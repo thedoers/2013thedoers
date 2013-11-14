@@ -1,0 +1,54 @@
+-# coding: utf-8
+!!!5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+%html.no-js{lang:"en",:"xmlns:fb" => "http://ogp.me/ns/fb#"}
+  %head
+    %meta{:charset => "utf-8"}
+
+    %title
+      = page_title
+    %meta{:name => "description", :content => "We are doers. Internet enthusiasts, passionate about design&coding, eager learners and bold explorers. We love start-ups. We proudly work with them."}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %meta{:name => "apple-mobile-web-app-capable", :content =>"yes"}
+    %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+    %meta{:name => "keywords", :content => "interaction design, user experience design, business development" }
+    %meta{:property=>"og:title", :content=>"The Doers main page and projects wall"}
+    %meta{:property=>"og:type", :content=>"website"}
+    %meta{:property=>"og:description", :content => "We are doers. Internet enthusiasts, passionate about design&coding, eager learners and bold explorers. We love start-ups. We proudly work with them."}
+    %meta{:property=>"og:url", :content=>"http://thedoers.co"}
+    %meta{:property=>"og:image", :content=>"http://thedoers.co/images/logo_200x200.png"}
+    %meta{:property=>"og:site_name", :content=>"TheDoers"}
+    %meta{:property=>"fb:app_id", :content=>"548417228527743"}
+
+    <!-- Favicons and touch icons -->
+    <!-- For retina-display iPads -->
+    %link{ :href=>"apple-touch-icon-144x144-precomposed.png", :rel=>"apple-touch-icon-precomposed", :sizes=>"144x144", :type=>"image/png" }
+    <!-- For retina-display iPhones -->
+    %link{ :href=>"apple-touch-icon-144x144-precomposed.png", :rel=>"apple-touch-icon-precomposed", :sizes=>"114x114", :type=>"image/png" }
+    <!-- For iPad 1 -->
+    %link{ :href=>"apple-touch-icon-72x72-precomposed.png", :rel=>"apple-touch-icon-precomposed", :sizes=>"72x72", :type=>"image/png" }
+    <!-- For iPhone 3G, iPod Touch and Android -->
+    %link{ :href=>"apple-touch-icon-57x57-precomposed.png", :rel=>"apple-touch-icon-precomposed", :type=>"image/png" }
+    <!-- For Nokia -->
+    %link{ :href=>"apple-touch-icon-original.png", :rel=>"shortcut icon" }
+    <!-- For everything else -->
+    %link{ :href=>"favicon.png", :rel=>"shortcut icon", :type=>"image/png" }
+    %link{ :href=>"favicon.ico", :rel=>"shortcut icon", :type=>"image/x-icon" }
+
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr.js"
+    %script{ :type => "text/javascript"}
+      var analytics=analytics||[];(function(){var e=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group"],t=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var n=0;n<e.length;n++)analytics[e[n]]=t(e[n])})(),analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)};
+      analytics.load("raf4lyo0hh");
+
+
+  %body
+    = yield
+
+
+
+
+

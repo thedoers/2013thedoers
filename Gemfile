@@ -13,7 +13,7 @@ gem "compass-h5bp"
 gem "builder"
 
 gem 'oily_png'
-gem 'mini_magick'
+#gem 'mini_magick'
 
 
 

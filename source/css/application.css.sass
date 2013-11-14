@@ -1,0 +1,43 @@
+@import compass/utilities/sprites
+@import compass/typography/text/replacement
+@import compass/typography/lists/horizontal-list
+@import compass/typography/lists/bullets
+@import h5bp
+@import susy
+@import compass/typography/vertical_rhythm
+@import compass/css3/hyphenation
+@import compass/support
+@import "compass/css3"
+
+
++h5bp-normalize
++establish-baseline
+
+$legacy-support-for-ie: true
+
+$assets: sprite-map("old/assets/*.png")
+
+
+$yellow: #F5FD48
+$blue: #2C43B5
+$pink: #FC8686
+$purple: #8591FD
+
+
+$rose: #FF4874
+$light-yellow: #fffed9
+$black: #000
+$acqua: #81FFD0
+$green: #00FF80
+
+@import partials/custom_mixins
+@import partials/fonts
+@import partials/grid
+
+@import partials/320grid
+@import partials/960grid
+
+
+*:focus
+  outline-style: none
+  outline-width: 0px

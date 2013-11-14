@@ -1,0 +1,927 @@
++at-breakpoint($break)
+  ul.menu-container
+    right: 40px
+  a.logo-doers
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 20
+    &:active
+      top: 3px
+      left: 3px
+  a.logo-doers-qa
+    +assign-sprite-background($assets)
+    +sprite($assets, "logo_estrusione", true)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 3
+    &:hover
+      +assign-sprite-background($assets)
+      +sprite($assets, "logo_estrusione_hover", true)
+      top: 0
+      left: 0
+    &:active
+      +assign-sprite-background($assets)
+      +sprite($assets, "logo_estrusione_active", true)
+      top: 6px
+      left: 6px
+  .mazinga-main
+    position: absolute
+    width: 100%
+    height: 100%
+    $image: image-url("textures/mazinga-bg.png")
+    background: $image repeat left top
+
+  h1#error404
+    font-size: px-to-em(1080px,16px)
+    line-height: px-to-em(745px,1080px)
+    top: -12px
+    left: -25px
+  h2#description-error
+    font-size: px-to-em(430px,16px)
+    line-height: px-to-em(295px,430px)
+    top: -4px
+    left: -36px
+  .white-fulminetti-2
+    top: 57%
+    left: 45%
+  h4#warning
+    top: 60%
+    left: 45%
+
+  form#form1
+    ul
+      margin-top: 0
+
+  section.page
+    //+susy-grid-background
+    hr.wave, hr.dotted
+      display: none
+    .mission
+      margin-bottom: 100px
+      +span-columns(9,15)
+      +pre(3,15)
+      margin-top: 0
+      margin-bottom: 70px
+
+  ul#projects-wall
+    +span-columns(15,15)
+    position: relative
+    margin-top: 190px
+    li.wall-container-photo
+      // +span-columns(7,15)
+      width: 45.45455%
+      position: relative
+      +float-left
+      margin-right: 20px
+      // &:nth-child(even)
+      // 	margin-right: 0
+    li.wall-container-photo.large
+      +span-columns(14,15)
+      a.wall
+        +span-columns(4,14)
+
+
+
+
+  #bg-submission
+    $image: image-url("textures/stripes.png")
+    background: $image repeat left top
+    height: 230px
+    width: 100%
+    position: absolute
+    z-index: 22
+  #bg-questions
+    $image: image-url("textures/questionmark.png")
+    background: $image repeat left top
+    height: 410px
+    width: 100%
+    position: fixed
+    top: 100px
+
+  section.page
+    p.hiring, p.hiring-last
+      +span-columns(13,15)
+    p.hiring-last
+      margin-bottom: 150px
+
+
+  section.page
+    .black-pink-title
+      +span-columns(5,15)
+    .project-container-photo
+      +span-columns(15,15)
+      position: relative
+      .img-medium
+        +span-columns(10,15)
+        +pre(1)
+      .img-large
+        +span-columns(12,15)
+      img
+        max-width: 100%
+    .bottom-spacer-projects
+      margin-bottom: 200px
+    hr.spacer-project
+      +span-columns(12,15)
+    .description-image
+      position: absolute
+      top: 0
+      right: -20px
+      margin-top: 13px
+      +span-columns(4 omega,15)
+      z-index: 12
+      padding-left: 20px
+      padding-right: 20px
+      p
+        +span-columns(4,4)
+        +pre(0)
+      .corner
+        +sprite($assets, "corner_project_description", true)
+        top: 18px
+        left: -9px
+
+    .black-pink-title-small
+      +span-columns(4,4)
+      +pre(0)
+    .project-info.team
+      +span-columns(13,15)
+      margin-bottom: 130px
+      .container-single-info
+        margin-bottom: 40px
+      .container-single-info.eight-columns
+        +span-columns(8,13)
+        p.oggetto-sociale
+          font-size: px-to-em(30px,16px)
+          line-height: px-to-em(34px,30px)
+          text-transform: none
+          margin: 0
+          margin-top: 11px
+        p.date
+          margin-top: 18px
+          span.day
+            font-size: px-to-em(85px,65px)
+            line-height: px-to-em(45px,85px)
+            span.slash-date
+              font-size: px-to-em(28px,85px)
+          span.year
+            font-size: px-to-em(85px,65px)
+            line-height: px-to-em(45px,85px)
+            span.slash-date
+              font-size: px-to-em(28px,85px)
+          span.month
+            font-size: px-to-em(45px,65px)
+            line-height: px-to-em(25px,45px)
+            padding-top: 4px
+            padding-bottom: 14px
+            span.slash-date
+              font-size: px-to-em(28px,45px)
+        p.city
+          font-size: px-to-em(45px,16px)
+          line-height: px-to-em(40px,45px)
+          margin: 0
+          margin-top: -5px
+      .container-single-info.five-columns
+        +span-columns(5 omega,13)
+        p.activity
+          font-size: px-to-em(12px,16px)
+          line-height: px-to-em(12px,12px)
+          margin: 0
+          margin-top: 17px
+          span.slash
+            font-size: px-to-em(8px,12px)
+            line-height: px-to-em(8px,8px)
+        p.notaio
+          font-size: px-to-em(32px,16px)
+          line-height: px-to-em(27px,32px)
+          margin: 0
+          margin-top: 10px
+        p.notaio-address
+          font-size: px-to-em(12px,16px)
+          line-height: px-to-em(12px,12px)
+          margin: 0
+          margin-top: 10px
+          span.smallcaps
+            text-transform: lowercase
+      .container-single-info.all-columns
+        +span-columns(13,13)
+        p.sede
+          font-size: px-to-em(45px,16px)
+          line-height: px-to-em(38px,45px)
+          margin: 0
+          margin-top: 9px
+          span.smallcaps
+            text-transform: lowercase
+        p.society.clienti
+          margin-top: 0
+        a.society
+          font-size: px-to-em(45px,16px)
+          line-height: px-to-em(38px,45px)
+          margin: 0
+          margin-top: 9px
+          color: #2BFECF
+          text-decoration: underline
+          display: block
+          &:hover
+            color: #C7FFEF
+    .project-info
+      +span-columns(12,15)
+      .container-single-info
+        +span-columns(3,12)
+        margin-bottom: 50px
+        p.date
+          margin: 0
+          margin-top: 15px
+          font-size: px-to-em(65px,16px)
+          line-height: px-to-em(38px,65px)
+        span.day
+          padding-bottom: -5px !important
+          display: block
+          span.slash-date
+            font-size: px-to-em(28px,65px)
+        span.month
+          font-size: px-to-em(32px,65px)
+          line-height: px-to-em(25px,32px)
+          word-break: break-all
+          display: block
+          padding-bottom: 11px
+          span.slash-date
+            font-size: px-to-em(28px,32px)
+        p.users
+          margin: 0
+          margin-top: 8px
+          font-size: px-to-em(65px,16px)
+          line-height: px-to-em(51px,65px)
+          word-break: break-all
+        ul.press, ul.funding
+          +no-bullets
+          margin: 0
+          padding: 0
+          margin-top: 13px
+        a.press
+          margin: 0
+          color: #2BFECF
+          font-size: px-to-em(32px,16px)
+          line-height: px-to-em(20px,32px)
+          text-decoration: underline
+          word-break: break-all
+          &:hover
+            color: #C7FFEF
+        p.date-press
+          margin: 0
+          margin-bottom: 12px
+          font-size: px-to-em(12px,16px)
+          line-height: px-to-em(12px,12px)
+          span.slash-press
+            font-size: px-to-em(8px,12px)
+        p.funding
+          margin: 0
+          font-size: px-to-em(65px,16px)
+          line-height: px-to-em(41px,65px)
+          word-break: break-all
+          display: block
+          span.money
+            font-size: px-to-em(35px,65px)
+            padding-right: 5px
+        span.funder
+          font-size: px-to-em(12px,16px)
+          line-height: px-to-em(12px,12px)
+          padding-left: 32px
+          display: block
+          margin-top: -4px
+          margin-bottom: 18px
+
+
+      .last
+        margin-right: 0
+    .project-description
+      +span-columns(12,15)
+      clear: left
+      margin-bottom: 30px
+      ul.areas
+        +span-columns(3 omega,12)
+        li
+          margin-bottom: 13px
+        .business
+          top: 2px
+        .interaction
+          top: 4px
+        .technology
+          top: 3px
+        .identity
+          top: 5px
+        .graphics
+          top: -1px
+    .container-p
+      +span-columns(8,12)
+      // padding-right: 40px
+      // border-right: 1px dotted $yellow
+    hr.horizontal-dotted
+      display: none
+    hr.vertical-dotted
+      margin-left: 18px
+      // display: inline-block
+      position: relative
+      height: auto
+
+
+
+
+
+
+    .container-submission, .container-hiring
+      position: relative
+      background: $purple
+      margin-top: 20px
+      margin-bottom: 0
+      height: 165px
+      z-index: 22
+      .bottone-container-hover
+        margin-top: 23px
+    .container-submission
+      +span-columns(9,15)
+    .container-hiring
+      +span-columns(6 omega,15)
+    p.description
+      margin-top: 100px
+      margin-bottom: 0
+      +span-columns(9,15)
+      +pre(3,15)
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+      font-size: px-to-em(22px,16px)
+      line-height: px-to-em(31px,22px)
+      color: $yellow
+      font-weight: 700
+  section.page
+    ul.question-answer
+      position: relative
+      z-index: 4
+      list-style-type: none
+      padding: 0
+      margin-top: 300px
+      margin-bottom: 100px
+      $image: image-url("textures/purple_transparent.png")
+      background: $image repeat left top
+      li.container
+        @include clearfix
+        margin: 0
+        margin-bottom: 25px
+        width: 100%
+        background: $purple
+        padding-top: 5px
+        padding-bottom: 0
+        .questionmark
+          display: none
+        p.question, p.answer
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+          font-size: px-to-em(14px,16px)
+          line-height: px-to-em(18px,14px)
+          color: $yellow
+          padding: 32px 0 10px 0
+          position: relative
+          z-index: 12px
+          +pre(0)
+
+        p.question
+          +span-columns(4,15)
+          font-weight: 700
+          position: relative
+          +pre(1)
+          margin-top: 0
+
+        p.answer
+          text-indent: 22px
+          +span-columns(8 omega,15)
+          +post(1)
+          font-weight: 400
+          padding-left: 10px
+          padding-right: 10px
+          margin-bottom: 0
+  section.page
+    overflow: visible
+    h1.submission.index
+      margin-top: 50px
+    h1.submission
+      margin-top: 150px
+      position: relative
+      .arrow_reverse, .arrow
+        width: 238px
+        height: 41px
+        position: absolute
+        z-index: 4
+        top: -30px
+        left: -15px
+      .wave_line
+        height: 4px
+        position: absolute
+        z-index: 3
+        $image: image-url("textures/hr_wave.png")
+        background: $image repeat left top
+      .right
+        top: 15px
+        left: 305px
+        width: 400px
+      .left
+        top: 15px
+        left: -200px
+        width: 250px
+      .container.team
+        margin-bottom: 60px
+      .container
+        +span-columns(8,15)
+        margin-bottom: 60px
+        margin-left: 9px
+        span
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+          font-size: 50px
+          line-height: 45px
+          color: $pink
+          font-weight: 700
+          text-transform: uppercase
+          text-decoration: none
+          padding: 2px 10px 2px 2px
+          position: relative
+          z-index: 2
+          display: inline-block
+          background: black
+          margin: 0
+          margin-left: -9px
+          margin-bottom: 1px
+          padding: 0
+          padding-right: 13px
+          padding-left: 3px
+          .shadow-right
+            height: 34px
+            width: 11px
+            background: $blue
+            float: right
+            position: absolute
+            right: -11px
+            top: 11px
+            opacity: 0.4
+          .shadow-bottom
+            height: 11px
+            width: 100%
+            background: $blue
+            position: absolute
+            top: 45px
+            left: 11px
+            opacity: 0.4
+
+    ul.submission
+      +span-columns(13,15)
+      list-style-type: none
+      padding: 0
+      margin: 0
+      margin-bottom: 100px
+      hr.short-spacer
+        +span-columns(2,8)
+      p.keywords
+        +span-columns(8,8)
+      li
+        margin-bottom: 62px
+        @include clearfix
+        .container-left.posted-tags
+          .people
+            display: inline-block
+            position: relative
+            +span-columns(3,5)
+            margin-bottom: 10px
+            img
+              width: 100%
+              height: auto
+        .single-blog-post
+          +span-columns(8 omega,13)
+          margin-bottom: 12px
+          display: inline-block
+          h3
+            position: relative
+            margin: 0
+            margin-bottom: 1px
+            line-height: 20px
+            span
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+              font-size: 16px
+              line-height: 19px
+              color: black
+              font-weight: 700
+              background: $pink
+              padding: 0 10px 2px 2px
+              display: inline-block
+              position: relative
+              .smaller
+                font-size: 9px
+                line-height: 9px
+                padding: 0
+                margin: 0
+              .shadow-right
+                height: 13px
+                width: 8px
+                background: $blue
+                float: right
+                position: absolute
+                right: -8px
+                top: 8px
+                opacity: 0.4
+              .shadow-bottom
+                height: 8px
+                width: 100%
+                background: $blue
+                position: absolute
+                top: 21px
+                left: 8px
+                opacity: 0.4
+                z-index: -1
+          h2.single-title
+            margin-top: 23px
+          h2
+            position: relative
+            margin: 0
+            .container
+              margin-left: 7px
+              a.blog
+                text-decoration: none !important
+                font-size: 50px
+                line-height: 45px
+                span
+                  margin-right: -6px
+                  font-size: 50px
+                  line-height: 45px
+                  padding: 0 15px 0 2px !important
+                &:hover
+                  opacity: 1
+                  span
+                    color: white
+                .shadow-bottom
+                  top: 45px
+                .shadow-right
+                  height: 37px
+              span
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+                font-size: 31px
+                line-height: 28px
+                color: $pink
+                font-weight: 700
+                text-transform: uppercase
+                text-decoration: none
+                padding: 2px 10px 2px 2px
+                position: relative
+                z-index: 2
+                display: inline-block
+                background: black
+                margin: 0
+                margin-left: -7px
+                margin-bottom: 1px
+                padding: 0 10px 0 2px
+                .shadow-right
+                  height: 20px
+                  width: 8px
+                  background: $blue
+                  float: right
+                  position: absolute
+                  right: -8px
+                  top: 8px
+                  opacity: 0.4
+                .shadow-bottom
+                  height: 8px
+                  width: 100%
+                  background: $blue
+                  position: absolute
+                  top: 28px
+                  left: 8px
+                  opacity: 0.4
+                  z-index: -1
+
+
+        .container-left
+          +span-columns(5,13)
+          margin-top: 0
+          margin-bottom: 0
+          .icon
+            +assign-sprite-background($assets)
+            position: relative
+            margin-top: 40px
+            top: 0
+            left: 0
+          .photo-team
+            position: relative
+            margin-top: 30px
+            top: 0
+            left: 0
+          .tags, .posted-by
+            +span-columns(3,5)
+          .tags
+            h4
+              margin-top: 15px
+          .posted-by
+            h4
+              margin-top: 25px
+          h3
+            position: relative
+            margin: 0
+            margin-bottom: 1px
+            span
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+              font-size: 16px
+              line-height: 19px
+              color: black
+              font-weight: 700
+              background: $pink
+              padding: 0 10px 2px 2px
+              display: inline-block
+              position: relative
+              .shadow-right
+                height: 13px
+                width: 8px
+                background: $blue
+                float: right
+                position: absolute
+                right: -8px
+                top: 8px
+                opacity: 0.4
+              .shadow-bottom
+                height: 8px
+                width: 100%
+                background: $blue
+                position: absolute
+                top: 21px
+                left: 8px
+                opacity: 0.4
+          h2
+            position: relative
+            margin: 0
+            .container
+              margin-left: 7px
+              span
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+                font-size: 31px
+                line-height: 28px
+                color: $pink
+                font-weight: 700
+                text-transform: uppercase
+                text-decoration: none
+                padding: 2px 10px 2px 2px
+                position: relative
+                z-index: 2
+                display: inline-block
+                background: black
+                margin: 0
+                margin-left: -7px
+                margin-bottom: 1px
+                padding: 0 10px 0 2px
+                .shadow-right
+                  height: 20px
+                  width: 8px
+                  background: $blue
+                  float: right
+                  position: absolute
+                  right: -8px
+                  top: 8px
+                  opacity: 0.4
+                .shadow-bottom
+                  height: 8px
+                  width: 100%
+                  background: $blue
+                  position: absolute
+                  top: 28px
+                  left: 8px
+                  opacity: 0.4
+        .container-right
+          +span-columns(8 omega,13)
+          p.submit-description
+            margin: 0
+            margin-top: 20px
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+            font-size: px-to-em(22px,16px)
+            line-height: px-to-em(31px,22px)
+            color: $yellow
+            font-weight: 700
+            &:first-child
+              margin-top: 20px
+            a
+              color: $blue
+              &:hover
+                opacity: 0.7
+              &:active
+                color: $pink !important
+                opacity: 1
+              &:visited
+                color: $yellow
+                opacity: 1
+          #comments-title
+            +span-columns(8,8)
+            height: 67px
+            margin-top: 120px
+            .container-left
+              +span-columns(3,8)
+            .wave_line
+              height: 4px
+              position: absolute
+              z-index: 3
+              $image: image-url("textures/hr_wave.png")
+              background: $image repeat left top
+            .right
+              top: 15px
+              left: 195px
+              width: 263px
+            .left
+              top: 15px
+              left: -300px
+              width: 320px
+          ul#comments
+            +span-columns(8,8)
+            li.single-comment
+              .people
+                +span-columns(2,8)
+              h4, p
+                +span-columns(6 omega,8)
+
+
+
+
+
+
+
+
+    .container-submission, .container-hiring
+      p.testi
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+        font-size: px-to-em(14px,16px)
+        line-height: px-to-em(18px,14px)
+        color: $yellow
+        font-weight: 400
+        span.capo_lettera
+          float: left
+          position: relative
+          margin-top: -33px
+          margin-bottom: -3px
+          color: transparent
+        .A
+          +assign-sprite-background($assets)
+          +sprite($assets, "capolettera_A", true)
+          margin-right: 2px
+        .T
+          +assign-sprite-background($assets)
+          +sprite($assets, "capolettera_T", true)
+          margin-left: -3px
+          margin-right: -3px
+
+
+
+
+
+    .container-submission
+      p.testi
+        +span-columns(5,9)
+        margin: 35px 0 0 20px
+    .container-hiring
+      p.testi
+        position: relative
+        float: left
+        width: 180px
+        margin: 35px 0 0 20px
+
+    ul.old-site
+      position: relative
+      +span-columns(9,15)
+      +pre(3,15)
+      list-style-type: none
+      padding: 0
+      margin-bottom: 200px
+      margin-top: 100px
+      li
+        position: relative
+        float: left
+        margin-right: 15px
+        clear: none
+        margin-bottom: 0
+        &:last-child
+          margin-right: 0
+        .icon
+          margin-bottom: 10px
+          float: none
+          position: relative
+        .process
+          +assign-sprite-background($assets)
+          +sprite($assets, "icon_process", true)
+        .blog
+          +assign-sprite-background($assets)
+          +sprite($assets, "icon_blog", true)
+        .projects
+          +assign-sprite-background($assets)
+          +sprite($assets, "icon_projects", true)
+          left: 0
+        .container
+          @include clearfix
+          padding-right: 8px
+          position: relative
+          float: none
+          margin-left: 0
+          margin-top: 0
+          .shadow-right
+            height: 20px
+            width: 8px
+            background: $blue
+            float: right
+            position: absolute
+            right: 0
+            top: 8px
+            opacity: 0.4
+          .shadow-bottom
+            height: 8px
+            width: 100%
+            background: $blue
+            position: relative
+            top: -4px
+            left: 8px
+            opacity: 0.4
+          a
+            display: inline-block
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+            font-size: px-to-em(31px,16px)
+            color: $pink
+            font-weight: 700
+            text-transform: uppercase
+            background: black
+            text-decoration: none
+            padding: 2px 10px 2px 2px
+            position: relative
+            z-index: 2
+    ul.old-site
+      li:hover
+        a
+          color: white !important
+    ul.old-site
+      li:active
+        a
+          top: 4px
+          left: 4px
+
+
+  section.page
+    .mazinga-bg
+      background: $purple
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 50px
+      height: 200px
+    .mazinga-footer
+      +assign-sprite-background($assets)
+      +sprite($assets, "mazinga", true)
+      position: fixed
+      right: 0
+      bottom: 0
+    a.mazinga-footer-lettering
+      +assign-sprite-background($assets)
+      +sprite($assets, "mazinga_lettering", true)
+      position: fixed
+      right: 9px
+      bottom: 6px
+      &:hover
+        opacity: 0.7
+
+  section.footer
+    position: absolute
+    width: 100%
+    left: -10px
+    #bg-footer
+      height: 16px
+      width: 100%
+      position: absolute
+      .freakin_icon
+        background-image: url('../../images/fav_animata_16x16.gif')
+        width: 16px
+        height: 16px
+        position: absolute
+        margin-bottom: 0
+      .bottom
+        bottom: 0
+        left: 0
+      .middle
+        bottom: 16px
+        left: 16px
+        display: block
+      .top
+        bottom: 32px
+        left: 0
+        display: block
+      p.contacts
+        margin: 0
+        position: absolute
+        left: 43px
+        bottom: 12px
+        font-family: "veramono"
+        font-weight: 400
+        color: $blue
+        font-size: px-to-em(12px,16px)
+        line-height: px-to-em(14px,12px)
+        letter-spacing: px-to-em(2px)
+        .first-letter
+          color: $yellow
+          font-style: italic
+          font-weight: 700
+        .slash
+          font-size: px-to-em(6px,12px)
+          color: $yellow
+

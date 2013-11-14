@@ -6,14 +6,19 @@ section.page
   +container($total-columns, $break)
   overflow: hidden
 
+#test
+  height: 300px
+  width: 300px
+  background-color: red
 
 
-
-body
+#header
   -webkit-font-smoothing: antialiased
   -webkit-overflow-scrolling: touch
-  $image: image-url("textures/square.png")
+  $image: image-url("old/textures/square.png")
   background: $image repeat left top
+  height: 500px
+  width: 600px
 a.logo-doers
   +assign-sprite-background($assets)
   +sprite($assets, "logo_white_50alfa", true)
@@ -29,23 +34,7 @@ a.logo-doers
     +sprite($assets, "logo_black", true)
     top: -22px
     left: -90px
-a.logo-doers-qa
-  +assign-sprite-background($assets)
-  +sprite($assets, "logo_short_estrusione", true)
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 3
-  &:hover
-    +assign-sprite-background($assets)
-    +sprite($assets, "logo_short_estrusione_hover", true)
-    top: -25px
-    left: -93px
-  &:active
-    +assign-sprite-background($assets)
-    +sprite($assets, "logo_short_estrusione_active", true)
-    top: -19px
-    left: -87px
+
 .top-spacer
   margin-top: 20px !important
 .bottom-spacer
@@ -1095,184 +1084,6 @@ section.page
 
 
 
-
-
-
-  .container-submission, .container-hiring
-    +span-columns(7,7)
-    @include clearfix
-    position: relative
-    margin-bottom: 10px
-    p.testi
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
-      font-size: px-to-em(14px,16px)
-      line-height: px-to-em(18px,14px)
-      color: $yellow
-      font-weight: 400
-      margin-top: 35px
-      margin-bottom: 10px
-      span.capo_lettera
-        float: left
-        position: relative
-        margin-top: -33px
-        margin-bottom: -3px
-        color: transparent
-
-
-
-  p.description
-    margin-top: 20px
-    +span-columns(7,7)
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
-    font-size: px-to-em(22px,16px)
-    line-height: px-to-em(31px,22px)
-    color: $yellow
-    font-weight: 700
-
-  ul.old-site
-    position: relative
-    +span-columns(7,7)
-    list-style-type: none
-    padding: 0
-    margin-bottom: 100px
-    margin-top: 70px
-    li
-      position: relative
-      float: left
-      margin: 0
-      margin-bottom: 15px
-      clear: both
-
-      &:last-child
-        margin-right: 0
-      .icon
-        //margin-bottom: 50px
-        float: left
-        position: absolute
-      .process
-        +assign-sprite-background($assets)
-        +sprite($assets, "icon_process", true)
-      .blog
-        +assign-sprite-background($assets)
-        +sprite($assets, "icon_blog", true)
-      .projects
-        +assign-sprite-background($assets)
-        +sprite($assets, "icon_projects", true)
-        left: 6px
-      .container
-        @include clearfix
-        padding-right: 8px
-        position: relative
-        float: left
-        margin-left: 70px
-        margin-top: 9px
-        .shadow-right
-          height: 20px
-          width: 8px
-          background: $blue
-          float: right
-          position: absolute
-          right: 0
-          top: 8px
-          opacity: 0.4
-        .shadow-bottom
-          height: 8px
-          width: 100%
-          background: $blue
-          position: relative
-          top: -4px
-          left: 8px
-          opacity: 0.4
-          z-index: -1
-        a
-          display: inline-block
-          font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
-          font-size: px-to-em(31px,16px)
-          color: $pink
-          font-weight: 700
-          text-transform: uppercase
-          background: black
-          text-decoration: none
-          padding: 2px 10px 2px 2px
-          position: relative
-          z-index: 2
-  ul.old-site
-    li:hover
-      a
-        color: white !important
-  ul.old-site
-    li:active
-      a
-        top: 4px
-        left: 4px
-
-
-section.page
-  ul.question-answer
-    position: relative
-    z-index: 4
-    list-style-type: none
-    padding: 0
-    margin-bottom: 100px
-    margin-top: 160px
-    li.container
-      @include clearfix
-      margin: 0
-      margin-bottom: 10px
-      margin-top: 10px
-      position: relative
-      .questionmark
-        +assign-sprite-background($assets)
-        +sprite($assets, "questionmark_small", true)
-        position: absolute
-        top: 13px
-      p.question, p.answer
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif
-        font-size: px-to-em(14px,16px)
-        line-height: px-to-em(18px,14px)
-        color: $yellow
-        padding: 32px 0 15px 0
-        position: relative
-        z-index: 12px
-        +span-columns(5,7)
-        +pre(2)
-        margin-top: 0
-        margin-bottom: 0
-
-      p.question
-        font-weight: 700
-        position: relative
-        margin-top: 10px
-        span.capo_lettera
-          float: left
-          position: relative
-          margin-top: -33px
-          margin-bottom: -3px
-          color: transparent
-        .W
-          +assign-sprite-background($assets)
-          +sprite($assets, "capolettera_W", true)
-          margin-right: -2px
-        .H
-          +assign-sprite-background($assets)
-          +sprite($assets, "capolettera_H", true)
-          margin-right: 2px
-      p.answer
-        text-indent: 22px
-        font-weight: 400
-        padding-top: 0
-        margin-bottom: 10px
-      p
-        a
-          color: $blue
-          &:hover
-            opacity: 0.7
-          &:active
-            color: $pink !important
-            opacity: 1
-          &:visited
-            color: $yellow
-            opacity: 1
 
 
 section.page

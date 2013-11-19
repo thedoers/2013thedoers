@@ -6,7 +6,7 @@ article.ixdt
 
   header
     h2.ixdt-title
-      float: left
+      +replace-text-with-dimensions("ixdt/ixdt_logo_mobile.png")
     h3.subtitle
 
     .subtitle-paragraph
@@ -45,28 +45,55 @@ article.ixdt
         background: black
         border: none
         color: white
+        box-shadow: rgb(0,255,255) 2px 2px 1px 0px
   footer
-
-    ul.share
-      height: auto
-      list-style-type: none
-      margin: 0px
-      padding: 0px
-      display: inline-block
-    li
-      text-decoration: none
-      width: 16px
-      height: 16px
+    //border: 1px solid black
+    .text
+      width: 100%
       float: left
-      padding-left: 3px
-      padding-right: 6px
-      .facebook
-        background: image-url("fabrica/social-fab_fb.png") no-repeat
-      .twitter
-        background: image-url("fabrica/social-fab_twitter.png") no-repeat
-      .googleplus
-        background: image-url("fabrica/social-fab_gplus.png") no-repeat
-      .linkedin
-        background: image-url("fabrica/social-fab_linkedin.png") no-repeat
+      clear: both
+      .paragraph-sponsor
+        float: left
+      .paragraph-share
+        float: right
+    .icon
+      display: inline-block
+      width: 100%
+      ul.left-sponsor
+        list-style-type: none
+        margin: 0px
+        padding: 0px
+
+        li
+          text-decoration: none
+          float: left
+        .treatabit
+          width: 41px
+          height: 51px
+          float: left
+          background: image-url("ixdt/treatabit_logo_mobile.png") no-repeat
+        .treatabit-eng
+          a
+      ul.right-share
+        list-style-type: none
+        float: right
+        margin: 0px
+        padding: 0px
+        li
+          text-decoration: none
+          width: 26px
+          height: 26px
+          float: right
+          margin-top: 25px
+        .facebook
+          background: image-url("ixdt/social_fb.png") no-repeat
+        .twitter
+          background: image-url("ixdt/social_twitter.png") no-repeat
+        .googleplus
+          background: image-url("ixdt/social_gplus.png") no-repeat
+        .linkedin
+          background: image-url("ixdt/social_linkedin.png") no-repeat
+
+
 
 

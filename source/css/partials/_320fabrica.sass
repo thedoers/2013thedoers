@@ -1,8 +1,12 @@
+.fago
+  font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
+
+
 article.fabrica
   +susy-grid-background
 
   color: white
-  font-family: fagoNoRegular
+  @extend .fago
   width: 100%
   float: left
   clear: both
@@ -12,6 +16,9 @@ article.fabrica
       width: 100%
       position: absolute
       z-index: -10
+      img
+        width: 100%
+
     h2.fabrica-title
       background: black
       z-index: 10
@@ -21,13 +28,14 @@ article.fabrica
       margin: 0
       top: 42px
       +replace-text("fabrica/fabrica_logo.png")
-    h2.subtitle
+    h3.subtitle
       position: relative
       margin: 46px 0px 0px
       width: 66px
       background: black
       text-align: center
-      font-family: fagoNo-Bold
+      @extend .fago
+      font-weight: 600
       font-size: px-to-em(19px,16px)
       padding: 0px
     .subtitle-paragraph
@@ -40,10 +48,12 @@ article.fabrica
         padding: 2px 8px
         margin-top: 2px
         span.big-symbol
-          font-family: fagoNo-Bold
+          @extend .fago
+          font-weight: 600
           font-size: px-to-em(21px, 16px)
         span.big-number
-          font-family: fagoNo-Bold
+          @extend .fago
+          font-weight: 600
           font-size: px-to-em(34px, 16px)
 
   section.container
@@ -60,16 +70,19 @@ article.fabrica
     p.first span.white-bk
       background: white
       color: black
-      font-family: fagoNo-Bold
+      @extend .fago
+      font-weight: 600
     p.text-one
     p.text-due
-      font-family: fagoNo-Bold
+      @extend .fago
+      font-weight: 600
       padding-bottom: 16px
     p.underline
       background: white
       color: black
-      font-family: fagoNo-Bold
-    .form
+      @extend .fago
+      font-weight: 600
+    form
       input
         width: 98%
         margin-left: 1%
@@ -91,7 +104,8 @@ article.fabrica
         background: black
         border: none
         color: white
-        font-family: fagoNo-Bold
+        @extend .fago
+        font-weight: 600
         font-size: px-to-em(12px, 16px)
         float: left
         clear: both

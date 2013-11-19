@@ -1,0 +1,72 @@
+//.fago
+//  font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
+
+article.ixdt
+  +susy-grid-background
+
+  header
+    h2.ixdt-title
+      float: left
+    h3.subtitle
+
+    .subtitle-paragraph
+      width: 100%
+      float: left
+      clear: both
+    p.powered
+      display
+  section.container
+    +span-columns(6,7)
+    +pre(1,7)
+    p.f-paragraph
+    p.s-paragraph
+    p.r-paragraph
+  figure
+  section.register
+    h3
+
+    form
+      input
+        text-align: center
+      .email
+        height: 50px
+        //todo cambiare width
+        width: 95%
+        margin-left: 1%
+        border: 3px solid black
+        margin-top: 26px
+      .send
+        height: 40px
+        //todo cambiare width
+        width: 94%
+        margin: 12px 0px 26px
+        margin-left: 1%
+        text-decoration: none
+        background: black
+        border: none
+        color: white
+  footer
+
+    ul.share
+      height: auto
+      list-style-type: none
+      margin: 0px
+      padding: 0px
+      display: inline-block
+    li
+      text-decoration: none
+      width: 16px
+      height: 16px
+      float: left
+      padding-left: 3px
+      padding-right: 6px
+      .facebook
+        background: image-url("fabrica/social-fab_fb.png") no-repeat
+      .twitter
+        background: image-url("fabrica/social-fab_twitter.png") no-repeat
+      .googleplus
+        background: image-url("fabrica/social-fab_gplus.png") no-repeat
+      .linkedin
+        background: image-url("fabrica/social-fab_linkedin.png") no-repeat
+
+

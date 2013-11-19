@@ -1,41 +1,46 @@
 //todo fabrica layout
-%section.fabrica
+%article.fabrica
   %header
-    //todo image fabrica
-    %h2.title Fabrica
-    %h2.title
+    //todo image fabrica, swap nome
+    .image-container
+      %image{src:'/images/fabrica/foto_fabrica.jpg', alt:'Fabrica', width:'100%', height:'221'}
+    %h2.fabrica-title
+      FABRICA
+    %h2.subtitle
       STORY
-    .subtitle
-      <span> <span class="big-data-title">+ 70%</span> di nuovi candidati</span>
-      <span>In cosa consiste il valore della tua</span>
-      <span>presenza online?</span>
-  .article
+    .subtitle-paragraph
+      <span class="paragraph"> <span class="big-symbol">+ </span><span class="big-number"> 70% </span> di nuovi candidati</span>
+      <span class="paragraph">In cosa consiste il valore della tua</span>
+      <span class="paragraph">presenza online?</span>
+  %section.container
     %p.base.first
-      %a{href:''}
-        Per Fabrica - il centro di ricerca sulla Comunicazione del gruppo Benetton - il valore è rappresentato dal numero di studenti che chiedono di entrare nel programma di ricerca, e dalla qualità dei loro curriculum. In soli 3 mesi, dopo la ri-progettazione del sistema di candidatura online, e un nuovo sito web,
+      Per <a href=''> Fabrica </a>- il centro di ricerca sulla Comunicazione del gruppo Benetton - il valore è rappresentato dal numero di studenti che chiedono di entrare nel programma di ricerca, e dalla qualità dei loro curriculum. In soli 3 mesi, dopo la ri-progettazione del sistema di candidatura online, e un nuovo sito web,
       <span class="white-bk">il numero di curriculum è aumentato del 70%.</span>
-    %p.base
-      <span class="">Come ci siamo riusciti?</span>
-      <span class="">Abbiamo migliorato drasticamente la User Experience! </span>
+    %p.base.text-one
+      Come ci siamo riusciti?
+    %p.base.text-due
+      Abbiamo migliorato drasticamente la User Experience!
     %p.base.underline
       Vuoi sapere come la progettazione dell’Esperienza Utente può migliorare notevolmente i risultati della tua presenza online?
     %p.base.last
       Abbiamo molte soluzioni da suggerirti ed esperienze pratiche che ti possono ispirare: vieni a parlarne nel nostro studio, a pranzo, per un caffè, un bicchiere di whisky? Lascia la tua email per ottenere il tuo invito!
-  %section.form
-    //todo form with wufoo?
-    %input{:type=>'text', :placeholder=>'Lascia qui la tua mail'}
-    %button{type:'submit'}
-      OTTIMO, E ALLORA SI MANGIA!
+    .form
+      //todo form with wufoo?
+      %input{:type=>'text', :class=>'email',:placeholder=>'Lascia qui la tua mail'}
+      %input{:type=>'submit', :class=>'send' ,:value=>'OTTIMO, E ALLORA SI MANGIA!'}
+
   %footer
     %p
       Se vuoi, puoi condividere qui
+    //todo nome della pagina quando si condivide è sbagliato - mettere link a pagina di fabrica
     %ul.share
       %li.facebook
-        %a{href:''}
+        %a{href:'http://facebook.com/share.php?u=http://www.thedoers.co', target:'_blank'}
       %li.twitter
-        %a{href:''}
+        %a{href:'http://twitter.com/home?status=http://www.thedoers.co', target:'_blank'}
       %li.googleplus
-        %a{href:''}
-      %li.linkdin
-        %a{href:''}
+        %a{href:'https://plus.google.com/share?url=http://www.thedoers.co', onclick:'javascript:window.open(this.href,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600"");return false;'}
+      %li.linkedin
+        <a href='http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.thedoers.co/' target='_blank'></a>
+
 

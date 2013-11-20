@@ -1,0 +1,112 @@
+$white : #FFFFFF
+.nodecoration
+  text-decoration: none
+.pinkletter
+  span
+    color: #fb8585
+.blender
+  font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
+#header
+  //+susy-grid-background
+
+  +container($total-columns, $break)
+  .padder
+    position: relative
+    margin-top: 22px
+    margin-bottom: 22px
+    +background(image-url("header/header_shades-background-mobile.png"))
+    height: image-height("header/header_shades-background-mobile.png")
+
+
+  a.logo
+    position: relative
+    padding-top: 70px
+    display: block
+    +replace-text-with-dimensions("header/header_logo-mobile.png")
+    @extend .nodecoration
+    +pre(1)
+    background-position: 100% 100%
+
+  h1
+    color: $white
+    +span-columns(4,7)
+    @extend .blender
+    +pre(1)
+    font-weight: 600
+    font-size: px-to-em(12px,16px)
+    line-height: px-to-em(24px,16px)
+    @extend .pinkletter
+    margin-top: 60px
+
+  .share
+    position: absolute
+    right: 0
+    top: 10px
+    right: 10px
+
+  ul.menu-container
+    display: none
+
+  p.scroll
+    position: absolute
+    bottom: 0
+    left: 0
+    color: $white
+    @extend .blender
+    width: 100%
+    text-align: center
+    font-size: px-to-em(12px,16px)
+    margin-bottom: 10px
+
+
++at-breakpoint($break)
+  #header
+    +susy-grid-background
+    +span-columns(7,7)
+
+    .padder
+      position: relative
+      margin: 22px
+      +background(image-url("header/header_shades-background.png"))
+      height: image-height("header/header_shades-background.png")
+      padding-left: 46px
+    a
+      .logo
+        +replace-text-with-dimensions("header/header_logo.png")
+        padding-top: 75px
+
+        @extend .nodecoration
+    h1
+      color: $white
+      +span-columns(4,7)
+      @extend .blender
+
+      font-weight: 600
+      font-size: px-to-em(17px,16px)
+      @extend .pinkletter
+
+    .share
+      position: absolute
+      right: 0
+      top: 10px
+      right: 10px
+
+    ul.menu-container
+      position: absolute
+      bottom: 60px
+      right: 20px
+      +no-bullets
+      +horizontal-list-container
+      li
+        +horizontal-list-item
+        @extend .pinkletter
+        a
+          @extend .blender
+          @extend .nodecoration
+          color: $white
+          font-weight: px-to-em(19px,16px)
+          display: block
+          background-color: #2c43b5
+          padding-left: 15px
+          padding-right: 15px
+

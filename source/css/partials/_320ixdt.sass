@@ -6,22 +6,48 @@ article.ixdt
 
   header
     h2.ixdt-title
+      width: 100%!important
+      border-bottom: 5px solid black
+      margin: 0px!important
       +replace-text-with-dimensions("ixdt/ixdt_logo_mobile.png")
-    h3.subtitle
-
-    .subtitle-paragraph
+    h3.subtitle-paragraph
       width: 100%
       float: left
       clear: both
-    p.powered
-      display
+      border-bottom: 5px solid black
+      p.subtitle
+        margin: 0px
+      p.powered
+        margin: 4px 0px 0px
   section.container
     +span-columns(6,7)
     +pre(1,7)
     p.f-paragraph
     p.s-paragraph
     p.r-paragraph
-  figure
+  section.location
+    position: relative
+    span.date
+      position: absolute
+      bottom: 132px
+      left: 15px
+      background: white
+    span.hour
+      position: absolute
+      bottom: 95px
+      left: 15px
+      background: white
+    span.place
+      position: absolute
+      bottom: 55px
+      right: 35px
+      background: white
+    span.address
+      position: absolute
+      bottom: 20px
+      right: 23px
+      background: white
+
   section.register
     h3
 
@@ -63,7 +89,6 @@ article.ixdt
         list-style-type: none
         margin: 0px
         padding: 0px
-
         li
           text-decoration: none
           float: left
@@ -85,6 +110,9 @@ article.ixdt
           height: 26px
           float: right
           margin-top: 25px
+          padding-right: 15px
+          &:first-child
+            padding-right: 0px!important
         .facebook
           background: image-url("ixdt/social_fb.png") no-repeat
         .twitter

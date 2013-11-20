@@ -2,7 +2,7 @@
 //  font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
 
 article.ixdt
-  +susy-grid-background
+  //+susy-grid-background
 
   header
     h2.ixdt-title
@@ -10,21 +10,23 @@ article.ixdt
       border-bottom: 5px solid black
       margin: 0px!important
       +replace-text-with-dimensions("ixdt/ixdt_logo_mobile.png")
+
+  section.container
     h3.subtitle-paragraph
-      width: 100%
+      //width: 100%
       float: left
-      clear: both
+      //clear: both
       border-bottom: 5px solid black
       p.subtitle
         margin: 0px
       p.powered
         margin: 4px 0px 0px
-  section.container
-    +span-columns(6,7)
-    +pre(1,7)
-    p.f-paragraph
-    p.s-paragraph
-    p.r-paragraph
+    .paragraph
+      +span-columns(6,7)
+      +pre(1,7)
+      p.f-paragraph
+      p.s-paragraph
+      p.r-paragraph
   section.location
     position: relative
     span.date

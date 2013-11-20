@@ -1,14 +1,2 @@
-
-@font-face
-  font-family: 'Fago'
-  src: url(font-url('fago/FagoNoRegular.eot')) /* IE9 Compat Modes */
-  src: url(font-url('fago/FagoNoRegular.eot?#iefix')) format('embedded-opentype'), url(font-url('fago/FagoNoRegular.woff')) format('woff'), url(font-url('fago/FagoNoRegular.ttf'))  format('truetype'), url(font-url('fago/FagoNoRegular.svg#1c45d1b4f5202e1ca1f962981a3a373d')) format('svg')
-  font-style:   normal
-  font-weight:  400
-
-@font-face
-  font-family: 'Fago'
-  src: url(font-url('fago/FagoNo-Bold.eot')) /* IE9 Compat Modes */
-  src: url(font-url('fago/FagoNo-Bold.eot?#iefix')) format('embedded-opentype'), url(font-url('fago/FagoNo-Bold.woff')) format('woff'), url(font-url('fago/FagoNo-Bold.ttf'))  format('truetype'), url(font-url('fago/FagoNo-Bold.svg#1c45d1b4f5202e1ca1f962981a3a373d')) format('svg')
-  font-style:   normal
-  font-weight:  600
+@include font-face("Fago", font-files("fago/FagoNoRegular.woff", "woff", "fago/FagoNoRegular.ttf","ttf", "fago/FagoNoRegular.svg","svg"),"fago/FagoNoRegular.eot", 400, normal)
+@include font-face("Fago", font-files("fago/FagoNo-Bold.woff", "woff", "fago/FagoNo-Bold.ttf","ttf", "fago/FagoNo-Bold.svg","svg"),"fago/FagoNo-Bold.eot", 600, normal)

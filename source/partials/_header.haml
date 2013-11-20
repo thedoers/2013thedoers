@@ -1,40 +1,28 @@
 -# coding: utf-8
 #header
-  %a.logo-doers{href: 'http://www.thedoers.co/'}
-  %section.page
+  .padder
+    %a.logo{href: 'http://www.thedoers.co/'}
+      The Doers
     #mission
-      %h2
-        <span class="capo_lettera U_big">U</span>ser Experience, Interaction Design and Digital Strategy.
-
-
-  %ul.menu-container
-    %li.container-hover
-      %a{href: 'http://blog.thedoers.co'}
-      .white-line
-        .hover-corner-left
-        .hover-center
-        .hover-corner-right
-        .bottone_container
-          .bottone
-            %p
-              <span class="first-letter">B</span>log
-              %span.slash /
-            .corner_right
-            .block_center
-            .corner_left
-      .fulminetti
-    %li.container-hover
-      %a{href: '/team.html'}
-      .white-line
-        .hover-corner-left
-        .hover-center
-        .hover-corner-right
-        .bottone_container
-          .bottone
-            %p
-              <span class="first-letter">T</span>eam
-              %span.slash /
-            .corner_right
-            .block_center
-            .corner_left
-      .fulminetti
+      %h1
+        <span>U</span>SER  <span>E</span>XPERIENCE DESIGN<br />
+        <span>P</span>RODUCT  <span>D</span>EVELOPMENT AND <span>L</span>EAN APPROACH.
+    .share
+      .addthis_toolbox
+        .custom_images
+          %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; "}
+            = image_tag "share-buttons/share_fb.png", border: "0", alt: "facebook share"
+          %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; "}
+            = image_tag "share-buttons/share_tw.png", border: "0", alt: "twitter share"
+          %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; "}
+            = image_tag "share-buttons/share_gp.png", border: "0", alt: "google plus share"
+          %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; "}
+            = image_tag "share-buttons/share_li.png", border: "0", alt: "linkedin share"
+        %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0a3fcd63f94cae", type: "text/javascript"}
+    %ul.menu-container
+      %li.container-hover
+        %a{href: 'http://blog.thedoers.co'}
+          <span>b</span>log
+      %li.container-hover
+        %a{href: '/team.html'}
+          <span>t</span>eam

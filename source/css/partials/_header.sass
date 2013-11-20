@@ -7,7 +7,7 @@ $white : #FFFFFF
 .blender
   font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
 #header
-  +susy-grid-background
+  //+susy-grid-background
 
   +container($total-columns, $break)
   .padder
@@ -34,7 +34,7 @@ $white : #FFFFFF
     +pre(1)
     font-weight: 600
     font-size: px-to-em(12px,16px)
-    line-height: px-to-em(16px,16px)
+    line-height: px-to-em(24px,16px)
     @extend .pinkletter
     margin-top: 60px
 
@@ -46,6 +46,17 @@ $white : #FFFFFF
 
   ul.menu-container
     display: none
+
+  p.scroll
+    position: absolute
+    bottom: 0
+    left: 0
+    color: $white
+    @extend .blender
+    width: 100%
+    text-align: center
+    font-size: px-to-em(12px,16px)
+    margin-bottom: 10px
 
 
 +at-breakpoint($break)

@@ -1,9 +1,16 @@
-//.fago
-//  font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
-
+.akzidenz
+  font-family: Akzidenz , "Helvetica neue", Helvetica, Arial, sans-serif
+.droidsans
+  font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbold
+  font-family: VistaSansab, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbookita
+  font-family: VistaSansabi, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltmediaita
+  font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
 article.ixdt
   //+susy-grid-background
-
+  +container($total-columns, $break)
   header
     h2.ixdt-title
       width: 100%!important
@@ -13,30 +20,57 @@ article.ixdt
 
   section.container
     h3.subtitle-paragraph
-      //width: 100%
       float: left
-      //clear: both
+      margin: 0px
+      margin-top: 16px
       border-bottom: 5px solid black
       p.subtitle
+        @extend .droidsans
+        font-weight: 600
+        font-size:  23px
         margin: 0px
+        .color
+          //color: #81FFD0
       p.powered
+        @extend .vistasansaltbookita
+        font-size: 12px
+        font-style: italic
         margin: 4px 0px 0px
     .paragraph
       +span-columns(6,7)
       +pre(1,7)
+      @extend .vistasansaltbookita
+      font-size: 15px
+      font-style: italic
       p.f-paragraph
+        //todo non prende il font bene
+        margin: 0px
+        margin-top: 16px
       p.s-paragraph
-      p.r-paragraph
+        margin: 0px
+        @extend .vistasansaltmediaita
+        font-size: 15px
+        font-style: italic
+        .name
+          display: inline-block
+          width: 100%
+        .phrase
+          display: inline-block
+          width: 100%
+      p.t-paragraph
+        //todo non prende il font bene
+        margin: 0px
+        margin-bottom: 16px
   section.location
     position: relative
     span.date
       position: absolute
-      bottom: 132px
+      bottom: 98px
       left: 15px
       background: white
     span.hour
       position: absolute
-      bottom: 95px
+      bottom: 70px
       left: 15px
       background: white
     span.place
@@ -46,13 +80,25 @@ article.ixdt
       background: white
     span.address
       position: absolute
-      bottom: 20px
-      right: 23px
+      bottom: 25px
+      right: 47px
       background: white
+    span.date, span.place
+      @extend .akzidenz
+      font-size: 28px
+      font-weight: 500
+      font-style: italic
+    span.hour, span.address
+      @extend .akzidenz
+      font-size: 20px
+      font-weight: 300
+      font-style: italic
 
   section.register
     h3
-
+      @extend .droidsans
+      font-weight: 600
+      font-size:  23px
     form
       input
         text-align: center
@@ -63,6 +109,8 @@ article.ixdt
         margin-left: 1%
         border: 3px solid black
         margin-top: 26px
+        @extend .vistasansaltbold
+        font-size: 15px
       .send
         height: 40px
         //todo cambiare width
@@ -72,6 +120,10 @@ article.ixdt
         text-decoration: none
         background: black
         border: none
+        @extend .akzidenz
+        font-size: 20px
+        font-weight: 600
+        font-style: italic
         color: white
         box-shadow: rgb(0,255,255) 2px 2px 1px 0px
   footer
@@ -80,6 +132,8 @@ article.ixdt
       width: 100%
       float: left
       clear: both
+      @extend .droidsans
+      font-size: 10px
       .paragraph-sponsor
         float: left
       .paragraph-share

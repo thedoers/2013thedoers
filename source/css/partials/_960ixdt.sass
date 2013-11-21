@@ -1,6 +1,7 @@
 +at-breakpoint($break)
   article.ixdt
     +susy-grid-background
+
     //+container($total-columns, $break)
     header
       h2.ixdt-title
@@ -21,19 +22,31 @@
         float: left
         margin-left: 0px
     section.location
+      span
+        width: 142px!important
       span.date
-
+        top: 138px
+        left: 72px
       span.hour
-
+        top: 165px
+        left: 72px
       span.place
-
+        bottom: 150px
+        right: 203px
       span.address
-
+        bottom: 122px
+        right: 203px
       span.date, span.place
         font-size: 34px
       span.hour, span.address
         font-size: 22px
+      figure
+        img#mappa_mobile
+          display: none!important
+        img#mappa_desktop
+          display: block!important
     section.register
+      margin-bottom: 0px
       h3
         +span-columns(6,12)
         font-size: 28px

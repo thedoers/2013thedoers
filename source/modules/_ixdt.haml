@@ -24,19 +24,27 @@
     %span.date
       26 NOV 2013
     %span.hour
-      19,00 pm
+      19,30 pm
     %span.place
       LAB - TORINO
     %span.address
       Piazza Vittorio 13
     %figure
-      %image{src:'/images/ixdt/mappa_mobile.png', alt:'IxdtLocation', width: '100%' , height: 'auto'}
+      %image{src:'/images/ixdt/mappa_mobile.png', id:'mappa_mobile', alt:'IxdtLocation', width: '100%' , height: 'auto'}
+      %image{src:'/images/ixdt/mappa_desktop.png', id:'mappa_desktop', alt:'IxdtLocation', width: '100%' , height: 'auto'}
   %section.register
     %h3
       ARE YOU CURIOUS TO SEE HOW UX DESIGN COULD BOOST YOUR BUSINESS?
-    %form
-      %input{:type=>'text', :class=>'email',:placeholder=>'Leave your email to join the event!'}
-      %input{:type=>'submit', :class=>'send' ,:value=>'I WANT UX TO BOOST MY PROJECT!'}
+    - form_tag 'https://zapier.com/hooks/catch/n/h71qr/', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+      - field_set_tag do
+        %p
+          = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Leave your email to join the event!", :type=>"text"
+        = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
+        = hidden_field_tag  :list, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
+        = hidden_field_tag  :list, :value => "eng", :name => "language", :id => 'language'
+        %p
+          = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'GREAT, I\'M COMING!'
+
   %footer
     .text
       .paragraph-sponsor

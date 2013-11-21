@@ -118,19 +118,27 @@ article.ixdt
       font-weight: 600
       font-size:  23px
     form
-      //+span-columns(7,7)
+      +span-columns(7,7)
       //margin-bottom: 16px
       input
         text-align: center
         @include border-radius(0px)
+      fieldset
+        border: none
+        margin: 0
+        padding: 0
+
+
       .email
         height: 50px
         width: 98%
         margin: 0px
         margin-bottom: 16px
-        border: 3px solid black
+        border: 3px inset black
         @extend .vistasansaltbold
         font-size: 15px
+        text-indent: 10px
+
       .send
         height: 40px
         width: 98%
@@ -138,6 +146,7 @@ article.ixdt
         text-decoration: none
         background: black
         border: none
+        text-align: center
         @extend .akzidenz
         font-size: 20px
         font-weight: 600

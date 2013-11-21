@@ -35,9 +35,14 @@
   %section.register
     %h3
       ARE YOU CURIOUS TO SEE HOW UX DESIGN COULD BOOST YOUR BUSINESS?
-    %form
-      %input{:type=>'text', :class=>'email',:placeholder=>'Leave your email to join the event!'}
-      %input{:type=>'submit', :class=>'send' ,:value=>'GREAT, I\'M COMING!'}
+    - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+      - field_set_tag do
+        %p
+          = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Leave your email to join the event!", :type=>"text"
+        = hidden_field_tag  :list, :value => "tJt3biJc763TeUDxS19mJJ6A", :name => "list", :id => 'submit_list'
+        %p
+          = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'GREAT, I\'M COMING!'
+
   %footer
     .text
       .paragraph-sponsor

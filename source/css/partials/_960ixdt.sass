@@ -1,21 +1,43 @@
 +at-breakpoint($break)
   article.ixdt
     +susy-grid-background
-    +span-columns(12,12)
+    //+container($total-columns, $break)
+    header
+      h2.ixdt-title
+        +replace-text-with-dimensions("ixdt/ixdt_logo_desktop.png",0,0)
     section.container
       display: block
       h3.subtitle-paragraph
         +span-columns(6,12)
         float: left
+        p.subtitle
+          font-size: 31px
+          line-height: 1em
+          color: $acqua
+          .color
+            color: $black
       .paragraph
         +span-columns(6 omega,12)
         float: left
         margin-left: 0px
     section.location
+      span.date
 
+      span.hour
+
+      span.place
+
+      span.address
+
+      span.date, span.place
+        font-size: 34px
+      span.hour, span.address
+        font-size: 22px
     section.register
       h3
         +span-columns(6,12)
+        font-size: 28px
+        line-height: 1em
         float: left
       form
         +span-columns(6 omega,12)

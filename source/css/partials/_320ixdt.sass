@@ -9,9 +9,10 @@
 .vistasansaltmediaita
   font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
 article.ixdt
-  //+susy-grid-background
+  +susy-grid-background
   +container($total-columns, $break)
   header
+    margin-bottom: 16px
     h2.ixdt-title
       width: 100%!important
       border-bottom: 5px solid black
@@ -19,18 +20,20 @@ article.ixdt
       +replace-text-with-dimensions("ixdt/ixdt_logo_mobile.png")
 
   section.container
+    //margin-bottom: 16px
     h3.subtitle-paragraph
       float: left
       margin: 0px
-      margin-top: 16px
+      margin-bottom: 16px
       border-bottom: 5px solid black
       p.subtitle
         @extend .droidsans
         font-weight: 600
         font-size:  23px
         margin: 0px
+        color: $acqua
         .color
-          //color: #81FFD0
+          color: $black
       p.powered
         @extend .vistasansaltbookita
         font-size: 12px
@@ -39,13 +42,13 @@ article.ixdt
     .paragraph
       +span-columns(6,7)
       +pre(1,7)
+      margin-bottom: 16px
       @extend .vistasansaltbookita
       font-size: 15px
       font-style: italic
       p.f-paragraph
         //todo non prende il font bene
         margin: 0px
-        margin-top: 16px
       p.s-paragraph
         margin: 0px
         @extend .vistasansaltmediaita
@@ -59,10 +62,12 @@ article.ixdt
           width: 100%
       p.t-paragraph
         //todo non prende il font bene
+        .groundcolor
+          background: $acqua
         margin: 0px
-        margin-bottom: 16px
   section.location
     position: relative
+    //margin-bottom: 16px
     span.date
       position: absolute
       bottom: 98px
@@ -93,30 +98,34 @@ article.ixdt
       font-size: 20px
       font-weight: 300
       font-style: italic
+    figure
+      margin-bottom: 16px
 
   section.register
+    //margin-bottom: 16px
     h3
+      margin: 0px
+      margin-bottom: 16px
       @extend .droidsans
       font-weight: 600
       font-size:  23px
     form
+      +span-columns(7,7)
+      margin-bottom: 16px
       input
         text-align: center
       .email
         height: 50px
-        //todo cambiare width
-        width: 95%
-        margin-left: 1%
+        width: 98%
+        margin: 0px
+        margin-bottom: 16px
         border: 3px solid black
-        margin-top: 26px
         @extend .vistasansaltbold
         font-size: 15px
       .send
         height: 40px
-        //todo cambiare width
-        width: 94%
-        margin: 12px 0px 26px
-        margin-left: 1%
+        width: 98%
+        margin: 0px
         text-decoration: none
         background: black
         border: none
@@ -127,7 +136,6 @@ article.ixdt
         color: white
         box-shadow: rgb(0,255,255) 2px 2px 1px 0px
   footer
-    //border: 1px solid black
     .text
       width: 100%
       float: left
@@ -159,13 +167,13 @@ article.ixdt
         list-style-type: none
         float: right
         margin: 0px
+        margin-top: 25px
         padding: 0px
         li
           text-decoration: none
           width: 26px
           height: 26px
           float: right
-          margin-top: 25px
           padding-right: 15px
           &:first-child
             padding-right: 0px!important

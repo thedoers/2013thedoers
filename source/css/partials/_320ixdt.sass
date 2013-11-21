@@ -88,12 +88,12 @@ article.ixdt
     span.place
       position: absolute
       bottom: 37px
-      right: 47px
+      right: 24px
       background: white
     span.address
       position: absolute
       bottom: 10px
-      right: 47px
+      right: 24px
       background: white
     span.date, span.place
       @extend .akzidenz
@@ -120,6 +120,9 @@ article.ixdt
     form
       +span-columns(7,7)
       //margin-bottom: 16px
+      input
+        text-align: center
+        @include border-radius(0px)
       fieldset
         border: none
         margin: 0
@@ -129,7 +132,6 @@ article.ixdt
       .email
         height: 50px
         width: 98%
-
         margin: 0px
         margin-bottom: 16px
         border: 3px inset black

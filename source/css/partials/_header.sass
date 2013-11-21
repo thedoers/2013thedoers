@@ -7,7 +7,7 @@ $white : #FFFFFF
 .blender
   font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
 #header
-  //+susy-grid-background
+  +susy-grid-background
 
   +container($total-columns, $break)
   .padder
@@ -61,7 +61,7 @@ $white : #FFFFFF
 
 +at-breakpoint($break)
   #header
-    //+susy-grid-background
+    +susy-grid-background
     +span-columns(7,7)
 
     .padder

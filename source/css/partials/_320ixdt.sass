@@ -12,6 +12,7 @@ article.ixdt
   //+susy-grid-background
   +container($total-columns, $break)
   header
+    +span-columns(7,7)
     margin-bottom: 16px
     h2.ixdt-title
       width: 100%!important
@@ -20,7 +21,8 @@ article.ixdt
       +replace-text-with-dimensions("ixdt/ixdt_logo_mobile.png")
 
   section.container
-    //margin-bottom: 16px
+    +span-columns(7,7)
+    margin-bottom: 16px
     h3.subtitle-paragraph
       float: left
       margin: 0px
@@ -42,7 +44,7 @@ article.ixdt
     .paragraph
       +span-columns(6,7)
       +pre(1,7)
-      margin-bottom: 16px
+      //margin-bottom: 16px
       @extend .vistasansaltbookita
       font-size: 15px
       font-style: italic
@@ -66,26 +68,31 @@ article.ixdt
           background: $acqua
         margin: 0px
   section.location
+    +span-columns(7,7)
+    margin-bottom: 16px
     position: relative
-    //margin-bottom: 16px
+    span
+      width: 110px
+      text-align: center
     span.date
       position: absolute
-      bottom: 98px
-      left: 15px
+      top: 6px
+      left: 6px
       background: white
     span.hour
       position: absolute
-      bottom: 70px
-      left: 15px
+      width: 74px
+      top: 33px
+      left: 6px
       background: white
     span.place
       position: absolute
-      bottom: 55px
-      right: 35px
+      bottom: 37px
+      right: 47px
       background: white
     span.address
       position: absolute
-      bottom: 25px
+      bottom: 10px
       right: 47px
       background: white
     span.date, span.place
@@ -99,10 +106,11 @@ article.ixdt
       font-weight: 300
       font-style: italic
     figure
-      margin-bottom: 16px
-
+      img#mappa_desktop
+        display: none
   section.register
-    //margin-bottom: 16px
+    +span-columns(7,7)
+    margin-bottom: 16px
     h3
       margin: 0px
       margin-bottom: 16px
@@ -110,8 +118,8 @@ article.ixdt
       font-weight: 600
       font-size:  23px
     form
-      +span-columns(7,7)
-      margin-bottom: 16px
+      //+span-columns(7,7)
+      //margin-bottom: 16px
       input
         text-align: center
       .email

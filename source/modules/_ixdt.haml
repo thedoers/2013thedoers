@@ -21,6 +21,8 @@
         huuuuuge companies that's why UX is a key competitive factors for
         Startups.
   %section.location
+    %figure
+      = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Piazza+Vittorio+13,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/WfOzcT%7Clabel:S%7C45.0655,7.6955&sensor=false', id:'mappa_mobile', alt:'IxdtLocation'
     %span.date
       26 NOV 2013
     %span.hour
@@ -29,10 +31,8 @@
       LAB - TORINO
     %span.address
       Piazza Vittorio 13
-    %figure
-      %image{src:'http://maps.googleapis.com/maps/api/staticmap?center=Piazza+Vittorio+13,Torino,To&zoom=18&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C45.0655,7.6955&sensor=false', id:'mappa_mobile', alt:'IxdtLocation', width: '100%' , height: 'auto'}
-      -#%image{src:'/images/ixdt/mappa_mobile.png', id:'mappa_mobile', alt:'IxdtLocation', width: '100%' , height: 'auto'}
-      -#%image{src:'/images/ixdt/mappa_desktop.png', id:'mappa_desktop', alt:'IxdtLocation', width: '100%' , height: 'auto'}
+
+
 
   %section.register
     %h3
@@ -58,14 +58,16 @@
       %ul.left-sponsor
         %li.treatabit
           %a{href:'', target:'_blank'}
-        -#%li.treatabit-eng
-        -#  %a{href:'', target:'_blank'} in English
-      %ul.right-share
-        %li.linkedin
-          <a href='http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.thedoers.co/' target='_blank'></a>
-        %li.googleplus
-          %a{href:'https://plus.google.com/share?url=http://www.thedoers.co', onclick:'javascript:window.open(this.href,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600"");return false;'}
-        %li.twitter
-          %a{href:'http://twitter.com/home?status=http://www.thedoers.co', target:'_blank'}
-        %li.facebook
-          %a{href:'http://facebook.com/share.php?u=http://www.thedoers.co', target:'_blank'}
+            Treatabit
+      .share
+        .addthis_toolbox
+          .custom_images.green
+            %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "ixdt/ixdt_share-fb.png", border: "0", alt: "facebook share"
+            %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "ixdt/ixdt_share-tw.png", border: "0", alt: "twitter share"
+            %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "ixdt/ixdt_share-gp.png", border: "0", alt: "google plus share"
+            %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "ixdt/ixdt_share-li.png", border: "0", alt: "linkedin share"
+          %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0a3fcd63f94cae", type: "text/javascript"}

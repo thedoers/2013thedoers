@@ -75,18 +75,22 @@ article.ixdt
       +span-columns(3,7)
       text-align: center
       background: $white
-      position: relative
+      position: absolute
       display: block
-    span.date
-      margin-top: 6px
 
+    span.date
+      top: 6px
+      left: 0px
     span.hour
-      margin-top: 4px
-      clear: left
+      top: 33px
+      left: 0px
     span.place
       +pre(4)
+      bottom: 37px
+      right: 0px
     span.address
-      margin-top: 4px
+      bottom: 10px
+      right: 0px
       +pre(4)
       clear: left
     span.date, span.place
@@ -100,15 +104,17 @@ article.ixdt
       font-weight: 300
       font-style: italic
     figure
-      +stretch(0,-($grid-padding),0,-($grid-padding))
+      margin-left: -($grid-padding)
+      margin-right: -($grid-padding)
+      position: relative
+
       img
         position: relative
         display: block
         vertical-align: middle
         width: 100%
         height: auto
-      img#mappa_desktop
-        display: none
+
   section.register
     +span-columns(7,7)
     margin-bottom: 16px
@@ -120,28 +126,31 @@ article.ixdt
       font-size:  23px
     form
       +span-columns(7,7)
-      //margin-bottom: 16px
+
       input
-        @include border-radius(0px)
+        +border-radius(0px)
+        +box-sizing(content-box)
       fieldset
         border: none
         margin: 0
         padding: 0
-
+        p
+          margin: 0
+          padding: 0
 
       .email, .name
         height: 50px
-        width: 98%
+        width: 97%
         margin: 0px
         margin-bottom: 16px
         border: 3px inset black
         @extend .vistasansaltbold
         font-size: px-to-em(14px,16px)
         text-indent: 10px
-
+        padding: 0
       .send
         height: 40px
-        width: 98%
+        width: 97%
         margin: 0px
         text-decoration: none
         background: $black
@@ -151,8 +160,11 @@ article.ixdt
         font-size: 20px
         font-weight: 600
         font-style: italic
+        border: 3px inset black
         color: $white
         box-shadow: $wow-green 2px 2px 1px 0px
+        padding: 0
+
   footer
     .text
       width: 100%
@@ -175,34 +187,17 @@ article.ixdt
           text-decoration: none
           float: left
         .treatabit
-          width: 41px
-          height: 51px
-          float: left
-          background: image-url("ixdt/ixdt_treatabit-logo-mobile.png") no-repeat
+          a
+            +replace-text-with-dimensions("ixdt/ixdt_treatbit-mobile.png")
+            display: block
         .treatabit-eng
           a
-      ul.right-share
+      .share
         list-style-type: none
         float: right
         margin: 0px
         margin-top: 25px
         padding: 0px
-        li
-          text-decoration: none
-          width: 26px
-          height: 26px
-          float: right
-          padding-right: 15px
-          &:first-child
-            padding-right: 0px!important
-        .facebook
-          background: image-url("ixdt/ixdt_social-fb.png") no-repeat
-        .twitter
-          background: image-url("ixdt/ixdt_social-twitter.png") no-repeat
-        .googleplus
-          background: image-url("ixdt/ixdt_social-gplus.png") no-repeat
-        .linkedin
-          background: image-url("ixdt/ixdt_social-linkedin.png") no-repeat
 
 
 

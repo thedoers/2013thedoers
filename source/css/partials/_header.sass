@@ -1,31 +1,36 @@
-$white : #FFFFFF
+#container
+  +container($total-columns, $break)
+  +susy-grid-background
 .nodecoration
   text-decoration: none
 .pinkletter
   span
-    color: #fb8585
+    color: $pink
 .blender
   font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
 #header
-  +susy-grid-background
 
-  +container($total-columns, $break)
+  +span-columns(7 ,7)
+
   .padder
     position: relative
     margin-top: 22px
     margin-bottom: 22px
-    +background(image-url("header/header_shades-background-mobile.png"))
     height: image-height("header/header_shades-background-mobile.png")
+  .background
+    +stretch(0,0,0,0)
+    +background(image-url("header/header_shades-background-mobile.png"))
+
 
 
   a.logo
     position: relative
     padding-top: 70px
     display: block
-    +replace-text-with-dimensions("header/header_logo-mobile.png")
+    +replace-text-with-dimensions("header/header_logo-mobile.png",100%,100%)
     @extend .nodecoration
     +pre(1)
-    background-position: 100% 100%
+
 
   h1
     color: $white
@@ -37,6 +42,7 @@ $white : #FFFFFF
     line-height: px-to-em(24px,16px)
     @extend .pinkletter
     margin-top: 60px
+    position: relative
 
   .share
     position: absolute
@@ -59,17 +65,19 @@ $white : #FFFFFF
     margin-bottom: 10px
 
 
-+at-breakpoint($break)
-  #header
++at-breakpoint(30em $break)
+  #container
     +susy-grid-background
-    +span-columns(7,7)
+  #header
+
+    +span-columns(12 ,12)
 
     .padder
       position: relative
-      margin: 22px
+
       +background(image-url("header/header_shades-background.png"))
       height: image-height("header/header_shades-background.png")
-      padding-left: 46px
+
     a
       .logo
         +replace-text-with-dimensions("header/header_logo.png")
@@ -92,6 +100,7 @@ $white : #FFFFFF
       right: 10px
 
     ul.menu-container
+      display: inline
       position: absolute
       bottom: 60px
       right: 20px
@@ -107,6 +116,10 @@ $white : #FFFFFF
           font-weight: px-to-em(19px,16px)
           display: block
           background-color: #2c43b5
-          padding-left: 15px
-          padding-right: 15px
 
+          padding-right: 15px
++at-breakpoint(60em $break2)
+  #container
+    +susy-grid-background
+  #header
+    +span-columns(12 ,24)

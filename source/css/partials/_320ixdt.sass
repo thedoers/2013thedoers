@@ -9,16 +9,15 @@
 .vistasansaltmediaita
   font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
 article.ixdt
-  //+susy-grid-background
-  +container($total-columns, $break)
+  +span-columns(7,7)
   header
     +span-columns(7,7)
     margin-bottom: 16px
     h2.ixdt-title
       width: 100%!important
-      border-bottom: 5px solid black
+      border-bottom: 5px solid $black
       margin: 0px!important
-      +replace-text-with-dimensions("ixdt/ixdt_logo_mobile.png",0,0)
+      +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
 
   section.container
     +span-columns(7,7)
@@ -27,7 +26,7 @@ article.ixdt
       float: left
       margin: 0px
       margin-bottom: 16px
-      border-bottom: 5px solid black
+      border-bottom: 5px solid $black
       p.subtitle
         @extend .droidsans
         font-weight: 600
@@ -71,30 +70,25 @@ article.ixdt
     +span-columns(7,7)
     margin-bottom: 16px
     position: relative
+
     span
-      width: 110px
+      +span-columns(3,7)
       text-align: center
+      background: $white
+      position: relative
+      display: block
     span.date
-      position: absolute
-      top: 6px
-      left: 6px
-      background: white
+      margin-top: 6px
+
     span.hour
-      position: absolute
-      width: 74px
-      top: 33px
-      left: 6px
-      background: white
+      margin-top: 4px
+      clear: left
     span.place
-      position: absolute
-      bottom: 37px
-      right: 24px
-      background: white
+      +pre(4)
     span.address
-      position: absolute
-      bottom: 10px
-      right: 24px
-      background: white
+      margin-top: 4px
+      +pre(4)
+      clear: left
     span.date, span.place
       @extend .akzidenz
       font-size: 28px
@@ -106,6 +100,13 @@ article.ixdt
       font-weight: 300
       font-style: italic
     figure
+      +stretch(0,-($grid-padding),0,-($grid-padding))
+      img
+        position: relative
+        display: block
+        vertical-align: middle
+        width: 100%
+        height: auto
       img#mappa_desktop
         display: none
   section.register
@@ -143,15 +144,15 @@ article.ixdt
         width: 98%
         margin: 0px
         text-decoration: none
-        background: black
+        background: $black
         border: none
         text-align: center
         @extend .akzidenz
         font-size: 20px
         font-weight: 600
         font-style: italic
-        color: white
-        box-shadow: rgb(0,255,255) 2px 2px 1px 0px
+        color: $white
+        box-shadow: $wow-green 2px 2px 1px 0px
   footer
     .text
       width: 100%
@@ -177,7 +178,7 @@ article.ixdt
           width: 41px
           height: 51px
           float: left
-          background: image-url("ixdt/treatabit_logo_mobile.png") no-repeat
+          background: image-url("ixdt/ixdt_treatabit-logo-mobile.png") no-repeat
         .treatabit-eng
           a
       ul.right-share
@@ -195,13 +196,13 @@ article.ixdt
           &:first-child
             padding-right: 0px!important
         .facebook
-          background: image-url("ixdt/social_fb.png") no-repeat
+          background: image-url("ixdt/ixdt_social-fb.png") no-repeat
         .twitter
-          background: image-url("ixdt/social_twitter.png") no-repeat
+          background: image-url("ixdt/ixdt_social-twitter.png") no-repeat
         .googleplus
-          background: image-url("ixdt/social_gplus.png") no-repeat
+          background: image-url("ixdt/ixdt_social-gplus.png") no-repeat
         .linkedin
-          background: image-url("ixdt/social_linkedin.png") no-repeat
+          background: image-url("ixdt/ixdt_social-linkedin.png") no-repeat
 
 
 

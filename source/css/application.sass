@@ -1,13 +1,11 @@
 @import compass/utilities/sprites
-@import compass/typography/text/replacement
-@import compass/typography/lists/horizontal-list
-@import compass/typography/lists/bullets
+@import compass/typography
 @import h5bp
 @import susy
 @import compass/typography/vertical_rhythm
-@import compass/css3/hyphenation
 @import compass/support
 @import compass/css3
+@import "compass/layout/stretching"
 
 
 +h5bp-normalize
@@ -71,53 +69,10 @@ $acqua-green: #24CDA8
   -webkit-font-smoothing: antialiased
   -webkit-overflow-scrolling: touch
 
-.isotope
-  /* change duration value to whatever you like
-  -webkit-transition-duration: 0.8s
-  -moz-transition-duration: 0.8s
-  -ms-transition-duration: 0.8s
-  -o-transition-duration: 0.8s
-  transition-duration: 0.8s
-  .isotope-item
-    /* change duration value to whatever you like
-    -webkit-transition-duration: 0.8s
-    -moz-transition-duration: 0.8s
-    -ms-transition-duration: 0.8s
-    -o-transition-duration: 0.8s
-    transition-duration: 0.8s
-    -webkit-transition-property: -webkit-transform, opacity
-    -moz-transition-property: -moz-transform, opacity
-    -ms-transition-property: -ms-transform, opacity
-    -o-transition-property: -o-transform, opacity
-    transition-property: transform, opacity
-  -webkit-transition-property: height, width
-  -moz-transition-property: height, width
-  -ms-transition-property: height, width
-  -o-transition-property: height, width
-  transition-property: height, width
-  &.no-transition
-    -webkit-transition-duration: 0s
-    -moz-transition-duration: 0s
-    -ms-transition-duration: 0s
-    -o-transition-duration: 0s
-    transition-duration: 0s
-    .isotope-item
-      -webkit-transition-duration: 0s
-      -moz-transition-duration: 0s
-      -ms-transition-duration: 0s
-      -o-transition-duration: 0s
-      transition-duration: 0s
-  .isotope-item.no-transition
-    -webkit-transition-duration: 0s
-    -moz-transition-duration: 0s
-    -ms-transition-duration: 0s
-    -o-transition-duration: 0s
-    transition-duration: 0s
 
 
 
-@import "compass/css3/hyphenation"
-@import "compass/layout/stretching"
+@import "partials/isotope"
 @import "partials/fabrica"
 @import "partials/ixdt"
 @import "partials/header"

@@ -10,11 +10,12 @@
   +span-columns(7,7)
   position: relative
   .padder
+    +span-columns(6,7)
     position: relative
     margin-top: 22px
 
     padding-top: 40px
-    padding-left: 20px
+    +prefix(1)
     padding-bottom: 20px
   .background
     +stretch(0,0,0,0)
@@ -32,7 +33,7 @@
   .follow
     position: absolute
     top: 22px
-    right: 20px
+    +post(1)
     p
       margin: 0
       padding: 0
@@ -47,10 +48,10 @@
       vertical-align: middle
       width: 100%
       height: auto
-+at-breakpoint(30em $break)
++at-breakpoint($screen1 $break1)
   #footer
     +span-columns(12 ,12)
-+at-breakpoint(60em $break2)
++at-breakpoint($screen2 $break2)
   #footer
     +span-columns(8 ,24)
 

@@ -8,14 +8,14 @@
   font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
 #header
 
-  +span-columns(7 ,7)
+  +span-columns(10 ,10)
   -webkit-perspective: 600px
   -moz-perspective: 600px
   perspective: 600px
   position: relative
   height: 464px
   .front
-    background-color: $white
+
     float: none
     position: absolute
     top: 0
@@ -38,7 +38,7 @@
     transition: all .8s ease-in-out
 
   .back
-    background-color: $white
+
     float: none
     position: absolute
     top: 0
@@ -94,7 +94,7 @@
 
   h1
     color: $white
-    +span-columns(4,7)
+    +span-columns(6,10)
     @extend .blender
     +pre(1)
     font-weight: 600
@@ -111,7 +111,27 @@
     right: 10px
 
   ul.menu-container
-    display: none
+    +horizontal-list-container
+    display: inline
+    position: relative
+    +pre(5)
+    +no-bullets
+    +span-columns(4,10)
+    margin-top: 130px
+    li
+
+      +span-columns(2,4)
+      &:last-child
+        +span-columns(2 omega,4)
+      a
+        @extend .blender
+        @extend .nodecoration
+        @extend .pinkletter
+        color: $white
+        font-weight: px-to-em(19px,16px)
+        display: block
+        background-color: #2c43b5
+        text-align: center
 
   p.scroll
     position: absolute
@@ -125,7 +145,7 @@
     margin-bottom: 10px
 
 
-+at-breakpoint(30em $break)
++at-breakpoint($screen2 $break2)
 
   .nodecoration
     text-decoration: none
@@ -136,7 +156,6 @@
     font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
 
   #container
-    //+susy-grid-background
   #header
 
     +span-columns(12 ,12)
@@ -155,7 +174,7 @@
         @extend .nodecoration
     h1
       color: $white
-      +span-columns(4,7)
+      +span-columns(4,10)
       @extend .blender
 
       font-weight: 600
@@ -168,28 +187,12 @@
       top: 10px
       right: 10px
 
-    ul.menu-container
-      display: inline
-      position: absolute
-      bottom: 60px
-      right: 20px
-      +no-bullets
-      +horizontal-list-container
-      li
-        +horizontal-list-item
 
-        a
-          @extend .blender
-          @extend .nodecoration
-          @extend .pinkletter
-          color: $white
-          font-weight: px-to-em(19px,16px)
-          display: block
-          background-color: #2c43b5
-          padding-left: 15px
-          padding-right: 15px
+
+
+
+
 +at-breakpoint($screen3 $break3)
   #container
-    //+susy-grid-background
   #header
     +span-columns(8 ,24)

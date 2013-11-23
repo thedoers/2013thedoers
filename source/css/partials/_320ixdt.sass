@@ -10,18 +10,19 @@
   font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
 article.ixdt
   +span-columns(7,7)
+
   header
     +span-columns(7,7)
     margin-bottom: 16px
     h2.ixdt-title
-      width: 100%!important
-      border-bottom: 5px solid $black
-      margin: 0px!important
+      margin-bottom: 0
       +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
 
   section.container
     +span-columns(7,7)
+    border-top: 5px solid $black
     margin-bottom: 16px
+    padding-top: 10px
     h3.subtitle-paragraph
       float: left
       margin: 0px
@@ -190,8 +191,7 @@ article.ixdt
           a
             +replace-text-with-dimensions("ixdt/ixdt_treatbit-mobile.png")
             display: block
-        .treatabit-eng
-          a
+
       .share
         list-style-type: none
         float: right

@@ -55,14 +55,7 @@ $acqua-green: #24CDA8
 @import partials/fonts
 @import partials/grid
 
-@import "compass/css3/hyphenation"
-@import "compass/layout/stretching"
-@import "partials/320fabrica"
-@import "partials/960fabrica"
-@import "partials/320ixdt"
-@import "partials/960ixdt"
-@import "partials/header"
-@import "partials/footer"
+
 
 //@import partials/320grid
 //@import partials/960grid
@@ -71,3 +64,63 @@ $acqua-green: #24CDA8
 *:focus
   outline-style: none
   outline-width: 0px
+
+#container
+  +container($total-columns, $break)
+  //+susy-grid-background
+  -webkit-font-smoothing: antialiased
+  -webkit-overflow-scrolling: touch
+
+.isotope
+  /* change duration value to whatever you like
+  -webkit-transition-duration: 0.8s
+  -moz-transition-duration: 0.8s
+  -ms-transition-duration: 0.8s
+  -o-transition-duration: 0.8s
+  transition-duration: 0.8s
+  .isotope-item
+    /* change duration value to whatever you like
+    -webkit-transition-duration: 0.8s
+    -moz-transition-duration: 0.8s
+    -ms-transition-duration: 0.8s
+    -o-transition-duration: 0.8s
+    transition-duration: 0.8s
+    -webkit-transition-property: -webkit-transform, opacity
+    -moz-transition-property: -moz-transform, opacity
+    -ms-transition-property: -ms-transform, opacity
+    -o-transition-property: -o-transform, opacity
+    transition-property: transform, opacity
+  -webkit-transition-property: height, width
+  -moz-transition-property: height, width
+  -ms-transition-property: height, width
+  -o-transition-property: height, width
+  transition-property: height, width
+  &.no-transition
+    -webkit-transition-duration: 0s
+    -moz-transition-duration: 0s
+    -ms-transition-duration: 0s
+    -o-transition-duration: 0s
+    transition-duration: 0s
+    .isotope-item
+      -webkit-transition-duration: 0s
+      -moz-transition-duration: 0s
+      -ms-transition-duration: 0s
+      -o-transition-duration: 0s
+      transition-duration: 0s
+  .isotope-item.no-transition
+    -webkit-transition-duration: 0s
+    -moz-transition-duration: 0s
+    -ms-transition-duration: 0s
+    -o-transition-duration: 0s
+    transition-duration: 0s
+
+
+
+@import "compass/css3/hyphenation"
+@import "compass/layout/stretching"
+@import "partials/320fabrica"
+@import "partials/960fabrica"
+@import "partials/320ixdt"
+@import "partials/960ixdt"
+@import "partials/header"
+@import "partials/footer"

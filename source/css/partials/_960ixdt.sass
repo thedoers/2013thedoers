@@ -1,6 +1,17 @@
-+at-breakpoint($break)
+.akzidenz
+  font-family: Akzidenz , "Helvetica neue", Helvetica, Arial, sans-serif
+.droidsans
+  font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbold
+  font-family: VistaSansab, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbookita
+  font-family: VistaSansabi, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltmediaita
+  font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
+
++at-breakpoint($break2)
   article.ixdt
-    +span-columns(12 omega,24)
+    +span-columns(8 ,24)
     header
       h2.ixdt-title
         +replace-text-with-dimensions("ixdt/ixdt_logo-desktop.png",0,0)
@@ -39,10 +50,10 @@
       span.hour, span.address
         font-size: 22px
       figure
-        //img#mappa_mobile
-        //  display: none!important
-        //img#mappa_desktop
-        //  display: block!important
+        margin-left: 0
+        margin-right: 0
+        max-height: 200px
+        +clearfix
     section.register
       margin-bottom: 0px
       h3

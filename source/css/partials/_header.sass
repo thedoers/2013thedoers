@@ -1,6 +1,4 @@
-#container
-  +container($total-columns, $break)
-  +susy-grid-background
+
 .nodecoration
   text-decoration: none
 .pinkletter
@@ -11,6 +9,68 @@
 #header
 
   +span-columns(7 ,7)
+  -webkit-perspective: 600px
+  -moz-perspective: 600px
+  perspective: 600px
+  position: relative
+  height: 464px
+  .front
+    background-color: $white
+    float: none
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 900
+    width: inherit
+    height: inherit
+
+
+    -webkit-transform: rotateX(0deg) rotateY(0deg)
+    -moz-transform: rotateX(0deg) rotateY(0deg)
+    transform: rotateX(0deg) rotateY(0deg)
+    -webkit-transform-style: preserve-3d
+    -moz-transform-style: preserve-3d
+    transform-style: preserve-3d
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+    -webkit-transition: all .8s ease-in-out
+    transition: all .8s ease-in-out
+
+  .back
+    background-color: $white
+    float: none
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 800
+    width: inherit
+    height: inherit
+    -webkit-transform: rotateY(180deg)
+    -webkit-transform-style: preserve-3d
+    -webkit-backface-visibility: hidden
+    -moz-transform: rotateY(180deg)
+    -moz-transform-style: preserve-3d
+    -moz-backface-visibility: hidden
+    transform: rotateY(180deg)
+    transform-style: preserve-3d
+    backface-visibility: hidden
+    -webkit-transition: all .8s ease-in-out
+    transition: all .8s ease-in-out
+  &.flip
+    .front
+      z-index: 900
+      -webkit-transform: rotateY(-180deg)
+      -moz-transform: rotateY(-180deg)
+      transform: rotateY(-180deg)
+
+  &.flip
+    .back
+      z-index: 1000
+      -webkit-transform: rotateX(0deg) rotateY(0deg)
+      -moz-transform: rotateX(0deg) rotateY(0deg)
+      transform: rotateX(0deg) rotateY(0deg)
+
 
   .padder
     position: relative
@@ -66,8 +126,17 @@
 
 
 +at-breakpoint(30em $break)
+
+  .nodecoration
+    text-decoration: none
+  .pinkletter
+    span
+      color: $pink
+  .blender
+    font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
+
   #container
-    +susy-grid-background
+    //+susy-grid-background
   #header
 
     +span-columns(12 ,12)
@@ -108,18 +177,19 @@
       +horizontal-list-container
       li
         +horizontal-list-item
-        @extend .pinkletter
+
         a
           @extend .blender
           @extend .nodecoration
+          @extend .pinkletter
           color: $white
           font-weight: px-to-em(19px,16px)
           display: block
           background-color: #2c43b5
-
+          padding-left: 15px
           padding-right: 15px
 +at-breakpoint(60em $break2)
   #container
-    +susy-grid-background
+    //+susy-grid-background
   #header
-    +span-columns(12 ,24)
+    +span-columns(8 ,24)

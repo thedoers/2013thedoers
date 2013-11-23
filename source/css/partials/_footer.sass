@@ -8,6 +8,7 @@
 
 #footer
   +span-columns(7,7)
+  position: relative
   .padder
     position: relative
     margin-top: 22px
@@ -46,3 +47,13 @@
       vertical-align: middle
       width: 100%
       height: auto
++at-breakpoint(30em $break)
+  #footer
+    +span-columns(12 ,12)
++at-breakpoint(60em $break2)
+  #footer
+    +span-columns(8 ,24)
+
+    figure
+      margin-left: 0
+      margin-right: 0

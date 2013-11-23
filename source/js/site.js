@@ -1,5 +1,6 @@
 //= require "vendor/jquery"
 //= require "vendor/jquery.unveil.min"
+//= require "vendor/jquery.isotope.min"
 //= require "subscribe"
 /**
  * Created with JetBrains RubyMine.
@@ -10,4 +11,8 @@
  */
 $(document).ready(function(){
     ajaxform_subscribe();
+});
+
+$('#header').click(function(){
+    $('#header').toggleClass('flip');
 });

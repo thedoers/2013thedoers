@@ -9,17 +9,17 @@
 .vistasansaltmediaita
   font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
 article.ixdt
-  +span-columns(7,7)
+  +span-columns(10,10)
 
   header
-    +span-columns(7,7)
+    +span-columns(10,10)
     margin-bottom: 16px
     h2.ixdt-title
       margin-bottom: 0
       +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
 
   section.container
-    +span-columns(7,7)
+    +span-columns(10,10)
     border-top: 5px solid $black
     margin-bottom: 16px
     padding-top: 10px
@@ -33,7 +33,7 @@ article.ixdt
         font-weight: 600
         font-size:  23px
         margin: 0px
-        color: $acqua
+        color: $acqua-green
         .color
           color: $black
       p.powered
@@ -42,8 +42,8 @@ article.ixdt
         font-style: italic
         margin: 4px 0px 0px
     .paragraph
-      +span-columns(6,7)
-      +pre(1,7)
+      +span-columns(8,10)
+      +pre(2)
       //margin-bottom: 16px
       @extend .vistasansaltbookita
       font-size: 15px
@@ -65,15 +65,15 @@ article.ixdt
       p.t-paragraph
         //todo non prende il font bene
         .groundcolor
-          background: $acqua
+          background: $wow-green
         margin: 0px
   section.location
-    +span-columns(7,7)
+    +span-columns(10,10)
     margin-bottom: 16px
     position: relative
 
     span
-      +span-columns(3,7)
+      +span-columns(4,10)
       text-align: center
       background: $white
       position: absolute
@@ -117,7 +117,7 @@ article.ixdt
         height: auto
 
   section.register
-    +span-columns(7,7)
+    +span-columns(10,10)
     margin-bottom: 16px
     h3
       margin: 0px
@@ -126,7 +126,7 @@ article.ixdt
       font-weight: 600
       font-size:  23px
     form
-      +span-columns(7,7)
+      +span-columns(10,10)
 
       input
         +border-radius(0px)
@@ -199,18 +199,16 @@ article.ixdt
         margin-top: 25px
         padding: 0px
 
-.akzidenz
-  font-family: Akzidenz , "Helvetica neue", Helvetica, Arial, sans-serif
-.droidsans
-  font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
-.vistasansaltbold
-  font-family: VistaSansab, "Helvetica neue", Helvetica, Arial, sans-serif
-.vistasansaltbookita
-  font-family: VistaSansabi, "Helvetica neue", Helvetica, Arial, sans-serif
-.vistasansaltmediaita
-  font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
++at-breakpoint($screen3 $break3)
+  article.ixdt
+    +span-columns(10 omega,20)
+    section.location
+      figure
+        margin-left: 0
+        margin-right: 0
 
-+at-breakpoint($break2)
+//todo refactoring
++at-breakpoint($break4)
   article.ixdt
     +span-columns(8 ,24)
     header

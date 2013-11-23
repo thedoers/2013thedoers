@@ -7,7 +7,7 @@ $grid-padding: 1.250em
 $container-style: fluid
 $border-box-sizing: true
 
-$break1: 12
+$break1: 14
 $break2: 14
 $break3: 20
 $break4: 36
@@ -18,3 +18,23 @@ $screen3: 40em
 $screen4: 60em
 $screen5: 80em
 $screen6: 90em
+
+
+
+#container
+  +container($total-columns, $break1, $break2, $break3, $break4)
+  //+susy-grid-background
+  -webkit-font-smoothing: antialiased
+  -webkit-overflow-scrolling: touch
++at-breakpoint($screen2 $break1)
+  #container
+    //+susy-grid-background
++at-breakpoint($screen3 $break3)
+  #container
+    //+susy-grid-background
++at-breakpoint($screen4 $break3)
+  #container
+    //+susy-grid-background
++at-breakpoint($screen5 $break4)
+  #container
+    //+susy-grid-background

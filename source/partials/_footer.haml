@@ -1,18 +1,6 @@
-
 #footer
   .padder
     .background
-    %p
-      <span>T</span>HE <span>D</span>OERS S.R.L.<br />
-      <span>P</span>IVA 10766230014<br />
-      <span>T</span>ORINO, <span>V</span>IA <span>M</span>ANTOVA 36<br />
-
-    %p
-      <i></i> we@thedoersproject.com
-    %p
-      <i></i> +39 3393723401
-    %p
-      <i></i> callme@thedoers.co
     .follow
       %p
         <span>F</span>OLLOW <span>U</span>S
@@ -27,5 +15,16 @@
           %a.addthis_button_google_follow{style: "text-decoration:none; cursor: pointer; ",:"addthis:userid"=>"+Thedoersproject"}
             = image_tag "share-buttons/share_li.png", border: "0", alt: "linkedin share"
         %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0a3fcd63f94cae", type: "text/javascript"}
+    %p.info
+      <span>T</span>HE <span>D</span>OERS S.R.L.<br />
+      <span>P</span>IVA 10766230014<br />
+      <span>T</span>ORINO, <span>V</span>IA <span>M</span>ANTOVA 36<br />
+    %p.contacts
+      <a href="mailto:we@thedoersproject.com"><i class="fa fa-envelope-o fa-lg"></i> <span>we@thedoersproject.com</span></a>
+    %p.contacts
+      <a href="tel:+393393723401"><i class="fa fa-mobile fa-lg"></i>  <span>+39 3393723401</span></a>
+    %p.contacts
+      <a href="skype:osagep78?call"><i class="fa fa-skype fa-lg"></i> <span>callme@thedoers.co</span></a>
+
   %figure
     = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Via+Mantova+36,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/d0GT44%7Clabel:S%7C45.075065,7.69844&sensor=false', id:'map_office', alt:'Office Location, Via Mantova 36 Torino'

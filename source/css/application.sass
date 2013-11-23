@@ -7,6 +7,7 @@
 @import compass/css3
 @import "compass/layout/stretching"
 
+@import "partials/awesome/font-awesome"
 
 +h5bp-normalize
 +establish-baseline
@@ -63,23 +64,7 @@ $acqua-green: #24CDA8
   outline-style: none
   outline-width: 0px
 
-#container
-  +container($total-columns, $break1, $break2, $break3, $break4)
-  +susy-grid-background
-  -webkit-font-smoothing: antialiased
-  -webkit-overflow-scrolling: touch
-+at-breakpoint($screen2 $break1)
-  #container
-    +susy-grid-background
-+at-breakpoint($screen3 $break2)
-  #container
-    +susy-grid-background
-+at-breakpoint($screen4 $break3)
-  #container
-    +susy-grid-background
-+at-breakpoint($screen5 $break4)
-  #container
-    +susy-grid-background
+
 
 
 @import "partials/isotope"

@@ -3,8 +3,9 @@
   .front
     .padder
       .background
-      %a.logo{href: 'http://www.thedoers.co/'}
-        The Doers
+      .logo
+        %a{href: 'http://www.thedoers.co/'}
+          The Doers
       #mission
         %h1
           <span>U</span>SER  <span>E</span>XPERIENCE DESIGN<br />
@@ -54,11 +55,10 @@
               = image_tag "share-buttons/share_li.png", border: "0", alt: "linkedin share"
           %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0a3fcd63f94cae", type: "text/javascript"}
       %ul.menu-container
-        %li.container-hover
+        %li
           %a{href: 'http://blog.thedoers.co'}
             <span>b</span>log
-        %li.container-hover
+        %li
           %a{href: '/team.html'}
             <span>t</span>eam
-      %p.scroll
-        SCROLL TO EXPLORE
+      %p.scroll SCROLL TO EXPLORE

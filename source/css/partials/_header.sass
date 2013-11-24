@@ -7,15 +7,13 @@
 .blender
   font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
 #header
-
-  +span-columns(7 ,7)
+  +span-columns(10 ,10)
   -webkit-perspective: 600px
   -moz-perspective: 600px
   perspective: 600px
   position: relative
   height: 464px
   .front
-    background-color: $white
     float: none
     position: absolute
     top: 0
@@ -38,7 +36,7 @@
     transition: all .8s ease-in-out
 
   .back
-    background-color: $white
+
     float: none
     position: absolute
     top: 0
@@ -85,7 +83,7 @@
 
   a.logo
     position: relative
-    padding-top: 70px
+    margin-top: 70px
     display: block
     +replace-text-with-dimensions("header/header_logo-mobile.png",100%,100%)
     @extend .nodecoration
@@ -94,7 +92,7 @@
 
   h1
     color: $white
-    +span-columns(4,7)
+    +span-columns(6,10)
     @extend .blender
     +pre(1)
     font-weight: 600
@@ -106,12 +104,34 @@
 
   .share
     position: absolute
-    right: 0
-    top: 10px
-    right: 10px
+    top: 24px
+    right: columns(1,10)
+    margin-top: 0
+    float: right
+    width: auto
 
   ul.menu-container
+    +horizontal-list-container
     display: none
+    position: relative
+    +pre(5)
+    +no-bullets
+    +span-columns(4,10)
+    margin-top: 130px
+    li
+
+      +span-columns(2,4)
+      &:last-child
+        +span-columns(2 omega,4)
+      a
+        @extend .blender
+        @extend .nodecoration
+        @extend .pinkletter
+        color: $white
+        font-weight: px-to-em(19px,16px)
+        display: block
+        background-color: #2c43b5
+        text-align: center
 
   p.scroll
     position: absolute
@@ -125,71 +145,13 @@
     margin-bottom: 10px
 
 
-+at-breakpoint(30em $break1)
-
-  .nodecoration
-    text-decoration: none
-  .pinkletter
-    span
-      color: $pink
-  .blender
-    font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
-
-  #container
-    //+susy-grid-background
++at-breakpoint($screen3 $break3)
   #header
-
-    +span-columns(12 ,12)
-
-    .padder
-      position: relative
-
-      +background(image-url("header/header_shades-background.png"))
-      height: image-height("header/header_shades-background.png")
-
-    a
-      .logo
-        +replace-text-with-dimensions("header/header_logo.png")
-        padding-top: 75px
-
-        @extend .nodecoration
-    h1
-      color: $white
-      +span-columns(4,7)
-      @extend .blender
-
-      font-weight: 600
-      font-size: px-to-em(17px,16px)
-      @extend .pinkletter
-
-    .share
-      position: absolute
-      right: 0
-      top: 10px
-      right: 10px
-
+    +span-columns(10 ,20)
     ul.menu-container
       display: inline
-      position: absolute
-      bottom: 60px
-      right: 20px
-      +no-bullets
-      +horizontal-list-container
-      li
-        +horizontal-list-item
+    .front, .back
+      +span-columns(10 ,10)
+    .padder
+      +span-columns(10 ,10)
 
-        a
-          @extend .blender
-          @extend .nodecoration
-          @extend .pinkletter
-          color: $white
-          font-weight: px-to-em(19px,16px)
-          display: block
-          background-color: #2c43b5
-          padding-left: 15px
-          padding-right: 15px
-+at-breakpoint($screen3 $break3)
-  #container
-    //+susy-grid-background
-  #header
-    +span-columns(8 ,24)

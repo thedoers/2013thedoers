@@ -13,6 +13,6 @@ $(document).ready(function(){
     ajaxform_subscribe();
 });
 
-$('#header').click(function(){
+/*$('#header').click(function(){
     $('#header').toggleClass('flip');
-});
+});*/

@@ -200,8 +200,7 @@
   #header
     +span-columns(12 ,24)
     height: image-height("header/header_shades-background.png")
-    ul.menu-container
-      display: inline
+
     .front, .back
       +span-columns(12 ,12)
     .padder
@@ -216,18 +215,17 @@
     h1
       font-size: px-to-em(17px,16px)
     ul.menu-container
+      display: inline
       margin-top: 20px
       +span-columns(4,12)
-      +pre(7)
+
     .scroll
-      display: non
+      display: none
 
 +at-breakpoint($screen5 $break5)
   #header
     +span-columns(12 ,36)
     height: image-height("header/header_shades-background.png")
-    ul.menu-container
-      display: inline
     .front, .back
       +span-columns(12 ,12)
     .padder
@@ -242,8 +240,9 @@
     h1
       font-size: px-to-em(17px,16px)
     ul.menu-container
+      display: inline
       margin-top: 20px
       +span-columns(4,12)
-      +pre(7)
+
     .scroll
       display: none

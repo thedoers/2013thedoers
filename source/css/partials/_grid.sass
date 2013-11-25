@@ -18,8 +18,11 @@ $screen1: 20em //320px
 $screen2: 30em //480px
 $screen3: 40em //640px
 $screen4: 60em //960px
+$screen4a: 59.9em //960px
 $screen5: 80em //1280px
+$screen5a: 79.9em
 $screen6: 90em
+$screen6a: 89.9em
 
 
 
@@ -32,17 +35,17 @@ $screen6: 90em
 +at-breakpoint($screen2 $break2)
   #container
     //+susy-grid-background
-+at-breakpoint($screen3 $break3 $screen4)
++at-breakpoint($screen3 $break3 $screen4a)
   #container
     //+susy-grid-background
     >div
       +nth-omega(2n)
-+at-breakpoint($screen4 $break4 $screen5)
++at-breakpoint($screen4 $break4 $screen5a)
   #container
     //+susy-grid-background
     >div
       +nth-omega(2n)
-+at-breakpoint($screen5 $break5 $screen6)
++at-breakpoint($screen5 $break5 $screen6a)
   #container
     //+susy-grid-background
     >div

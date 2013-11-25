@@ -1,42 +1,64 @@
 .fago
   font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
 
-
 article.fabrica
+  //+susy-grid-background
   color: $white
   @extend .fago
   width: 100%
   float: left
   clear: both
+
   header
+    position: relative
     .image-container
-      width: 100%
-      position: absolute
+
+
+    h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
+      background: $black
+      +box-shadow($white 1px 1px 0px)
+    .image-container
+      margin-left: -($grid-padding)
+      margin-right: -($grid-padding)
+      position: relative
       z-index: -10
+
       img
+        display: block
+        vertical-align: middle
+        height: 220px
         width: 100%
 
+      #fabrica_bg-mobile
+        display: block
+      #fabrica_bg-desktop
+        display: none
+
     h2.fabrica-title
-      background: $black
-      z-index: 10
-      width: 172px
+      position: absolute
       height: 21px
-      position: relative
+      width: 182px
+      top: 46px
       margin: 0
-      top: 42px
+      z-index: 10
       +replace-text("fabrica/fabrica_logo.png")
+
     h3.subtitle
-      position: relative
-      margin: 46px 0px 0px
+      position: absolute
+      height: 20px
       width: 66px
-      background: black
+      top: 71px
+      margin: 0px
       text-align: center
       @extend .fago
       font-weight: 600
       font-size: px-to-em(19px,16px)
       padding: 0px
+
     .subtitle-paragraph
-      margin-top: 8px
+      position: absolute
+      top: 99px
+
       span.paragraph
         background: black
         float: left
@@ -44,96 +66,179 @@ article.fabrica
         font-size: px-to-em(15px,16px)
         padding: 2px 8px
         margin-top: 2px
+
         span.big-symbol
-          @extend .fago
-          font-weight: 600
           font-size: px-to-em(21px, 16px)
         span.big-number
+          font-size: px-to-em(34px, 16px)
+        span.big-symbol, span.big-number
           @extend .fago
           font-weight: 600
-          font-size: px-to-em(34px, 16px)
 
   section.container
-    +span-columns(6,7)
-    +pre(1,7)
-    margin-top: 10px
+    //todo chiedere a Pier gliela posizione dal container va bene così
+    +span-columns(9,10)
+    +pre(1,10)
+    margin-top: -15px
+    margin-bottom: 26px
     font-size: px-to-em(14px, 16px)
-    float: left
-    clear: both
     p.base
       background: black
       margin: 0px auto
-
-    p.first span.white-bk
-      background: white
-      color: black
-      @extend .fago
-      font-weight: 600
-    p.text-one, p.text-due
-      @extend .fago
-      font-weight: 600
-      padding-bottom: 16px
+      padding-left: 9px
+      padding-right: 6px
+    p.first
+      padding-top: 30px
+      padding-bottom: 21px
+      a
+        text-decoration: none
+        color: white
+        border-bottom: 1px solid white
+      span.white-bk
+        background: $white
+        color: $black
+      span.white-bk, span.bold
+        @extend .fago
+        font-weight: 600
+      span.regular, span.bold
+        display: block
+    //todo mancano le righe
     p.underline
+      padding-top: 0px
+      padding-bottom: 0px
       background: white
       color: black
       @extend .fago
       font-weight: 600
+    p.last
+      padding-top: 22px
+      padding-bottom: 15px
+
+  section.register
+    +span-columns(9,10)
+    +pre(1,10)
+    margin-bottom: 27px
     form
+      width: span-columns(9,10)
       input
-        width: 98%
-        margin-left: 1%
-        padding: 0px
-      .email
+        +border-radius(0px)
+        +box-sizing(content-box)
+        border: 3px inset black
+        padding: 0
+        margin: 0
+        text-align: left
+        text-indent: 10px
+      fieldset
+        border: none
+        margin: 0
+        padding: 0
+        p
+          margin: 0
+          padding: 0
+
+      .email, .name
         height: 30px
-        width: 48%
-        margin-left: 1%
-        border: 3px solid black
-        margin-top: 26px
-        padding-left: 20px
-        float: left
-        clear: both
+        width: 93%
+        margin-bottom: 16px
+
       .send
         height: 32px
-        margin: 12px 0px 26px
-        padding-left: 20px
-        text-decoration: none
-        background: black
+        width: 84%
+        background: $black
         border: none
-        color: white
+        text-decoration: none
+        +box-shadow($grey 4px -4px 0px)
         @extend .fago
         font-weight: 600
         font-size: px-to-em(12px, 16px)
-        float: left
-        clear: both
+        color: $white
+
   footer
-    +span-columns(6,7)
-    +pre(1,7)
+    +span-columns(9,10)
+    +pre(1,10)
     height: 68px
-    float: left
+    //float: left
     text-align:  center
     background: black
     p
       background: black
       margin: 16px 0px 0px
       font-size: px-to-em(10.34px, 16px)
-    ul.share
-      height: auto
+    .share
       list-style-type: none
       margin: 0px
-      padding: 0px
-      display: inline-block
-      li
-        text-decoration: none
-        width: 16px
-        height: 16px
+      padding: 0
+      a
+        padding: 0px 6px 3px
+
++at-breakpoint($screen3 $break3)
+  article.fabrica
+    +susy-grid-background
+    +span-columns(20,20)
+    header
+      .image-container
+        img
+          height: auto
+        #fabrica_bg-mobile
+          display: none
+        #fabrica_bg-desktop
+          display: block
+
+    section.container
+      +span-columns(17, 20)
+      +pre(0)
+      margin-top: -151px
+      p.base
+
+      p.first
+        padding-botton: 15px
+        a
+
+        span.white-bk
+          display: block
+
+        span.bold
+          font-weight: 600
+          color: $black
+          background: $white
+
+        span.regular
+
+      p.underline
+        text-transform: uppercase
+        color: $white
+        background: $black
+      p.last
+
+    section.register
+      +span-columns(17,20)
+      +pre(0)
+      form
+        width: span-columns(17,20)
+        input
+
+        .email.name
+          .send
+
+    footer
+      +span-columns(17,20)
+      +pre(0)
+      height: 35px
+      p
+        margin: 5px 0 0 10px
         float: left
-        padding-left: 3px
-        padding-right: 6px
-      .facebook
-        background: image-url("fabrica/social-fab_fb.png") no-repeat
-      .twitter
-        background: image-url("fabrica/social-fab_twitter.png") no-repeat
-      .googleplus
-        background: image-url("fabrica/social-fab_gplus.png") no-repeat
-      .linkedin
-        background: image-url("fabrica/social-fab_linkedin.png") no-repeat
+      .share
+        margin: 5px 10px 0 0
+        float: right
+
+//todo refactoring
++at-breakpoint($screen4 $break4)
+  article.fabrica
+    //+susy-grid-background
+    +span-columns(8 ,24)
+
+
+
+
+
+

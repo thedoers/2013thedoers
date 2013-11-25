@@ -95,8 +95,9 @@ article.fabrica
         color: white
         border-bottom: 1px solid white
       span.white-bk
-        background: $white
+        padding: 3px
         color: $black
+        background: $white
       span.white-bk, span.bold
         @extend .fago
         font-weight: 600
@@ -106,8 +107,8 @@ article.fabrica
     p.underline
       padding-top: 0px
       padding-bottom: 0px
-      background: white
-      color: black
+      background: $white
+      color: $black
       @extend .fago
       font-weight: 600
     p.last
@@ -140,6 +141,7 @@ article.fabrica
         height: 30px
         width: 93%
         margin-bottom: 16px
+        font-size: px-to-em(13px, 16px)
 
       .send
         height: 32px
@@ -171,10 +173,10 @@ article.fabrica
       a
         padding: 0px 6px 3px
 
-+at-breakpoint($screen3 $break3)
++at-breakpoint($screen2 $break2)
   article.fabrica
     +susy-grid-background
-    +span-columns(20,20)
+    +span-columns(12,12)
     header
       .image-container
         img
@@ -185,7 +187,7 @@ article.fabrica
           display: block
 
     section.container
-      +span-columns(17, 20)
+      +span-columns(9, 12)
       +pre(0)
       margin-top: -151px
       p.base
@@ -196,40 +198,106 @@ article.fabrica
 
         span.white-bk
           display: block
-
         span.bold
           font-weight: 600
+          padding: 3px
           color: $black
           background: $white
-
         span.regular
 
       p.underline
         text-transform: uppercase
         color: $white
         background: $black
+
       p.last
 
     section.register
-      +span-columns(17,20)
+      +span-columns(9,12)
       +pre(0)
       form
-        width: span-columns(17,20)
+        width: span-columns(9,12)
         input
 
-        .email.name
-          .send
+        .email, .name
+          +span-columns(6,9)
+          font-size: px-to-em(13.78px, 16px)
+          +float-left
+        .send
+          +span-columns(3 omega,9)
+          font-size: px-to-em(8.57px, 16px)
 
     footer
-      +span-columns(17,20)
+      +span-columns(9,12)
       +pre(0)
       height: 35px
       p
+        font-size: px-to-em(12.61px, 16px)
         margin: 5px 0 0 10px
         float: left
       .share
         margin: 5px 10px 0 0
         float: right
+
++at-breakpoint($screen3 $break3)
+  //article.fabrica
+  //  //+susy-grid-background
+  //  +span-columns(20,20)
+  //  header
+  //    .image-container
+  //      img
+  //        height: auto
+  //      #fabrica_bg-mobile
+  //        display: none
+  //      #fabrica_bg-desktop
+  //        display: block
+  //
+  //  section.container
+  //    +span-columns(17, 20)
+  //    +pre(0)
+  //    margin-top: -151px
+  //    p.base
+  //
+  //    p.first
+  //      padding-botton: 15px
+  //      a
+  //
+  //      span.white-bk
+  //        display: block
+  //
+  //      span.bold
+  //        font-weight: 600
+  //        color: $black
+  //        background: $white
+  //
+  //      span.regular
+  //
+  //    p.underline
+  //      text-transform: uppercase
+  //      color: $white
+  //      background: $black
+  //    p.last
+  //
+  //  section.register
+  //    +span-columns(17,20)
+  //    +pre(0)
+  //    form
+  //      width: span-columns(17,20)
+  //      input
+  //
+  //      .email.name
+  //        .send
+  //
+  //  footer
+  //    +span-columns(17,20)
+  //    +pre(0)
+  //    height: 35px
+  //    p
+  //      margin: 5px 0 0 10px
+  //      float: left
+  //    .share
+  //      margin: 5px 10px 0 0
+  //      float: right
 
 //todo refactoring
 +at-breakpoint($screen4 $break4)

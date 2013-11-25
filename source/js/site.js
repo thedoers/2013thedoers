@@ -13,10 +13,21 @@
  */
 $(document).ready(function(){
     ajaxform_subscribe();
+    overlay("a.map");
     $('#container').fadeloader({mode: "children",preloadImg: 'loading.gif',
         preloadWidth: 36,
         preloadHeight: 36});
 });
+
+
+function overlay(element){
+    $(element).hover(function(){
+        $(this).find(".overlay").fadeIn(400);
+    }, function() {
+        $(this).find(".overlay").fadeOut(400);
+    });
+
+}
 
 /*$('#header').click(function(){
     $('#header').toggleClass('flip');

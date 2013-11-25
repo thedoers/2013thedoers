@@ -61,8 +61,16 @@
       +span-columns(10,10)
       margin: 0
       padding: 0
-
-
+  a.map
+    @extend .nodecoration
+    position: relative
+    +span-columns(10,10)
+    .overlay
+      display: none
+      +stretch(0,0,0,0)
+      z-index: 2
+      +background(linear-gradient(top left, $blue, $pink))
+      +opacity(0.5)
   figure
     margin-left: -($grid-padding)
     margin-right: -($grid-padding)

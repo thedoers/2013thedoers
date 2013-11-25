@@ -2,7 +2,7 @@
   font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
 
 article.fabrica
-  +susy-grid-background
+  //+susy-grid-background
   color: $white
   @extend .fago
   width: 100%
@@ -11,6 +11,9 @@ article.fabrica
 
   header
     position: relative
+    .image-container
+
+
     h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
       background: $black
       +box-shadow($white 1px 1px 0px)
@@ -19,11 +22,17 @@ article.fabrica
       margin-right: -($grid-padding)
       position: relative
       z-index: -10
+
       img
         display: block
         vertical-align: middle
         height: 220px
         width: 100%
+
+      #fabrica_bg-mobile
+        display: block
+      #fabrica_bg-desktop
+        display: none
 
     h2.fabrica-title
       position: absolute
@@ -68,8 +77,8 @@ article.fabrica
 
   section.container
     //todo chiedere a Pier gliela posizione dal container va bene così
-    +span-columns(7,8)
-    +pre(1,8)
+    +span-columns(9,10)
+    +pre(1,10)
     margin-top: -15px
     margin-bottom: 26px
     font-size: px-to-em(14px, 16px)
@@ -81,9 +90,13 @@ article.fabrica
     p.first
       padding-top: 30px
       padding-bottom: 21px
+      a
+        text-decoration: none
+        color: white
+        border-bottom: 1px solid white
       span.white-bk
-        background: white
-        color: black
+        background: $white
+        color: $black
       span.white-bk, span.bold
         @extend .fago
         font-weight: 600
@@ -102,11 +115,11 @@ article.fabrica
       padding-bottom: 15px
 
   section.register
-    +span-columns(7,8)
-    +pre(1,8)
+    +span-columns(9,10)
+    +pre(1,10)
     margin-bottom: 27px
     form
-      +span-columns(7,8)
+      width: span-columns(9,10)
       input
         +border-radius(0px)
         +box-sizing(content-box)
@@ -141,8 +154,8 @@ article.fabrica
         color: $white
 
   footer
-    +span-columns(7,8)
-    +pre(1,8)
+    +span-columns(9,10)
+    +pre(1,10)
     height: 68px
     //float: left
     text-align:  center
@@ -157,6 +170,75 @@ article.fabrica
       padding: 0
       a
         padding: 0px 6px 3px
+
++at-breakpoint($screen3 $break3)
+  article.fabrica
+    +susy-grid-background
+    +span-columns(20,20)
+    header
+      .image-container
+        img
+          height: auto
+        #fabrica_bg-mobile
+          display: none
+        #fabrica_bg-desktop
+          display: block
+
+    section.container
+      +span-columns(17, 20)
+      +pre(0)
+      margin-top: -151px
+      p.base
+
+      p.first
+        padding-botton: 15px
+        a
+
+        span.white-bk
+          display: block
+
+        span.bold
+          font-weight: 600
+          color: $black
+          background: $white
+
+        span.regular
+
+      p.underline
+        text-transform: uppercase
+        color: $white
+        background: $black
+      p.last
+
+    section.register
+      +span-columns(17,20)
+      +pre(0)
+      form
+        width: span-columns(17,20)
+        input
+
+        .email.name
+          .send
+
+    footer
+      +span-columns(17,20)
+      +pre(0)
+      height: 35px
+      p
+        margin: 5px 0 0 10px
+        float: left
+      .share
+        margin: 5px 10px 0 0
+        float: right
+
+//todo refactoring
++at-breakpoint($screen4 $break4)
+  article.fabrica
+    //+susy-grid-background
+    +span-columns(8 ,24)
+
+
+
 
 
 

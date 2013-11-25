@@ -14,9 +14,10 @@
 $(document).ready(function(){
     ajaxform_subscribe();
     overlay("a.map");
-    $('#container').fadeloader({mode: "children",preloadImg: 'loading.gif',
+    $('#container').fadeloader({mode: "children",preloadImg: '/loading.gif',
         preloadWidth: 36,
-        preloadHeight: 36});
+        preloadHeight: 36,
+        displayType: "inline"});
 });
 
 

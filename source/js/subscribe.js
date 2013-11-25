@@ -13,6 +13,7 @@ function ajaxform_subscribe(){
             name = $form.find('input[name="name"]').val(),
             email = $form.find('input[name="email"]').val(),
             list = $form.find('input[name="list"]').val(),
+            success = $form.find('input[name="success"]').val(),
             url = $form.attr('action');
 
         $.post(url, {name:name, email:email, list:list, boolean:true},
@@ -41,8 +42,10 @@ function ajaxform_subscribe(){
                     }
                     else
                     {
+                        //todo fixare colori feedback
                         $("#status").text("You're subscribed!");
                         $("#status").css("color", "green");
+                        window.location.href = success;
                     }
                 }
                 else

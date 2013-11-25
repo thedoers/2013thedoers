@@ -7,6 +7,14 @@ module SiteHelpers
     end
     title
   end
+
+  def page_metas
+    metas = ""
+    if data.page.metas
+     metas = partial("metas/"+data.page.metas)
+    end
+    metas
+  end
   
   def page_description
     if data.page.description

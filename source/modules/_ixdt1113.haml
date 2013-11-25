@@ -47,6 +47,7 @@
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Leave your email to join the event!", :type=>"text"
           = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
+          = hidden_field_tag  :success, :value => "/events/success_ixdt1113.html#ixdt1113_tk", :name => "success", :id => 'submit_success'
           = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
           %p
             = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'GREAT, I\'M COMING!'
@@ -65,12 +66,12 @@
         .share
           .addthis_toolbox
             .custom_images.green
-              %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; "}
+              %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; ", :"fb:like:href"=>"http://thedoers.co/events/ixdt1113.html" }
                 = image_tag "ixdt/ixdt_share-fb.png", border: "0", alt: "facebook share"
-              %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; "}
+              %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; " , :"tw:url"=>"http://thedoers.co/events/ixdt1113.html", :"addthis:title"=>"Come with me at next #ixdt! #ux #startups #event #torino" }
                 = image_tag "ixdt/ixdt_share-tw.png", border: "0", alt: "twitter share"
-              %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; "}
+              %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co/events/ixdt1113.html" }
                 = image_tag "ixdt/ixdt_share-gp.png", border: "0", alt: "google plus share"
-              %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; "}
+              %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co/events/ixdt1113.html", :"addthis:title"=>"How to craft a perfect user Experience - even with a rough MVP" }
                 = image_tag "ixdt/ixdt_share-li.png", border: "0", alt: "linkedin share"
 

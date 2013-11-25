@@ -12,18 +12,8 @@ title: "main page"
 
     %title
       = page_title
-    %meta{:name => "description", :content => "We are doers. Internet enthusiasts, passionate about design&coding, eager learners and bold explorers. We love start-ups. We proudly work with them."}
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
-    %meta{:name => "apple-mobile-web-app-capable", :content =>"yes"}
-    %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
-    %meta{:name => "keywords", :content => "interaction design, user experience design, business development" }
-    %meta{:property=>"og:title", :content=>"The Doers main page and projects wall"}
-    %meta{:property=>"og:type", :content=>"website"}
-    %meta{:property=>"og:description", :content => "We are doers. Internet enthusiasts, passionate about design&coding, eager learners and bold explorers. We love start-ups. We proudly work with them."}
-    %meta{:property=>"og:url", :content=>"http://thedoers.co"}
-    %meta{:property=>"og:image", :content=>"http://thedoers.co/images/logo_200x200.png"}
-    %meta{:property=>"og:site_name", :content=>"TheDoers"}
-    %meta{:property=>"fb:app_id", :content=>"548417228527743"}
+
+    =partial "metas/main"
 
     <!-- Favicons and touch icons -->
     <!-- For retina-display iPads -->

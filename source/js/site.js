@@ -2,6 +2,8 @@
 //= require "vendor/jquery.unveil.min"
 //= require "vendor/jquery.isotope.min"
 //= require "subscribe"
+//= require "vendor/jquery.easing.min"
+//= require "vendor/jquery.fadeloader"
 /**
  * Created with JetBrains RubyMine.
  * User: piermariacosina
@@ -11,6 +13,9 @@
  */
 $(document).ready(function(){
     ajaxform_subscribe();
+    $('#container').fadeloader({mode: "children",preloadImg: 'loading.gif',
+        preloadWidth: 36,
+        preloadHeight: 36});
 });
 
 /*$('#header').click(function(){

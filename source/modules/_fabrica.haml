@@ -1,52 +1,52 @@
-%article.fabrica
-  %header
-    //todo image fabrica, swap nome
-    .image-container
-      = image_tag "fabrica/fabrica_bg-mobile.jpg", id:"fabrica_bg-mobile" ,alt:"Fabrica"
-      = image_tag "fabrica/fabrica_bg-desktop.jpg", id:"fabrica_bg-desktop" ,alt:"Fabrica"
-    %h2.fabrica-title
-      Fabrica
-    %h3.subtitle
-      STORY
-    .subtitle-paragraph
-      <span class="paragraph"> <span class="big-symbol">+ </span><span class="big-number"> 70% </span> di nuovi candidati</span>
-      <span class="paragraph">In cosa consiste il valore della tua</span>
-      <span class="paragraph">presenza online?</span>
-  %section.container
-    %p.base.first
-      Per <a href='http://www.fabrica.it' target='_blank'> Fabrica </a>- il centro di ricerca sulla Comunicazione del gruppo Benetton - il valore è rappresentato dal numero di studenti che chiedono di entrare nel programma di ricerca, e dalla qualità dei loro curriculum. In soli 3 mesi, dopo la ri-progettazione del sistema di candidatura online, e un nuovo sito web,
-      <span class="white-bk">il numero di curriculum è aumentato del 70%.</span><span class="regular">Come ci siamo riusciti?</span><span class="bold">Abbiamo migliorato drasticamente la User Experience!</span>
-    %p.base.underline
-      Vuoi sapere come la progettazione dell’Esperienza Utente può migliorare notevolmente i risultati della tua presenza online?
-    %p.base.last
-      Abbiamo molte soluzioni da suggerirti ed esperienze pratiche che ti possono ispirare: vieni a parlarne nel nostro studio, a pranzo, per un caffè, un bicchiere di whisky? Lascia la tua email per ottenere il tuo invito!
-  %section.register
-    - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
-      - field_set_tag do
-        %p
-          = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Lascia qui il tuo nome", :type=>"text"
-          = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Lascia qui la tua mail", :type=>"text"
-        = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
-        = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
-        = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
-        %p
-          = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'OTTIMO, E ALLORA SI MANGIA!'
-        %p#status
+#fabrica
+  %article
+    %header
+      //todo image fabrica, swap nome
+      .image-container
+        = image_tag "fabrica/fabrica_bg-mobile.jpg", id:"fabrica_bg-mobile" ,alt:"Fabrica"
+        = image_tag "fabrica/fabrica_bg-desktop.jpg", id:"fabrica_bg-desktop" ,alt:"Fabrica"
+      %h2.fabrica-title
+        Fabrica
+      %h3.subtitle
+        STORY
+      .subtitle-paragraph
+        <span class="paragraph"> <span class="big-symbol">+ </span><span class="big-number"> 70% </span> di nuovi candidati</span>
+        <span class="paragraph">In cosa consiste il valore della tua</span>
+        <span class="paragraph">presenza online?</span>
+    %section.container
+      %p.base.first
+        Per <a href='http://www.fabrica.it' target='_blank'> Fabrica </a>- il centro di ricerca sulla Comunicazione del gruppo Benetton - il valore è rappresentato dal numero di studenti che chiedono di entrare nel programma di ricerca, e dalla qualità dei loro curriculum. In soli 3 mesi, dopo la ri-progettazione del sistema di candidatura online, e un nuovo sito web,
+        <span class="white-bk">il numero di curriculum è aumentato del 70%.</span><span class="regular">Come ci siamo riusciti?</span><span class="bold">Abbiamo migliorato drasticamente la User Experience!</span>
+      %p.base.underline
+        Vuoi sapere come la progettazione dell’Esperienza Utente può migliorare notevolmente i risultati della tua presenza online?
+      %p.base.last
+        Abbiamo molte soluzioni da suggerirti ed esperienze pratiche che ti possono ispirare: vieni a parlarne nel nostro studio, a pranzo, per un caffè, un bicchiere di whisky? Lascia la tua email per ottenere il tuo invito!
+    %section.register
+      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+        - field_set_tag do
+          %p
+            = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Lascia qui il tuo nome", :type=>"text"
+            = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Lascia qui la tua mail", :type=>"text"
+          = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
+          = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
+          = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
+          %p
+            = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'OTTIMO, E ALLORA SI MANGIA!'
+          %p#status
 
-  %footer
-    %p
-      Se vuoi, puoi condividere qui
-    //todo cambiare icone con un height e weight, mettere la chiamata giusta sulla righa javascript
-    .share
-      .addthis_toolbox
-        .custom_images.green
-          %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; "}
-            = image_tag "fabrica/fabrica_share-fb.png", border: "0", alt: "facebook share"
-          %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; "}
-            = image_tag "fabrica/fabrica_share-tw.png", border: "0", alt: "twitter share"
-          %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; "}
-            = image_tag "fabrica/fabrica_share-gp.png", border: "0", alt: "google plus share"
-          %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; "}
-            = image_tag "fabrica/fabrica_share-li.png", border: "0", alt: "linkedin share"
-        %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0a3fcd63f94cae", type: "text/javascript"}
+    %footer
+      %p
+        Se vuoi, puoi condividere qui
+      //todo cambiare icone con un height e weight, mettere la chiamata giusta sulla righa javascript
+      .share
+        .addthis_toolbox{:"addthis:url"=>"http://example.com",:"addthis:title"=>"An Example Title",:"addthis:description"=>"An Example Description"}
+          .custom_images.green
+            %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "fabrica/fabrica_share-fb.png", border: "0", alt: "facebook share"
+            %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "fabrica/fabrica_share-tw.png", border: "0", alt: "twitter share"
+            %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "fabrica/fabrica_share-gp.png", border: "0", alt: "google plus share"
+            %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; "}
+              = image_tag "fabrica/fabrica_share-li.png", border: "0", alt: "linkedin share"
 

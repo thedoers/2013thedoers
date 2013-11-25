@@ -1,7 +1,8 @@
 .fago
   font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
 
-article.fabrica
+
+#fabrica
   //+susy-grid-background
   color: $white
   @extend .fago
@@ -209,7 +210,6 @@ article.fabrica
         text-transform: uppercase
         color: $white
         background: $black
-
       p.last
 
     section.register
@@ -301,7 +301,7 @@ article.fabrica
 
 //todo refactoring
 +at-breakpoint($screen4 $break4)
-  article.fabrica
+  #fabrica
     //+susy-grid-background
     +span-columns(8 ,24)
 

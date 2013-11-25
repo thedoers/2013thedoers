@@ -104,6 +104,17 @@
       font-size: px-to-em(20px,16px)
       font-weight: 300
       font-style: italic
+
+    a.map
+      @extend .nodecoration
+      position: relative
+      +span-columns(10,10)
+      .overlay
+        display: none
+        +stretch(0,0,0,0)
+        z-index: 2
+        background-color: $wow-green
+        +opacity(0.5)
     figure
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)

@@ -22,8 +22,10 @@
           huuuuuge companies that's why UX is a key competitive factors for
           Startups.
     %section.location
-      %figure
-        = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Piazza+Vittorio+13,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/WfOzcT%7Clabel:S%7C45.0655,7.6955&sensor=false', id:'mappa_ixdt', alt:'IxdtLocation'
+      %a.map{target: "_blank", href: 'https://maps.google.it/maps?q=google+maps+via+mantova+36+torino&ie=UTF-8&ei=t5OTUraCEa2Q7Abk7ICoAQ&ved=0CAgQ_AUoAg'}
+        .overlay
+        %figure
+          = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Piazza+Vittorio+13,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/WfOzcT%7Clabel:S%7C45.0655,7.6955&sensor=false', id:'mappa_ixdt', alt:'IxdtLocation'
       %span.date
         26 NOV 2013
       %span.hour

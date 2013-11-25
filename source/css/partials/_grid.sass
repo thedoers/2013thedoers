@@ -7,34 +7,51 @@ $grid-padding: 1.250em
 $container-style: fluid
 $border-box-sizing: true
 
-$break1: 14
-$break2: 14
+$break1: 10
+$break2: 12
 $break3: 20
-$break4: 36
+$break4: 24
+$break5: 36
+$break6: 46
 
-$screen1: 20em
-$screen2: 30em
-$screen3: 40em
-$screen4: 60em
-$screen5: 80em
+$screen1: 20em //320px
+$screen2: 30em //480px
+$screen3: 40em //640px
+$screen4: 60em //960px
+$screen5: 80em //1280px
 $screen6: 90em
 
 
 
 #container
-  +container($total-columns, $break1, $break2, $break3, $break4)
+  +container($total-columns, $break1, $break2, $break3, $break4, $break5)
   //+susy-grid-background
   -webkit-font-smoothing: antialiased
   -webkit-overflow-scrolling: touch
-+at-breakpoint($screen2 $break1)
+
++at-breakpoint($screen2 $break2)
   #container
     //+susy-grid-background
-+at-breakpoint($screen3 $break3)
++at-breakpoint($screen3 $break3 $screen4)
   #container
     //+susy-grid-background
-+at-breakpoint($screen4 $break3)
+    >div
+      +nth-omega(2n)
++at-breakpoint($screen4 $break4 $screen5)
   #container
     //+susy-grid-background
-+at-breakpoint($screen5 $break4)
+    >div
+      +nth-omega(2n)
++at-breakpoint($screen5 $break5 $screen6)
   #container
     //+susy-grid-background
+    >div
+      +nth-omega(3n)
+
++at-breakpoint($screen6 $break6)
+  #container
+    //+susy-grid-background
+    >div
+      +nth-omega(3n)
+
+

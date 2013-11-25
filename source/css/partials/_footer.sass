@@ -1,12 +1,11 @@
-.nodecoration
-  text-decoration: none
-.pinkletter
-  span
-    color: $pink
-.blender
-  font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
-
 #footer
+  .nodecoration
+    text-decoration: none
+  .pinkletter
+    span.pink
+      color: $pink
+  .blender
+    font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
   +span-columns(10,10)
   position: relative
   .padder
@@ -31,10 +30,11 @@
 
     &.contacts
       +span-columns(6,10)
-      line-height: 14px
+      line-height: px-to-em(14px,16px)
       display: inline-block
       a
         text-decoration: none
+        width: 100%
       i
         width: 25px
         height: 20px
@@ -64,25 +64,131 @@
 
 
   figure
-    +span-columns(10,10)
     margin-left: -($grid-padding)
     margin-right: -($grid-padding)
     position: relative
+    max-height: 200px
+    overflow: hidden
+    +float-left
 
     img
       position: relative
       display: block
       vertical-align: middle
       width: 100%
-      height: auto
+      margin-top: -50px
+
+
++at-breakpoint($screen2 $break2)
+  #footer
+    p
+      font-size: px-to-em(17px,16px)
+      line-height: auto
+    .contacts
+      i
+        width: 25px
+        height: 20px
+    .background
+      +background($pink image-url("footer/footer_shades-background.png"))
 
 +at-breakpoint($screen3 $break3)
+
+  #footer
+    +span-columns(10,20)
+    .nodecoration
+      text-decoration: none
+    .pinkletter
+      span.pink
+        color: $pink
+    .blender
+      font-family: "BlenderPro", "Helvetica Neue", Helvetica, Arial, sans-serif
+    margin-top: 22px
+
+    position: relative
+
+    .background
+      +stretch(0,0,0,0)
+      +background(image-url("footer/footer_shades-background-mobile.png"))
+    p
+      +span-columns(8,10)
+      color: $white
+      position: relative
+      @extend .pinkletter
+      @extend .blender
+      font-size: px-to-em(17px,16px)
+      line-height: auto
+      margin-top: 0.5em
+      margin-bottom: 0
+
+      &.contacts
+        +span-columns(8,10)
+        line-height: px-to-em(14px,16px)
+        display: inline-block
+        a
+          text-decoration: none
+          width: 100%
+        i
+          width: 35px
+          height: 30px
+          font-size: px-to-em(26px,16px)
+        span
+          text-decoration: underline
+          text-align: right
+          width: 100%
+
+      &.info
+        margin-top: 80px
+    a
+      color: $white
+
+
+    .follow
+      position: absolute
+      top: 24px
+      right: columns(1,10)
+      margin-top: 0
+      float: right
+      width: auto
+      p
+        +span-columns(10,10)
+        margin: 0
+        padding: 0
+
+
+    figure
+      +span-columns(10,10)
+      margin-left: 0
+      margin-right: 0
+      position: relative
+      max-height: 200px
+      overflow: hidden
+      +float-left
+
+      img
+        position: relative
+        display: block
+        vertical-align: middle
+        width: 100%
+        margin-top: -50px
+
+//960px horizontal layout
++at-breakpoint($screen4 $break4)
+  #footer
+    +span-columns(12,24)
+    p
+      font-size: px-to-em(17px,16px)
+      line-height: auto
+    .contacts
+      i
+        width: 25px
+        height: 20px
+    .background
+      +background($pink image-url("footer/footer_shades-background.png"))
+
++at-breakpoint($screen5 $break5)
   #footer
     margin-top: 22px
-    +span-columns(10,20)
-
-
-
+    +span-columns(12,36)
     figure
       +span-columns(10,10)
       margin-left: 0

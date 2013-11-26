@@ -11,7 +11,6 @@
 .vistasansaltmediaita
   font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
 #ixdt1113_tk
-  +susy-grid-background
   +span-columns(10,10)
   @extend .droidsans
   header
@@ -63,14 +62,15 @@
     .contact
       padding: 18px 13px
       margin-bottom: 15px
-      background: $acqua-green
+      background: $wow-green
       @extend .vistasansaltbook
       font-size: px-to-em(15px,16px)
       font-weight: 400
+      a
+        color: $black
 
 +at-breakpoint($screen2 $break2)
   #ixdt1113_tk
-    +susy-grid-background
     +span-columns(12 ,12)
     header
       +span-columns(12 ,12)
@@ -103,7 +103,6 @@
 
 +at-breakpoint($screen3 $break3)
   #ixdt1113_tk
-    +susy-grid-background
     +span-columns(10,20)
     @extend .droidsans
     header
@@ -162,7 +161,6 @@
 
 +at-breakpoint($screen4 $break4)
   #ixdt1113_tk
-    +susy-grid-background
     +span-columns(12 ,24)
     header
       +span-columns(12 ,12)

@@ -159,6 +159,9 @@
         @extend .vistasansaltbold
         font-size: px-to-em(14px,16px)
         text-indent: 10px
+        +nowrap
+        overflow: hidden
+        text-overflow: ellipsis
         padding: 0
       .send
         height: 40px
@@ -274,6 +277,9 @@
         +float-left
         input.email, input.name
           height: 40px
+          +nowrap
+          overflow: hidden
+          text-overflow: ellipsis
           margin-bottom: 5px
           font-size: px-to-em(12px,16px)
     footer
@@ -429,6 +435,9 @@
           @extend .vistasansaltbold
           font-size: px-to-em(14px,16px)
           text-indent: 10px
+          +nowrap
+          overflow: hidden
+          text-overflow: ellipsis
           padding: 0
         .send
           height: 40px

@@ -143,6 +143,9 @@
         width: 93%
         margin-bottom: 16px
         font-size: px-to-em(13px, 16px)
+        +nowrap
+        overflow: hidden
+        text-overflow: ellipsis
 
       .send
         height: 32px
@@ -222,6 +225,9 @@
         .email, .name
           +span-columns(6,9)
           font-size: px-to-em(13.78px, 16px)
+          +nowrap
+          overflow: hidden
+          text-overflow: ellipsis
           +float-left
         .send
           +span-columns(3 omega,9)

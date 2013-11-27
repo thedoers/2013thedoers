@@ -17,12 +17,13 @@ $break6: 46
 $screen1: 20em //320px
 $screen2: 30em //480px
 $screen3: 40em //640px
+$screen3a: 39.99em //640px
 $screen4: 60em //960px
-$screen4a: 59.9em //960px
+$screen4a: 59.99em //960px
 $screen5: 80em //1280px
-$screen5a: 79.9em
+$screen5a: 79.99em
 $screen6: 90em
-$screen6a: 89.9em
+$screen6a: 89.99em
 
 
 
@@ -32,7 +33,7 @@ $screen6a: 89.9em
   -webkit-font-smoothing: antialiased
   -webkit-overflow-scrolling: touch
 
-+at-breakpoint($screen2 $break2)
++at-breakpoint($screen2 $break2 $screen3a)
   #container
     //+susy-grid-background
 +at-breakpoint($screen3 $break3 $screen4a)

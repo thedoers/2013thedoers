@@ -18,7 +18,6 @@ $(document).ready(function(){
         preloadWidth: 36,
         preloadHeight: 36,
         displayType: "inline"});
-//    $('.speakerdeck-iframe').css({'width':'100%', 'height': '80px'});
 });
 
 

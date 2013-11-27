@@ -16,7 +16,7 @@ $(document).ready(function(){
     overlay("a.map");
     currentPath = getPathFromUrl(window.location.href);
 
-    if( currentPath == "http://0.0.0.0:4567/events/2013/thank-you-ixdt1113.html"){
+    if( currentPath == "http://thedoers.co/events/2013/thank-you-ixdt1113.html"){
         name = decodeURIComponent($.urlParam('name'));
 
         if (name == "null" || name == "" || name === "undefined" || name == 0){

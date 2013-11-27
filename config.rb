@@ -14,6 +14,7 @@ page "/404.html", :layout => :html5
 page "/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html", :layout => :html5
 page "/events/2013/thank-you-ixdt1113.html", :layout => :html5
 
+page "/newsletters/ixdt1113_post.html"
 page "/sitemap.xml", :layout => false
 
 

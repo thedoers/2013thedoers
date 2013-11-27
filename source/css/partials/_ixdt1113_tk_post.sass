@@ -1,0 +1,262 @@
+.akzidenz
+  font-family: Akzidenz , "Helvetica neue", Helvetica, Arial, sans-serif
+.droidsans
+  font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbold
+  font-family: VistaSansab, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbook
+  font-family: VistaSansabo, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltbookita
+  font-family: VistaSansabi, "Helvetica neue", Helvetica, Arial, sans-serif
+.vistasansaltmediaita
+  font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
+#ixdt1113_tk
+  +span-columns(10,10)
+  @extend .droidsans
+  header
+    +span-columns(10,10)
+    margin-bottom: 16px
+    h2.ixdt-title
+      margin-bottom: 0
+      +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
+
+  section.container
+    +span-columns(10,10)
+    border-top: 3px solid $black
+    margin-bottom: 16px
+    .subtitle-paragraph
+      +span-columns(10,10)
+      margin-bottom: 16px
+      border-bottom: 3px solid $black
+      h3.subtitle
+        +span-columns(10,10)
+        margin: 14px 0
+        font-weight: 600
+        font-size:  px-to-em(23px,16px)
+        color: $acqua-green
+        span.thank, span.so, span.business, span.with, span.ux
+          display: block
+        span.thank, span.business
+          color: $black
+
+    .paragraph
+      padding-bottom: 14px
+      //border-bottom: 2px dotted black
+      font-size: px-to-em(23px,16px)
+      font-weight: 600
+    iframe.speakerdeck-iframe
+      width: 100% !important
+      min-height: 300px !important
+
+  footer
+    +span-columns(10,10)
+    .text
+      margin-bottom: 14px
+      font-size: px-to-em(23px,16px)
+      font-weight: 600
+
+    .share
+      +no-bullets
+      text-align: center
+      margin: 0
+      margin-bottom: 14px
+      padding: 0
+
+    .contact
+      padding: 18px 13px
+      margin-bottom: 15px
+      background: $wow-green
+      @extend .vistasansaltbook
+      font-size: px-to-em(15px,16px)
+      font-weight: 400
+      a
+        color: $black
+
++at-breakpoint($screen2 $break2)
+  #ixdt1113_tk
+    +span-columns(12 ,12)
+    header
+      +span-columns(12 ,12)
+      h2.ixdt-title
+        +replace-text-with-dimensions("ixdt/ixdt_logo.png",0,0)
+    section.container
+      +span-columns(12 ,12)
+      border-top: 3px solid black
+      .subtitle-paragraph
+        border-bottom: 3px solid black
+        h3.subtitle
+          margin: 20px 0
+          font-size: px-to-em(31px,16px)
+          line-height: 1em
+          span.thank
+            margin-bottom: 25px
+      .paragraph
+        font-size: px-to-em(31px,16px)
+        line-height: 1em
+      iframe.speakerdeck-iframe
+        width: 100% !important
+        min-height: 450px !important
+    footer
+      +span-columns(12,12)
+      .text
+        font-size: px-to-em(31px,16px)
+        line-height: 1em
+      .share
+        text-align: left
+      .contact
+        font-size: px-to-em(20px,16px)
+
++at-breakpoint($screen3 $break3)
+  #ixdt1113_tk
+    +span-columns(10,20)
+    @extend .droidsans
+    header
+      +span-columns(10,10)
+      margin-bottom: 16px
+      h2.ixdt-title
+        margin-bottom: 0
+        +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
+
+    section.container
+      +span-columns(10,10)
+      border-top: 3px solid $black
+      margin-bottom: 16px
+      .subtitle-paragraph
+        +span-columns(10,10)
+        margin-bottom: 16px
+        border-bottom: 3px solid $black
+        h3.subtitle
+          +span-columns(10,10)
+          margin: 14px 0
+          font-weight: 600
+          font-size:  px-to-em(23px,16px)
+          color: $acqua-green
+          span.thank, span.so, span.business, span.with, span.ux
+            margin-bottom: 0
+            display: block
+          span.thank, span.business
+            color: $black
+      .paragraph
+        padding-bottom: 14px
+        //border-bottom: 2px dotted black
+        font-size: px-to-em(23px,16px)
+        font-weight: 600
+      iframe.speakerdeck-iframe
+        width: 100% !important
+        min-height: 350px !important
+    footer
+      +span-columns(10,10)
+      .text
+        margin-bottom: 14px
+        font-size: px-to-em(23px,16px)
+        font-weight: 600
+
+      .share
+        +no-bullets
+        text-align: center
+        margin: 0
+        margin-bottom: 14px
+        padding: 0
+
+      .contact
+        padding: 18px 13px
+        margin-bottom: 15px
+        background: $acqua-green
+        @extend .vistasansaltbook
+        font-size: px-to-em(15px,16px)
+        font-weight: 400
+
++at-breakpoint($screen4 $break4)
+  #ixdt1113_tk
+    +span-columns(12 ,24)
+    header
+      +span-columns(12 ,12)
+      h2.ixdt-title
+        +replace-text-with-dimensions("ixdt/ixdt_logo.png",0,0)
+    section.container
+      +span-columns(12 ,12)
+      border-top: 3px solid $black
+      .subtitle-paragraph
+        border-bottom: 3px solid $black
+        h3.subtitle
+          margin: 20px 0
+          font-size: px-to-em(31px,16px)
+          line-height: 1em
+          span.thank
+            margin-bottom: 25px
+      .paragraph
+        font-size: px-to-em(31px,16px)
+        line-height: 1em
+      iframe.speakerdeck-iframe
+        width: 100% !important
+        min-height: 450px !important
+    footer
+      +span-columns(12,12)
+      .text
+        font-size: px-to-em(31px,16px)
+        line-height: 1em
+      .share
+        text-align: left
+      .contact
+        font-size: px-to-em(20px,16px)
+
++at-breakpoint($screen5 $break5)
+  #ixdt1113_tk
+    +span-columns(12,36)
+    @extend .droidsans
+    header
+      +span-columns(12,12)
+      margin-bottom: 16px
+      h2.ixdt-title
+        margin-bottom: 0
+        +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
+
+    section.container
+      +span-columns(12,12)
+      border-top: 3px solid $black
+      margin-bottom: 16px
+      .subtitle-paragraph
+        +span-columns(12,12)
+        margin-bottom: 16px
+        border-bottom: 3px solid $black
+        h3.subtitle
+          +span-columns(12,12)
+          margin: 14px 0
+          font-weight: 600
+          font-size:  px-to-em(23px,16px)
+          color: $acqua-green
+          span.thank, span.so, span.business, span.with, span.ux
+            margin-bottom: 0
+            display: block
+          span.thank, span.business
+            color: $black
+
+      .paragraph
+        padding-bottom: 14px
+        //border-bottom: 2px dotted black
+        font-size: px-to-em(23px,16px)
+        font-weight: 600
+      iframe.speakerdeck-iframe
+        width: 100% !important
+        min-height: 400px !important
+    footer
+      +span-columns(12,12)
+      .text
+        margin-bottom: 14px
+        font-size: px-to-em(23px,16px)
+        font-weight: 600
+
+      .share
+        +no-bullets
+        text-align: center
+        margin: 0
+        margin-bottom: 14px
+        padding: 0
+
+      .contact
+        padding: 18px 13px
+        margin-bottom: 15px
+        background: $acqua-green
+        @extend .vistasansaltbook
+        font-size: px-to-em(15px,16px)
+        font-weight: 400

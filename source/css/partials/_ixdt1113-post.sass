@@ -110,7 +110,7 @@
       +span-columns(10,10)
       .overlay
         display: none
-        +stretch(0,0,0,0)
+        +stretch(0,-($grid-padding),0,-($grid-padding))
         z-index: 2
         background-color: $wow-green
         +opacity(0.5)
@@ -263,6 +263,12 @@
         font-size: 34px
       span.hour, span.address
         font-size: 22px
+
+      a.map
+        .overlay
+          display: none
+          +stretch(0,-($grid-padding),0,-($grid-padding))
+
       figure
         margin-left: -($grid-padding)
         margin-right: -($grid-padding)
@@ -400,6 +406,10 @@
         font-size: px-to-em(20px,16px)
         font-weight: 300
         font-style: italic
+      a.map
+        .overlay
+          display: none
+          +stretch(0,0,0,0)
       figure
         position: relative
         margin-left: 0
@@ -547,6 +557,10 @@
         font-size: 34px
       span.hour, span.address
         font-size: 22px
+      a.map
+        .overlay
+          display: none
+          +stretch(0,0,0,0)
       figure
         margin-left: 0
         margin-right: 0
@@ -579,6 +593,10 @@
   #ixdt1113
     +span-columns(12,36)
     section.location
+      a.map
+        .overlay
+          display: none
+          +stretch(0,0,0,0)
       figure
         margin-left: 0
         margin-right: 0

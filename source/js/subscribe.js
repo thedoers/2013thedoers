@@ -13,47 +13,75 @@ function ajaxform_subscribe(){
             name = $form.find('input[name="name"]').val(),
             email = $form.find('input[name="email"]').val(),
             list = $form.find('input[name="list"]').val(),
+            element = $form.find('input[name="element"]').val(),
+            language = $form.find('input[name="language"]').val(),
             success = $form.find('input[name="success"]').val(),
             url = $form.attr('action');
 
-        $.post(url, {name:name, email:email, list:list, boolean:true},
-            function(data) {
-                if(data)
-                {
-                    if(data=="Some fields are missing.")
+        var success_path = success+"?"+check_name(name)+check_element(element);
+        function check_name(name){
+            if(name == ""){
+                return "name=friend";
+            }else{
+                query= encodeURI("name="+name);
+                return query;
+            }
+        }
+        function check_element(element){
+            if(element != ""){
+                return element;
+            }else{
+                return
+            }
+        }
+
+        if (name == "null" || name == "" || name === "undefined" || name == 0)
+        {
+            $("#status").text("Please fill in your name.");
+            $("#status").css("color", "red");
+        }else{
+            $.post(url, {name:name, email:email, list:list, boolean:true,language:language},
+                function(data) {
+                    if(data)
                     {
-                        $("#status").text("Please fill in your name and email.");
-                        $("#status").css("color", "red");
-                    }
-                    else if(data=="Invalid email address.")
-                    {
-                        $("#status").text("Your email address is invalid.");
-                        $("#status").css("color", "red");
-                    }
-                    else if(data=="Invalid list ID.")
-                    {
-                        $("#status").text("Your list ID is invalid.");
-                        $("#status").css("color", "red");
-                    }
-                    else if(data=="Already subscribed.")
-                    {
-                        $("#status").text("You're already subscribed!");
-                        $("#status").css("color", "red");
+                        if(data=="Some fields are missing.")
+                        {
+                            $("#status").text("Please fill in your name and email.");
+                            $("#status").css("color", "red");
+                        }
+                        else if(data=="Invalid email address.")
+                        {
+                            $("#status").text("Your email address is invalid.");
+                            $("#status").css("color", "red");
+                        }
+                        else if(data=="Invalid list ID.")
+                        {
+                            $("#status").text("Your list ID is invalid.");
+                            $("#status").css("color", "red");
+                        }
+                        else if(data=="Already subscribed.")
+                        {
+                            $("#status").text("You're already subscribed!");
+                            $("#status").css("color", "red");
+                        }
+                        else
+                        {
+                            //todo fixare colori feedback
+                            $("#status").text("You're subscribed!");
+                            $("#status").css("color", "green");
+                            window.location.href = success_path;
+                        }
                     }
                     else
                     {
-                        //todo fixare colori feedback
-                        $("#status").text("You're subscribed!");
-                        $("#status").css("color", "green");
-                        window.location.href = success;
+                        alert("Sorry, unable to subscribe. Please try again later!");
                     }
                 }
-                else
-                {
-                    alert("Sorry, unable to subscribe. Please try again later!");
-                }
-            }
-        );
+            );
+        }
+
+
+
     });
     $("#signup-form").keypress(function(e) {
         if(e.keyCode == 13) {

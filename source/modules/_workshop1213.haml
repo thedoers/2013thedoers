@@ -1,0 +1,86 @@
+#wp1213
+  %article
+    %header
+      -#%h2.wp-title
+      -#  WORKSHOP
+
+      .subtitle
+        %h3
+          %span
+            Validare la mia
+          %span
+            idea di business
+          %span
+            o startup
+
+      .image-container
+        = image_tag 'workshop/workshop_bg-mobile.jpg', id:'workshop_bg-mobile', alt:'Workshop'
+
+
+    %section.container
+      .paragraph
+        %p
+          Dallo sniff test ai metodi qualitativi di raccolta metriche per la validazione del problema. Dalla valorizzazione del problema, alla validazione della soluzione: come controllare il costo dell’errore
+          e mettere a punto l’evoluzione dell’mvp.
+        %ul
+          %li
+            %span
+              Ha senso la mia idea di impresa?
+          %li
+            %span
+              Come posso misurare e dimostrate l’importanza del problema che voglio risolvere?
+          %li
+            %span
+              Come incontro i miei primi clienti se non ho ancora un prototipo?
+          %li
+            %span
+              Come emergo rispetto a chi offre soluzioni simili?
+      .banner_blue
+        %p
+          PER IMPRENDITORI E LORO TEAM CHE VALUTANO DI AVVIARE UN PROGETTO
+    %section.location
+      %a.map{target: "_blank",href: 'https://maps.google.it/maps?q=google+maps+via+mantova+36+torino&ie=UTF-8&ei=t5OTUraCEa2Q7Abk7ICoAQ&ved=0CAgQ_AUoAg'}
+        .overlay
+        %figure
+          = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Via+Mantova+36,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/d0GT44%7Clabel:S%7C45.075065,7.69844&sensor=false', id:'map_office', alt:'Office Location, Via Mantova 36 Torino'
+
+      %span.date
+        11 DICEMBRE 2013
+      %span.hour
+        10-18
+      %span.address
+        VIA MANTOVA,36
+      %span.place
+        TORINO
+
+    %section.register
+      %h3
+        VUOI PARTECIPARE?
+      %p.conditions
+        La partecipazione &egrave; gratuita e riservata a 5 team selezionati (max 10 persone)
+      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+        - field_set_tag do
+          %p
+            = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Il tuo nome", :type=>"text"
+            = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"La tua email", :type=>"text"
+          = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
+          = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
+          = hidden_field_tag  :success, :value => "/events/2013/success_ixdt1113.html#ixdt1113_tk", :name => "success", :id => 'submit_success'
+          = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
+          %p
+            = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'VOGLIO PARTECIPARE!'
+          %p#status
+
+    %footer
+      .share
+        .addthis_toolbox
+          .custom_images.green
+            %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; ", :"fb:like:href"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html",:"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html" }
+              = image_tag "ixdt/ixdt_share-fb.png", border: "0", alt: "facebook share"
+            %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; " , :"tw:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html", :"addthis:title"=>"Come with me at next #ixdt! #ux #startups #event #torino", :"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html" }
+              = image_tag "ixdt/ixdt_share-tw.png", border: "0", alt: "twitter share"
+            %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html" }
+              = image_tag "ixdt/ixdt_share-gp.png", border: "0", alt: "google plus share"
+            %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html", :"addthis:title"=>"How to craft a perfect user Experience - even with a rough MVP" }
+              = image_tag "ixdt/ixdt_share-li.png", border: "0", alt: "linkedin share"
+

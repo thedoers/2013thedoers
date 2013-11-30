@@ -118,13 +118,14 @@
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
       position: relative
-
+      overflow: hidden
       img
         position: relative
         display: block
         vertical-align: middle
         width: 100%
         height: auto
+        margin-bottom: -50px
 
   section.register
     +span-columns(10,10)
@@ -276,7 +277,7 @@
         max-height: 200px
         +clearfix
         img
-          margin-top: -50px
+          margin-bottom: -50px
           vertical-align: middle
     section.register
       margin-bottom: 0px
@@ -420,6 +421,7 @@
           vertical-align: middle
           width: 100%
           height: auto
+          margin-bottom: -50px
 
     section.register
       +span-columns(10,10)

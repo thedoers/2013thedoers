@@ -1,0 +1,576 @@
+.bebas
+  font-family: Bebas , "Helvetica neue", Helvetica, Arial, sans-serif
+.blender
+  font-family: Blender , "Helvetica neue", Helvetica, Arial, sans-serif
+.droidsans
+  font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
+
+#wp1213 article
+  +span-columns(10,10)
+  +susy-grid-background
+  @extend .blender
+  font-weight: 400
+  header
+    +span-columns(10,10)
+    position: relative
+    margin-bottom: 18px
+    //todo manca mettere immagine
+    //h2.wp-title
+      //margin-bottom: 0
+      //height: 342px
+      //+replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg",0,0)
+
+    //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
+    .subtitle
+      margin: 0
+      margin-left: -($grid-padding)
+      background: $black
+      position: absolute
+      top: 226px
+      font-size: px-to-em(28px, 15px)
+      color: $wp-white
+      h3
+        margin: 0
+        padding: 10px 0 10px $grid-padding
+        span
+          display: inline-block
+
+
+    .image-container
+      margin-left: -($grid-padding)
+      margin-right: -($grid-padding)
+      img
+        height: 342px
+        width: 100%
+        z-index: -10
+        display: block
+        vertical-align: middle
+
+  section.container
+    +span-columns(10,10)
+    //margin-bottom: 16px
+    //padding-top: 10px
+    font-size: px-to-em(15px, 16px)
+    //todo line-height testo va bene così?
+    .paragraph
+      margin-bottom: 12px
+      p
+        padding-top: 0
+      ul
+        margin: 0
+        padding: 0 0 0 16px
+
+
+    .banner_blue
+      height: 74px
+      background: $wp-blue
+      font-size: px-to-em(14px, 16px)
+      color: $wp-white
+      margin-left: -($grid-padding)
+      margin-right: -($grid-padding)
+      p
+        margin: 0
+        padding: 22px 0 0 $grid-padding
+        line-height: 1em
+
+  section.location
+    +span-columns(10,10)
+    margin-bottom: 16px
+    position: relative
+
+    a.map
+      @extend .nodecoration
+      position: relative
+      +span-columns(10,10)
+      .overlay
+        display: none
+        +stretch(0,-($grid-padding),0,-($grid-padding))
+        z-index: 2
+        background-color: $wow-green
+        +opacity(0.5)
+
+      figure
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+        position: relative
+
+        img
+          position: relative
+          display: block
+          vertical-align: middle
+          width: 100%
+          height: auto
+
+    span
+      //+span-columns(4,10)
+      position: absolute
+      display: block
+      @extend .bebas
+      //font-size: 20px
+      font-size: 16px
+    span.date
+      top: 0px
+      left: 0px
+    span.hour
+      top: 22px
+      left: 0px
+    span.address
+      top: 44px
+      left: 0
+    span.place
+      top: 66px
+      left: 0
+
+  section.register
+    +span-columns(10,10)
+    //margin-bottom: 16px
+    line-height: 1em
+    h3
+      +span-columns(10,10)
+      margin: 0
+      margin-bottom: 16px
+      @extend .bebas
+      font-size:  px-to-em(30px,16px)
+      color: $wp-blue
+
+    p.conditions
+      +span-columns(10,10)
+      margin: 0
+      margin-bottom: 12px
+      padding: 0
+      font-size: px-to-em(14px,16px)
+
+    form
+      +span-columns(10,10)
+
+      input
+        +border-radius(0px)
+        +box-sizing(content-box)
+      fieldset
+        border: none
+        margin: 0
+        padding: 0
+        p
+          margin: 0
+          padding: 0
+
+      .email, .name
+        height: 46px
+        width: 97%
+        margin: 0px
+        margin-bottom: 16px
+        border: 3px inset $wp-black
+        font-size: px-to-em(20px,16px)
+        font-weight: 600
+        text-indent: 10px
+        +nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        padding: 0
+      .send
+        height: 45px
+        width: 97%
+        margin: 0px
+        text-decoration: none
+        background: $wp-blue
+        border: none
+        text-align: center
+        @extend .bebas
+        font-size: px-to-em(20px,16px)
+        color: $white
+        box-shadow: $wp-gray 4px 4px 1px 0px
+        padding: 0
+      p#status
+        @extend .droidsans
+        margin-top: 20px
+
+  footer
+    +span-columns(10,10)
+    .share
+      text-align: center
+      +no-bullets
+      margin: 0
+      padding: 0
+
++at-breakpoint($screen2 $break2)
+  #ixdt1113
+    +span-columns(12 ,12)
+    header
+      h2.ixdt-title
+        +replace-text-with-dimensions("ixdt/ixdt_logo.png",0,0)
+    section.container
+      display: block
+      .subtitle-paragraph
+        +span-columns(6,12)
+        +float-left
+        h3.subtitle
+          +span-columns(5,6)
+          font-size: px-to-em(31px,16px)
+          line-height: px-to-em(16px,16px)
+
+      .paragraph
+        +span-columns(6 omega,12)
+        +pre(0)
+
+
+    section.location
+      span
+        width: 142px!important
+      span.date
+        top: 138px
+        left: columns(2)
+      span.hour
+        top: 165px
+        left: columns(2)
+      span.place
+        bottom: 150px
+        right: columns(2)
+      span.address
+        bottom: 122px
+        right: columns(2)
+      span.date, span.place
+        font-size: 34px
+      span.hour, span.address
+        font-size: 22px
+
+      a.map
+        .overlay
+          display: none
+          +stretch(0,-($grid-padding),0,-($grid-padding))
+
+      figure
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+
+        max-height: 200px
+        +clearfix
+        img
+          margin-top: -50px
+          vertical-align: middle
+    section.register
+      margin-bottom: 0px
+      h3
+        +span-columns(6,12)
+        font-size: px-to-em(28px,16px)
+        line-height: px-to-em(16px,16px)
+        +float-left
+      p.paragraph
+        +span-columns(6 omega,12)
+      form
+        +span-columns(6 omega,12)
+        +float-left
+        input.email, input.name
+          height: 40px
+          +nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          margin-bottom: 5px
+          font-size: px-to-em(12px,16px)
+    footer
+      +span-columns(6 omega,12)
+
++at-breakpoint($screen3 $break3)
+  .akzidenz
+    font-family: Akzidenz , "Helvetica neue", Helvetica, Arial, sans-serif
+  .droidsans
+    font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
+  .vistasansaltbold
+    font-family: VistaSansab, "Helvetica neue", Helvetica, Arial, sans-serif
+  .vistasansaltbookita
+    font-family: VistaSansabi, "Helvetica neue", Helvetica, Arial, sans-serif
+  .vistasansaltmediaita
+    font-family: VistaSansami, "Helvetica neue", Helvetica, Arial, sans-serif
+  #ixdt1113
+    +span-columns(10,20)
+
+    header
+      +span-columns(10,10)
+      margin-bottom: 16px
+      h2.ixdt-title
+        margin-bottom: 0
+        +replace-text-with-dimensions("ixdt/ixdt_logo-mobile.png",0,0)
+
+    section.container
+      +span-columns(10,10)
+      border-top: 5px solid $black
+      margin-bottom: 16px
+      padding-top: 10px
+      .subtitle-paragraph
+        +span-columns(10,10)
+        margin-bottom: 16px
+        border-bottom: 5px solid $black
+        h3.subtitle
+          +span-columns(10,10)
+          @extend .droidsans
+          font-weight: 600
+          font-size:  px-to-em(23px,16px)
+          margin: 0px
+          color: $acqua-green
+          .color
+            color: $black
+        p.powered
+          +span-columns(10,10)
+          @extend .vistasansaltbookita
+          font-size: px-to-em(12px,16px)
+          font-style: italic
+          margin: 4px 0px 0px
+      .paragraph
+        +span-columns(8,10)
+        +pre(2)
+        //margin-bottom: 16px
+        @extend .vistasansaltbookita
+        font-size: px-to-em(15px,16px)
+        font-style: italic
+        p.f-paragraph
+          margin: 0px
+        p.s-paragraph
+          margin: 0px
+          @extend .vistasansaltmediaita
+          font-size: 15px
+          font-style: italic
+          .name
+            display: inline-block
+            width: 100%
+          .phrase
+            display: inline-block
+            width: 100%
+        p.t-paragraph
+          .groundcolor
+            background: $wow-green
+          margin: 0px
+    section.location
+      +span-columns(10,10)
+      margin-bottom: 16px
+      position: relative
+
+      span
+        +span-columns(4,10)
+        text-align: center
+        background: $white
+        position: absolute
+        display: block
+
+      span.date
+        top: 6px
+        left: 0px
+      span.hour
+        top: 33px
+        left: 0px
+      span.place
+        +pre(4)
+        bottom: 37px
+        right: 0px
+      span.address
+        bottom: 10px
+        right: 0px
+        +pre(4)
+        clear: left
+      span.date, span.place
+        @extend .akzidenz
+        font-size: px-to-em(28px,16px)
+        font-weight: 500
+        font-style: italic
+      span.hour, span.address
+        @extend .akzidenz
+        font-size: px-to-em(20px,16px)
+        font-weight: 300
+        font-style: italic
+      a.map
+        .overlay
+          display: none
+          +stretch(0,0,0,0)
+      figure
+        position: relative
+        margin-left: 0
+        margin-right: 0
+        img
+          position: relative
+          display: block
+          vertical-align: middle
+          width: 100%
+          height: auto
+
+    section.register
+      +span-columns(10,10)
+      margin-bottom: 16px
+      h3
+        margin: 0px
+        margin-bottom: 16px
+        +span-columns(10,10)
+        @extend .droidsans
+        font-weight: 600
+        font-size:  px-to-em(23px,16px)
+      p.paragraph
+        +span-columns(10,10)
+      form
+        +span-columns(10,10)
+        input
+          +border-radius(0px)
+          +box-sizing(content-box)
+        fieldset
+          border: none
+          margin: 0
+          padding: 0
+          p
+            margin: 0
+            padding: 0
+
+        .email, .name
+          height: 50px
+          width: 97%
+          margin: 0px
+          margin-bottom: 16px
+          border: 3px inset black
+          @extend .vistasansaltbold
+          font-size: px-to-em(14px,16px)
+          text-indent: 10px
+          +nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          padding: 0
+        .send
+          height: 40px
+          width: 97%
+          margin: 0px
+          text-decoration: none
+          background: $black
+          border: none
+          text-align: center
+          @extend .akzidenz
+          font-size: 20px
+          font-weight: 600
+          font-style: italic
+          border: 3px inset black
+          color: $white
+          box-shadow: $wow-green 2px 2px 1px 0px
+          padding: 0
+
+    footer
+      +span-columns(10,10)
+      .text
+        width: 100%
+        +float-left
+        clear: both
+        @extend .droidsans
+        font-size: px-to-em(10px,16px)
+        .paragraph-sponsor
+          +float-left
+        .paragraph-share
+          +float-right
+      .icon
+        display: inline-block
+        width: 100%
+        ul.left-sponsor
+          +no-bullets
+          margin: 0px
+          padding: 0px
+          li
+            text-decoration: none
+            +float-left
+          .treatabit
+            a
+              +replace-text-with-dimensions("ixdt/ixdt_treatbit-mobile.png")
+              display: block
+
+        .share
+          +no-bullets
+          +float-right
+          margin: 0px
+          margin-top: 25px
+          padding: 0px
+
+
+//960px horizontal layout
++at-breakpoint($screen4 $break4)
+  #ixdt1113
+    +span-columns(12 ,24)
+    header
+      h2.ixdt-title
+        +replace-text-with-dimensions("ixdt/ixdt_logo.png",0,0)
+    section.container
+
+      display: block
+      .subtitle-paragraph
+        +span-columns(6,12)
+        +float-left
+        h3.subtitle
+          +span-columns(5,6)
+          font-size: px-to-em(31px,16px)
+          line-height: px-to-em(16px,16px)
+
+      .paragraph
+        +span-columns(6 omega,12)
+        +pre(0)
+
+
+    section.location
+      span
+        width: 142px!important
+      span.date
+        top: auto
+        bottom: 32px
+        left: columns(2)
+      span.hour
+        top: auto
+        bottom: 7px
+        left: columns(2)
+      span.place
+        bottom: auto
+        top: 7px
+        right: columns(2)
+      span.address
+        bottom: auto
+        top: 32px
+        right: columns(2)
+      span.date, span.place
+        font-size: 34px
+      span.hour, span.address
+        font-size: 22px
+      a.map
+        .overlay
+          display: none
+          +stretch(0,0,0,0)
+      figure
+        margin-left: 0
+        margin-right: 0
+
+        max-height: 200px
+        +clearfix
+        img
+          margin-top: -50px
+          vertical-align: middle
+    section.register
+      margin-bottom: 0px
+      h3
+        +span-columns(6,12)
+        font-size: px-to-em(28px,16px)
+        line-height: px-to-em(16px,16px)
+        +float-left
+      p.paragraph
+        +span-columns(6 omega,12)
+      form
+        +span-columns(6 omega,12)
+        +float-left
+        input.email, input.name
+          height: 40px
+          margin-bottom: 5px
+          font-size: px-to-em(12px,16px)
+    footer
+      +span-columns(6 omega,12)
+
++at-breakpoint($screen5 $break5)
+  #ixdt1113
+    +span-columns(12,36)
+    section.location
+      a.map
+        .overlay
+          display: none
+          +stretch(0,0,0,0)
+      figure
+        margin-left: 0
+        margin-right: 0
+
+
+
+
+

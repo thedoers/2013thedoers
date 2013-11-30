@@ -14,11 +14,16 @@
     +span-columns(10,10)
     position: relative
     //margin-bottom: 18px
-    //todo manca mettere immagine
+    //todo non funziona con replace-text
     //h2.wp-title
-      //margin-bottom: 0
-      //height: 342px
-      //+replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg",0,0)
+    //  //+span-columns(10,10)
+    //  height: 342px
+    //  width: 100%
+    //  display: block
+    //  margin-bottom: 0
+    //  margin-left: -($grid-padding)
+    //  margin-right: -($grid-padding)
+    //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
 
     //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
     .subtitle
@@ -187,7 +192,7 @@
       p#status
         @extend .droidsans
         margin-top: 20px
-
+  //todo cambiare icone
   footer
     +span-columns(10,10)
     .share

@@ -27,15 +27,12 @@
     %link{ :href=>"favicon.png?v=1", :rel=>"shortcut icon", :type=>"image/png" }
     %link{ :href=>"favicon.ico?v=1", :rel=>"shortcut icon", :type=>"image/x-icon" }
 
-
-    = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr.js"
-
+    = stylesheet_link_tag "application"
   %body
     = partial'partials/tag-manager'
     #container
       = yield
-    %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0a3fcd63f94cae", type: "text/javascript"}
     = javascript_include_tag "site.js"
 
 

@@ -11,17 +11,7 @@
           <span>U</span>SER  <span>E</span>XPERIENCE DESIGN<br />
           <span>P</span>RODUCT  <span>D</span>EVELOPMENT<br />
           <span>L</span>EAN APPROACH
-      .share
-        .addthis_toolbox
-          .custom_images.white
-            %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; ", :"fb:like:href"=>"http://thedoers.co", :"addthis:url"=>"http://thedoers.co" }
-              = image_tag "share-buttons/share_fb.png", border: "0", alt: "facebook share"
-            %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; " , :"tw:url"=>"http://thedoers.co", :"addthis:title"=>"They are Doers #ux #ixd #lean " }
-              = image_tag "share-buttons/share_tw.png", border: "0", alt: "twitter share"
-            %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co" }
-              = image_tag "share-buttons/share_gp.png", border: "0", alt: "google plus share"
-            %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co", :"addthis:title"=>"The Doers - User Experience, Interaction Design, Lean Product Development" }
-              = image_tag "share-buttons/share_li.png", border: "0", alt: "linkedin share"
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co", :twitter_title => "They are Doers #ux #ixd #lean ", :title => "The Doers - User Experience, Interaction Design, Lean Product Development"}
 
       %ul.menu-container
         %li

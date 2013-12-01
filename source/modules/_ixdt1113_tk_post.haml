@@ -23,17 +23,7 @@
     %footer
       .text
         SHARE IT WITH YOUR FRIENDS
-      .share
-        .addthis_toolbox
-          .custom_images.green
-            %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; ", :"fb:like:href"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html",:"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html" }
-              = image_tag "ixdt/ixdt_share-fb.png", border: "0", alt: "facebook share"
-            %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; " , :"tw:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html", :"addthis:title"=>"Are you curious to see how #UX #design could boost your #business? #startup", :"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html" }
-              = image_tag "ixdt/ixdt_share-tw.png", border: "0", alt: "twitter share"
-            %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html" }
-              = image_tag "ixdt/ixdt_share-gp.png", border: "0", alt: "google plus share"
-            %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; " , :"addthis:url"=>"http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html", :"addthis:title"=>"How to craft a perfect user Experience - even with a rough MVP" }
-              = image_tag "ixdt/ixdt_share-li.png", border: "0", alt: "linkedin share"
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.htm", :twitter_title => "Are you curious to see how #UX #design could boost your #business? #startup", :title => "How to craft a perfect user Experience - even with a rough MVP"}
 
       .contact
         <span>If you like to exchange more about it, drop us a line and join us for a coffee, an informal lunch or a glass of wine: </span><span> <strong><a href="mailto:we@thedoersproject.com">we@thedoers.co</a></strong>

@@ -15,5 +15,8 @@ gem "builder"
 gem 'oily_png'
 #gem 'mini_magick'
 
+gem "middleman-cloudfront"
+gem 'middleman-s3_sync'
+
 
 

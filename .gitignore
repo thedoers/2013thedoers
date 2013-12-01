@@ -9,6 +9,7 @@
 doc/
 *.swp
 *~
+.s3_sync
 .project
 .DS_Store
 /.sass-cache

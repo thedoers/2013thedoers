@@ -37,16 +37,5 @@
     %footer
       %p
         Se vuoi, puoi condividere qui
-      //todo cambiare icone con un height e weight, mettere la chiamata giusta sulla righa javascript
-      .share
-        .addthis_toolbox{ :"addthis:url"=>"http://example.com", :"addthis:title"=>"An Example Title", :"addthis:description"=>"An Example Description"}
-          .custom_images.green
-            %a.addthis_button_facebook{style: "text-decoration:none; cursor: pointer; "}
-              = image_tag "fabrica/fabrica_share-fb.png", border: "0", alt: "facebook share"
-            %a.addthis_button_twitter{style: "text-decoration:none; cursor: pointer; "}
-              = image_tag "fabrica/fabrica_share-tw.png", border: "0", alt: "twitter share"
-            %a.addthis_button_google_plusone_share{style: "text-decoration:none; cursor: pointer; "}
-              = image_tag "fabrica/fabrica_share-gp.png", border: "0", alt: "google plus share"
-            %a.addthis_button_linkedin{style: "text-decoration:none; cursor: pointer; "}
-              = image_tag "fabrica/fabrica_share-li.png", border: "0", alt: "linkedin share"
-
+      //todo fixare shares fabrica
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/projects/fabrica.htm", :twitter_title => "Come with me at next #ixdt! #ux #startups #event #torino", :title => "It\'s not the product that should be insanely great, but the experience of being your user. The product is just one component of that. (P.G.) - Are you curious to see how UX design could boost your Startup?"}

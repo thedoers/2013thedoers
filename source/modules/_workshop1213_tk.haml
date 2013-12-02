@@ -1,0 +1,49 @@
+#wp1213_tk
+  %article
+    %header
+      -#%h2.wp-title
+      -#  WORKSHOP
+
+      .subtitle
+        %h3
+          %span
+            Validare la mia
+          %span
+            idea di business
+          %span
+            o startup
+
+      .image-container
+        = image_tag 'workshop/workshop_bg-mobile.jpg', id:'workshop_bg-mobile', alt:'Workshop'
+
+
+    %section.container
+
+      .banner_blue
+        %p
+          <span class= "special"><span class= "name">GERONIMO</span><span> </span><span class="lastname">STILTON</span>, <br> SEI UN GRANDE!</span>
+
+      .paragraph
+        %p
+          Molti hanno un’idea di business - ma solo il migliori sono pronti per metterla alla prova.
+        %p
+          Nel giro di 24 ore ti contatteremo per  conoscerti meglio e confermare la tua partecipazione.
+        %p.interest
+          INTANTO POTREBBERO <br> INTERESSARTI:
+
+        %ul
+          %li
+            %span
+              HOW TO GET A PERFECT UX
+          %li
+            %span
+              THE NINE COMMANDMENTS FOR A STARTUPPER IN ACCELERATION
+
+      .banner_blue
+        %p
+          <span class="special">GRAZIE E A PRESTO!</span><br>Se vuoi contattarci o venirci a trovare prima:<strong>we@thedoers.co</strong> (.co è diverso da .com!)</strong><strong>+39 339 3723401</strong><br>I nostri riferimenti completi sono nel footer!
+
+    %footer
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co", :twitter_title => "They are Doers #ux #ixd #lean ", :title => "The Doers - User Experience, Interaction Design, Lean Product Development"}
+      .image-container
+        = image_tag 'workshop/workshop_bg-footer.jpg', id:'workshop_bg-footer', alt:'Workshop'

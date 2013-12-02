@@ -7,7 +7,7 @@
 
 #wp1213_tk article
   +span-columns(10,10)
-  //+susy-grid-background
+  +susy-grid-background
 
 
   header
@@ -99,6 +99,7 @@
         padding: 7px 0 7px $grid-padding
         li
           color: $wptk-blue
+          text-decoration: underline
 
 
   footer
@@ -106,10 +107,24 @@
     position: relative
 
     .share
-      text-align: center
-      +no-bullets
-      margin: 0
+      position: absolute
+      margin: 8% 0 0 0
       padding: 0
+      width: 100%
+      text-align: center
+
+      a
+        cursor: pointer
+        border: none
+        text-decoration: none
+        width: 34px
+        height: 34px
+        display: inline-block
+        text-align: center
+        font-size: px-to-em(24px,16px)
+        line-height: px-to-em(22px,16px)
+        //todo mettere a posto i colori
+        +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
 
     .image-container
       margin-left: -($grid-padding)

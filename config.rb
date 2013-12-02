@@ -13,7 +13,7 @@ activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = '2013.thedoers.co' # The name of the S3 bucket you are targetting. This is globally unique.
   s3_sync.region                     = 'eu-west-1'     # The AWS region for your bucket.
   s3_sync.delete                     = true # We delete stray files by default.
-  s3_sync.after_build                = true # We chain after the build step by default. This may not be your desired behavior...
+  s3_sync.after_build                = false # We chain after the build step by default. This may not be your desired behavior...
   s3_sync.prefer_gzip                = true
   s3_sync.path_style                 = true
   s3_sync.reduced_redundancy_storage = false
@@ -22,10 +22,10 @@ activate :s3_sync do |s3_sync|
 end
 
 activate :cloudfront do |cf|
-  cf.access_key_id = ENV['AWS_ACCESS_KEY']
-  cf.secret_access_key = ENV['AWS_SECRET']
+  cf.access_key_id = "AKIAIA2PSSK7HQN2O33A"
+  cf.secret_access_key = "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"
   cf.distribution_id = 'ER4IH8FBLUC9T'
-  cf.filter = /\.html$/i
+  cf.after_build = false
 end
 
 require 'builder'
@@ -67,7 +67,7 @@ configure :build do
   #activate :favicon_maker
   
   # # Enable cache buster
-  #activate :cache_buster
+  activate :cache_buster
   #activate :image_optim
   
   # # Use relative URLs

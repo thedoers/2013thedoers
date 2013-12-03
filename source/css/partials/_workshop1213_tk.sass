@@ -94,7 +94,7 @@
         font-size: px-to-em(15px, 16px)
 
       p
-        padding: 7px 7px 0 7px
+        padding: 7px 7px 7px 0
         margin: 0
 
       p.interest
@@ -151,7 +151,7 @@ $bebas-special-big: 35px
 +at-breakpoint($screen2 $break2)
   #wp1213_tk article
     +span-columns(12 ,12)
-    //+susy-grid-background
+    +susy-grid-background
     header
       +span-columns(12,12)
       position: relative
@@ -171,15 +171,10 @@ $bebas-special-big: 35px
       .subtitle
         //margin: 0
         margin-left: 0
-        //background: $black
-        //position: absolute
-        //top: 226px
-        //color: $wp-white
+
         h3
           margin: 0
           padding: 10px 5px 10px $grid-padding
-          //@extend .blender
-          //font-weight: 400
           font-size: px-to-em(28px, 16px)
           span
             display: block
@@ -189,55 +184,36 @@ $bebas-special-big: 35px
         margin-left: 0
         margin-right: 0
         img
-          //height: 342px
-          //width: 100%
-          //z-index: -10
-          //display: block
-          //vertical-align: middle
+
 
     section.container
       +span-columns(12,12)
-      //margin: 9px 0
+
 
       .banner_blue
-        //height: auto
-        //background: $wptk-blue
-        //color: $wp-white
-        //padding: 6px  0
         margin-left: 0
         margin-right: 0
 
         p
-          padding: 0 0 0 $grid-padding
-          margin: 0
-          //@extend .blender
-          //font-weight: 400
+          +pre(1)
+          padding: 0 0 0 0
           font-size: px-to-em(20px, 16px)
           .special
-            //@extend .bebas
-            //font-weight: 400
             font-size: px-to-em($bebas-special-big, 16px)
             line-height: 1em
           .strong
-            //display: inline-block
-            //@extend .blender
-            //font-weight: 600
             font-size: px-to-em(20px, 16px)
 
       .paragraph
         +pre(1)
         p, ul li
-          //@extend .blender
-          //font-weight: 400
           font-size: px-to-em(20px, 16px)
 
         p
-          padding: 7px 7px 0 7px
+          padding: 7px 7px 7px 0
           margin: 0
 
         p.interest
-          //@extend .bebas
-          //font-weight: 400
           font-size: px-to-em($bebas-special-big, 16px)
           line-height: 1em
 
@@ -246,8 +222,6 @@ $bebas-special-big: 35px
           margin: 0
           padding: 7px 7px 7px $grid-padding
           li
-            //color: $wptk-blue
-            //text-decoration: underline
 
 
     footer
@@ -289,7 +263,7 @@ $bebas-special-big: 35px
 +at-breakpoint($screen3 $break3)
   #wp1213_tk article
     +span-columns(10,20)
-    +susy-grid-background
+    //+susy-grid-background
 
 
     header
@@ -375,7 +349,7 @@ $bebas-special-big: 35px
           font-size: px-to-em(15px, 16px)
 
         p
-          padding: 7px 7px 0 7px
+          padding: 7px 7px 7px 0
           margin: 0
 
         p.interest
@@ -458,8 +432,6 @@ $bebas-special-big: 35px
         h3
           margin: 0
           padding: 10px 5px 10px $grid-padding
-          //@extend .blender
-          //font-weight: 400
           font-size: px-to-em(28px, 16px)
           span
             display: block
@@ -469,55 +441,34 @@ $bebas-special-big: 35px
         margin-left: 0
         margin-right: 0
         img
-          //height: 342px
-          //width: 100%
-          //z-index: -10
-          //display: block
-          //vertical-align: middle
 
     section.container
       +span-columns(12,12)
-      //margin: 9px 0
 
       .banner_blue
-        //height: auto
-        //background: $wptk-blue
-        //color: $wp-white
-        //padding: 6px  0
         margin-left: 0
         margin-right: 0
 
         p
-          padding: 0 0 0 $grid-padding
-          margin: 0
-          //@extend .blender
-          //font-weight: 400
+          +pre(1)
+          padding: 0 0 0 0
           font-size: px-to-em(20px, 16px)
           .special
-            //@extend .bebas
-            //font-weight: 400
             font-size: px-to-em($bebas-special-big, 16px)
             line-height: 1em
           .strong
-            //display: inline-block
-            //@extend .blender
-            //font-weight: 600
             font-size: px-to-em(20px, 16px)
 
       .paragraph
         +pre(1)
         p, ul li
-          //@extend .blender
-          //font-weight: 400
           font-size: px-to-em(20px, 16px)
 
         p
-          padding: 7px 7px 0 7px
+          padding: 7px 7px 7px 0
           margin: 0
 
         p.interest
-          //@extend .bebas
-          //font-weight: 400
           font-size: px-to-em($bebas-special-big, 16px)
           line-height: 1em
 
@@ -526,8 +477,6 @@ $bebas-special-big: 35px
           margin: 0
           padding: 7px 7px 7px $grid-padding
           li
-            //color: $wptk-blue
-            //text-decoration: underline
 
 
     footer
@@ -626,8 +575,9 @@ $bebas-special-big: 35px
         margin-right: 0
 
         p
+          +pre(1)
           padding: 0 0 0 0
-          margin: 0
+          //margin: 0
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
@@ -643,14 +593,14 @@ $bebas-special-big: 35px
             line-height: 1em
 
       .paragraph
-        +pre(0)
+        +pre(1)
         p, ul li
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
 
         p
-          padding: 7px 7px 0 7px
+          padding: 7px 7px 7px 0
           margin: 0
 
         p.interest

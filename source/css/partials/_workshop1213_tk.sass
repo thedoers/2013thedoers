@@ -14,41 +14,38 @@
   header
     +span-columns(10,10)
     position: relative
-    //margin-bottom: 18px
-    //todo non funziona con replace-text
-    //h2.wp-title
-    //  //+span-columns(10,10)
-    //  height: 342px
-    //  width: 100%
-    //  display: block
-    //  margin-bottom: 0
-    //  margin-left: -($grid-padding)
-    //  margin-right: -($grid-padding)
-    //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
+    h2
+      position: absolute
+      top: 0
+      right: 0
+      +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
+      @extend .blender
 
-    //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-    .subtitle
+
+
+
+    h3
       margin: 0
       margin-left: -($grid-padding)
       background: $black
       position: absolute
       top: 226px
       color: $wp-white
-      h3
-        margin: 0
-        padding: 10px 5px 10px $grid-padding
-        @extend .blender
-        font-weight: 400
-        font-size: px-to-em(28px, 16px)
-        span
-          display: block
+      padding: 10px 5px 10px $grid-padding
+      @extend .blender
+      font-weight: 400
+      font-size: px-to-em(28px, 16px)
+      span
+        display: block
 
 
     .image-container
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
+      max-height: 342px
+      overflow: hidden
       img
-        height: 342px
+        height: auto
         width: 100%
         z-index: -10
         display: block

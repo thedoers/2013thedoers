@@ -5,7 +5,7 @@
 .droidsans
   font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
 
-#wp1213 article
+#wp1213
   +span-columns(10,10)
 
   header
@@ -249,7 +249,7 @@
         vertical-align: middle
 
 +at-breakpoint($screen2 $break2)
-  #wp1213 article
+  #wp1213
     +span-columns(12 ,12)
 
     header
@@ -381,9 +381,8 @@
 
 
 +at-breakpoint($screen3 $break3)
-  #wp1213 article
+  #wp1213
     +span-columns(10,20)
-    +susy-grid-background
     header
       +span-columns(10,10)
       position: relative
@@ -628,16 +627,13 @@
 
 
 +at-breakpoint($screen4 $break4)
-  #wp1213 article
+  #wp1213
     +span-columns(12 ,24)
 
     header
       +span-columns(12,12)
       position: relative
 
-      .subtitle
-        h3
-          span
 
 
       .image-container
@@ -751,10 +747,9 @@
         text-align: center
 
 +at-breakpoint($screen5 $break5)
-  #wp1213 article
+  #wp1213
     +span-columns(12,36)
-    @extend .blender
-    font-weight: 400
+
 
     header
       +span-columns(12,12)

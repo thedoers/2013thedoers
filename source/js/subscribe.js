@@ -31,7 +31,7 @@ function ajaxform_subscribe(formSubmit,status){
             if(element != ""){
                 return element;
             }else{
-                return
+                return ""
             }
         }
 

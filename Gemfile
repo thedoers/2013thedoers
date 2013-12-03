@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem "middleman"
 gem "middleman-favicon-maker", :platforms => [:ruby]
-#gem "middleman-deploy"
+gem "middleman-deploy", :platforms => [:ruby]
 #gem "middleman-smusher"
 gem "middleman-minify-html"
 

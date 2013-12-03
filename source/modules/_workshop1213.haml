@@ -4,12 +4,11 @@
       %h2.wp-title
         WORKSHOP
       %h3.wp-subtitle
-        %span
-          Validare la mia
-        %span
-          idea di business
-        %span
-          o startup
+        %a{href:"/workshops/2013/Come-validare-la-mia-idea-di-business.html"}
+          %span
+            Validare la mia
+          %span
+            idea di startup
 
       .image-container
         = image_tag 'workshop/workshop_background-mobile.png', id:'workshop_bg-mobile', alt:'Workshop'
@@ -56,19 +55,20 @@
         VUOI PARTECIPARE?
       %p.conditions
         La partecipazione &egrave; gratuita e riservata a 5 team selezionati (max 10 persone)
-      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form-wp1213", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
         - field_set_tag do
           %p
             = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Il tuo nome", :type=>"text"
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"La tua email", :type=>"text"
-          = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
+          = hidden_field_tag  :list, :value => "2SpfQLrtBjMKEtOnfPVqKg", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
-          = hidden_field_tag  :success, :value => "/events/2013/success_ixdt1113.html#ixdt1113_tk", :name => "success", :id => 'submit_success'
+          = hidden_field_tag  :success, :value => "/workshops/2013/thank-you-workshop1213.html#wp1213_tk", :name => "success", :id => 'submit_success'
           = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
           %p
-            = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'VOGLIO PARTECIPARE!'
-          %p#status
+            = submit_tag "Submit-wp1213", :name => "submit", :id => 'submit-btn-wp1213',:class=> "send", :value=>'VOGLIO PARTECIPARE!'
+          %p#status-wp1213.status
 
     %footer
       =partial "partials/share_tag", :locals => {:url => "http://thedoers.co", :twitter_title => "They are Doers #ux #ixd #lean ", :title => "The Doers - User Experience, Interaction Design, Lean Product Development"}
-
+      .image-container
+        = image_tag 'workshop/workshop_bg-footer.jpg', id:'workshop_bg-footer', alt:'Workshop'

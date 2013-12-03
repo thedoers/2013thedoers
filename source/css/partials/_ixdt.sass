@@ -113,7 +113,7 @@
         +stretch(0,0,0,0)
         z-index: 2
         background-color: $wow-green
-        +opacity(0.5)
+        +opacity(0.2)
     figure
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
@@ -179,7 +179,7 @@
         color: $white
         box-shadow: $wow-green 2px 2px 1px 0px
         padding: 0
-      p#status
+      p.status
         @extend .droidsans
         margin-top: 20px
   footer
@@ -242,6 +242,9 @@
           +span-columns(5,6)
           font-size: px-to-em(31px,16px)
           line-height: px-to-em(16px,16px)
+          a
+            text-decoration: none
+            color: $wp-white
 
       .paragraph
         +span-columns(6 omega,12)

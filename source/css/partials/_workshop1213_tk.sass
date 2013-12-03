@@ -5,9 +5,11 @@
 .droidsans
   font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
 
+
+
 #wp1213_tk article
   +span-columns(10,10)
-  +susy-grid-background
+  //+susy-grid-background
 
 
   header
@@ -76,6 +78,13 @@
           @extend .bebas
           font-weight: 400
           font-size: px-to-em(20px, 16px)
+        .strong
+          display: inline-block
+          @extend .blender
+          font-weight: 600
+          font-size: px-to-em(15px, 16px)
+          line-height: 1em
+
 
 
     .paragraph
@@ -85,7 +94,7 @@
         font-size: px-to-em(15px, 16px)
 
       p
-        padding: 7px 0
+        padding: 7px 7px 0 7px
         margin: 0
 
       p.interest
@@ -96,7 +105,7 @@
 
       ul
         margin: 0
-        padding: 7px 0 7px $grid-padding
+        padding: 7px 7px 7px $grid-padding
         li
           color: $wptk-blue
           text-decoration: underline
@@ -137,715 +146,557 @@
         display: block
         vertical-align: middle
 
-//+at-breakpoint($screen2 $break2)
-//  #wp1213 article
-//    +span-columns(12 ,12)
-//    //+susy-grid-background
-//
-//    header
-//      +span-columns(12,12)
-//      position: relative
-//      //margin-bottom: 18px
-//      //todo non funziona con replace-text
-//      //h2.wp-title
-//      //  //+span-columns(10,10)
-//      //  height: 342px
-//      //  width: 100%
-//      //  display: block
-//      //  margin-bottom: 0
-//      //  margin-left: -($grid-padding)
-//      //  margin-right: -($grid-padding)
-//      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
-//
-//      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-//      .subtitle
-//        h3
-//          span
-//
-//
-//      .image-container
-//        margin-left: -($grid-padding)
-//        margin-right: -($grid-padding)
-//        img
-//          height: 342px
-//          width: 100%
-//          z-index: -10
-//          display: block
-//          vertical-align: middle
-//
-//    section.container
-//      +span-columns(12,12)
-//      font-size: px-to-em(20px, 16px)
-//      //todo line-height testo va bene così?
-//      .paragraph
-//        p
-//
-//        ul
-//          li
-//            span
-//
-//      .banner_blue
-//        font-size: px-to-em(14px, 16px)
-//        margin-left: 0
-//        margin-right: 0
-//        p
-//          padding: 22px 0 0 $grid-padding
-//
-//
-//    section.location
-//      +span-columns(12,12)
-//
-//      a.map
-//        @extend .nodecoration
-//        position: relative
-//        +span-columns(12,12)
-//
-//        .overlay
-//          display: none
-//          +stretch(0,0,0,0)
-//          z-index: 2
-//          background-color: $wow-green
-//          +opacity(0.5)
-//
-//        figure
-//          margin-left: 0
-//          margin-right: 0
-//          position: relative
-//          img
-//
-//      span
-//        font-size: px-to-em(35px, 16px)
-//
-//      span.date
-//        top: 25px
-//        left: 8px
-//
-//      span.hour
-//        top: 62px
-//        left: 8px
-//
-//      span.address
-//        top: 123px
-//        left: 8px
-//
-//      span.place
-//        top: 158px
-//        left: 8px
-//
-//    section.register
-//      +span-columns(12,12)
-//
-//      h3
-//        +span-columns(9,12)
-//        font-size:  px-to-em(35px,16px)
-//
-//      p.conditions
-//        +span-columns(9,12)
-//        font-size: px-to-em(20px,16px)
-//
-//      form
-//        +span-columns(9,12)
-//
-//        input
-//          +border-radius(0px)
-//          +box-sizing(content-box)
-//        fieldset
-//          border: none
-//          margin: 0
-//          padding: 0
-//          p
-//            +span-columns(9,9)
-//            margin: 0
-//            padding: 0
-//
-//        .email, .name
-//          font-size: px-to-em(20px,16px)
-//          +nowrap
-//          overflow: hidden
-//          text-overflow: ellipsis
-//          padding: 0
-//
-//        .send
-//          text-align: left
-//          text-indent: 10px
-//          font-size: px-to-em(25px,16px)
-//          box-shadow: $wp-gray 6px 6px 1px 0px
-//
-//        p#status
-//          margin-top: 20px
-//
-//    //todo cambiare icone
-//    footer
-//      +span-columns(12,12)
-//      .share
-//        text-align: center
-////+no-bullets
-////margin: 0
-////padding: 0
-//
-//
-//+at-breakpoint($screen3 $break3)
-//  #wp1213 article
-//    +span-columns(10,20)
-//    //+susy-grid-background
-//    @extend .blender
-//    font-weight: 400
-//
-//    header
-//      +span-columns(10,10)
-//      position: relative
-//      //todo non funziona con replace-text
-//      //h2.wp-title
-//      //  //+span-columns(10,10)
-//      //  height: 342px
-//      //  width: 100%
-//      //  display: block
-//      //  margin-bottom: 0
-//      //  margin-left: -($grid-padding)
-//      //  margin-right: -($grid-padding)
-//      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
-//
-//      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-//
-//      .subtitle
-//        margin: 0
-//        margin-left: -($grid-padding)
-//        background: $black
-//        position: absolute
-//        top: 226px
-//        font-size: px-to-em(28px, 15px)
-//        color: $wp-white
-//        h3
-//          margin: 0
-//          padding: 10px 5px 10px $grid-padding
-//          span
-//            display: block
-//
-//
-//      .image-container
-//        margin-left: -($grid-padding)
-//        margin-right: -($grid-padding)
-//        img
-//          height: 342px
-//          width: 100%
-//          z-index: -10
-//          display: block
-//          vertical-align: middle
-//
-//    section.container
-//      +span-columns(10,10)
-//      font-size: px-to-em(15px, 16px)
-//      //todo line-height testo va bene così?
-//
-//      .paragraph
-//        margin-bottom: 12px
-//        p
-//          padding-top: 0
-//        ul
-//          margin: 0
-//          padding: 0 0 0 16px
-//          li
-//            color: $wp-blue
-//            span
-//              color: $wp-black
-//
-//
-//      .banner_blue
-//        height: 74px
-//        background: $wp-blue
-//        font-size: px-to-em(14px, 16px)
-//        color: $wp-white
-//        margin-left: 0
-//        margin-right: 0
-//        p
-//          margin: 0
-//          padding: 22px $grid-padding 0 $grid-padding
-//          line-height: 1em
-//
-//    section.location
-//      +span-columns(10,10)
-//      margin-bottom: 16px
-//      position: relative
-//
-//      a.map
-//        @extend .nodecoration
-//        position: relative
-//        +span-columns(10,10)
-//
-//        .overlay
-//          display: none
-//          +stretch(0,0,0,0)
-//          z-index: 2
-//          background-color: $wow-green
-//          +opacity(0.5)
-//
-//        figure
-//          margin-left: 0
-//          margin-right: 0
-//          position: relative
-//
-//          img
-//            position: relative
-//            display: block
-//            vertical-align: middle
-//            width: 100%
-//            height: auto
-//
-//      span
-//        //+span-columns(4,10)
-//        position: absolute
-//        display: block
-//        @extend .bebas
-//        //font-size: 20px
-//        font-size: px-to-em(16px, 16px)
-//
-//      span.date
-//        top: 0px
-//        left: 0px
-//
-//      span.hour
-//        top: 22px
-//        left: 0px
-//
-//      span.address
-//        top: 44px
-//        left: 0
-//
-//      span.place
-//        top: 66px
-//        left: 0
-//
-//    section.register
-//      +span-columns(10,10)
-//      //margin-bottom: 16px
-//      line-height: 1em
-//
-//      h3
-//        +span-columns(10,10)
-//        margin: 0
-//        margin-bottom: 16px
-//        @extend .bebas
-//        font-size:  px-to-em(30px,16px)
-//        color: $wp-blue
-//        line-height: 1em
-//
-//      p.conditions
-//        +span-columns(10,10)
-//        margin: 0
-//        margin-bottom: 12px
-//        padding: 0
-//        font-size: px-to-em(14px,16px)
-//
-//      form
-//        +span-columns(10,10)
-//
-//        input
-//          +border-radius(0px)
-//          +box-sizing(content-box)
-//        fieldset
-//          border: none
-//          margin: 0
-//          padding: 0
-//          p
-//            +span-columns(10,10)
-//            margin: 0
-//            padding: 0
-//
-//        .email, .name
-//          height: 46px
-//          width: 97%
-//          margin: 0px
-//          margin-bottom: 16px
-//          border: 3px inset $wp-black
-//          font-size: px-to-em(16px,16px)
-//          font-weight: 600
-//          text-indent: 10px
-//          +nowrap
-//          overflow: hidden
-//          text-overflow: ellipsis
-//          padding: 0
-//
-//        .send
-//          height: 45px
-//          width: 97%
-//          margin: 0px
-//          text-decoration: none
-//          background: $wp-blue
-//          border: none
-//          text-align: center
-//          @extend .bebas
-//          font-size: px-to-em(20px,16px)
-//          color: $white
-//          box-shadow: $wp-gray 4px 4px 1px 0px
-//          padding: 0
-//
-//        p#status
-//          //@extend .droidsans
-//          margin-top: 20px
-//
-//    //todo cambiare icone
-//    footer
-//      +span-columns(10,10)
-//      .share
-//        text-align: center
-//        +no-bullets
-//        margin: 0
-//        padding: 0
-//
-//
-//
-//
-////960px horizontal layout
-//+at-breakpoint($screen4 $break4)
-//  #wp1213 article
-//    +span-columns(12 ,24)
-//    //+susy-grid-background
-//
-//    header
-//      +span-columns(12,12)
-//      position: relative
-//      //todo non funziona con replace-text
-//      //h2.wp-title
-//      //  //+span-columns(10,10)
-//      //  height: 342px
-//      //  width: 100%
-//      //  display: block
-//      //  margin-bottom: 0
-//      //  margin-left: -($grid-padding)
-//      //  margin-right: -($grid-padding)
-//      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
-//
-//      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-//      .subtitle
-//        h3
-//          span
-//
-//
-//      .image-container
-//        margin-left: -($grid-padding)
-//        margin-right: -($grid-padding)
-//        img
-//          height: 342px
-//          width: 100%
-//          z-index: -10
-//          display: block
-//          vertical-align: middle
-//
-//    section.container
-//      +span-columns(12,12)
-//      font-size: px-to-em(20px, 16px)
-//      //todo line-height testo va bene così?
-//      .paragraph
-//        p
-//          ul
-//            li
-//              span
-//
-//      .banner_blue
-//        font-size: px-to-em(14px, 16px)
-//        margin-left: 0
-//        margin-right: 0
-//        p
-//          padding: 22px 0 0 $grid-padding
-//
-//    section.location
-//      +span-columns(12,12)
-//
-//      a.map
-//        @extend .nodecoration
-//        position: relative
-//        +span-columns(12,12)
-//
-//        .overlay
-//          display: none
-//          +stretch(0,0,0,0)
-//          z-index: 2
-//          background-color: $wow-green
-//          +opacity(0.5)
-//
-//        figure
-//          margin-left: 0
-//          margin-right: 0
-//          position: relative
-//
-//          img
-//
-//      span
-//        font-size: px-to-em(35px, 16px)
-//
-//      span.date
-//        top: 25px
-//        left: 8px
-//
-//      span.hour
-//        top: 62px
-//        left: 8px
-//
-//      span.address
-//        top: 123px
-//        left: 8px
-//
-//      span.place
-//        top: 158px
-//        left: 8px
-//
-//    section.register
-//      +span-columns(12,12)
-//      h3
-//        +span-columns(9,12)
-//        font-size:  px-to-em(35px,16px)
-//
-//      p.conditions
-//        +span-columns(9,12)
-//        font-size: px-to-em(20px,16px)
-//
-//      form
-//        +span-columns(9,12)
-//
-//        input
-//          +border-radius(0px)
-//          +box-sizing(content-box)
-//        fieldset
-//          border: none
-//          margin: 0
-//          padding: 0
-//          p
-//            +span-columns(9,9)
-//            margin: 0
-//            padding: 0
-//
-//        .email, .name
-//          font-size: px-to-em(20px,16px)
-//          +nowrap
-//          overflow: hidden
-//          text-overflow: ellipsis
-//          padding: 0
-//
-//        .send
-//          text-align: left
-//          text-indent: 10px
-//          font-size: px-to-em(25px,16px)
-//          box-shadow: $wp-gray 6px 6px 1px 0px
-//
-//        p#status
-//          margin-top: 20px
-//
-//    //todo cambiare icone
-//    footer
-//      +span-columns(12,12)
-//      .share
-//        text-align: center
-//
-//+at-breakpoint($screen5 $break5)
-//  #wp1213 article
-//    +span-columns(12,36)
-//    //+susy-grid-background
-//    @extend .blender
-//    font-weight: 400
-//
-//    header
-//      +span-columns(12,12)
-//      position: relative
-//      //todo non funziona con replace-text
-//      //h2.wp-title
-//      //  //+span-columns(10,10)
-//      //  height: 342px
-//      //  width: 100%
-//      //  display: block
-//      //  margin-bottom: 0
-//      //  margin-left: -($grid-padding)
-//      //  margin-right: -($grid-padding)
-//      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
-//
-//      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-//      .subtitle
-//        margin: 0
-//        margin-left: 0
-//        background: $black
-//        position: absolute
-//        top: 226px
-//        font-size: px-to-em(28px, 15px)
-//        color: $wp-white
-//        h3
-//          margin: 0
-//          padding: 10px 5px 10px $grid-padding
-//          span
-//            display: block
-//
-//
-//      .image-container
-//        margin-left: 0
-//        margin-right: 0
-//        img
-//          height: 342px
-//          width: 100%
-//          z-index: -10
-//          display: block
-//          vertical-align: middle
-//
-//    section.container
-//      +span-columns(12,12)
-//      font-size: px-to-em(15px, 16px)
-//      //todo line-height testo va bene così?
-//
-//      .paragraph
-//        margin-bottom: 12px
-//        +pre(1)
-//        p
-//          padding-top: 0
-//        ul
-//          margin: 0
-//          padding: 0 0 0 16px
-//          li
-//            color: $wp-blue
-//            span
-//              color: $wp-black
-//
-//
-//      .banner_blue
-//        height: 74px
-//        background: $wp-blue
-//        font-size: px-to-em(14px, 16px)
-//        color: $wp-white
-//        margin-left: 0
-//        margin-right: 0
-//        p
-//          margin: 0
-//          padding: 22px $grid-padding 0 $grid-padding
-//          line-height: 1em
-//
-//    section.location
-//      +span-columns(12,12)
-//      margin-bottom: 16px
-//      position: relative
-//
-//      a.map
-//        @extend .nodecoration
-//        position: relative
-//        +span-columns(10,10)
-//
-//        .overlay
-//          display: none
-//          +stretch(0,0,0,0)
-//          z-index: 2
-//          background-color: $wow-green
-//          +opacity(0.5)
-//
-//        figure
-//          margin-left: 0
-//          margin-right: 0
-//          position: relative
-//
-//          img
-//            position: relative
-//            display: block
-//            vertical-align: middle
-//            width: 100%
-//            height: auto
-//
-//      span
-//        //+span-columns(4,10)
-//        position: absolute
-//        display: block
-//        @extend .bebas
-//        //font-size: 20px
-//        font-size: px-to-em(16px, 16px)
-//
-//      span.date
-//        top: 0px
-//        left: $grid-padding
-//
-//      span.hour
-//        top: 22px
-//        left: $grid-padding
-//
-//      span.address
-//        top: 44px
-//        left: $grid-padding
-//
-//      span.place
-//        top: 66px
-//        left: $grid-padding
-//
-//    section.register
-//      +span-columns(12,12)
-//      //margin-bottom: 16px
-//      line-height: 1em
-//
-//      h3
-//        +span-columns(12,12)
-//        //+pre(1)
-//        margin: 0
-//        margin-bottom: 16px
-//        @extend .bebas
-//        font-size:  px-to-em(30px,16px)
-//        color: $wp-blue
-//        line-height: 1em
-//
-//      p.conditions
-//        +span-columns(12,12)
-//        //+pre(1)
-//        margin: 0
-//        margin-bottom: 12px
-//        padding: 0
-//        font-size: px-to-em(14px,16px)
-//
-//      form
-//        +span-columns(12,12)
-//
-//        input
-//          +border-radius(0px)
-//          +box-sizing(content-box)
-//        fieldset
-//          border: none
-//          margin: 0
-//          padding: 0
-//          p
-//            +span-columns(12,12)
-//            margin: 0
-//            padding: 0
-//
-//        .email, .name
-//          height: 46px
-//          width: 97%
-//          margin: 0px
-//          margin-bottom: 16px
-//          border: 3px inset $wp-black
-//          font-size: px-to-em(16px,16px)
-//          font-weight: 600
-//          text-indent: 10px
-//          +nowrap
-//          overflow: hidden
-//          text-overflow: ellipsis
-//          padding: 0
-//
-//        .send
-//          height: 45px
-//          width: 97%
-//          margin: 0px
-//          text-decoration: none
-//          background: $wp-blue
-//          border: none
-//          text-align: center
-//          @extend .bebas
-//          font-size: px-to-em(20px,16px)
-//          color: $white
-//          box-shadow: $wp-gray 4px 4px 1px 0px
-//          padding: 0
-//
-//        p#status
-//          //@extend .droidsans
-//          margin-top: 20px
-//
-//    //todo cambiare icone
-//    footer
-//      +span-columns(12,12)
-//      .share
-//        text-align: center
-//        +no-bullets
-//        margin: 0
-//        padding: 0
-//
-//
-//
-//
+$bebas-special-big: 35px
+
++at-breakpoint($screen2 $break2)
+  #wp1213_tk article
+    +span-columns(12 ,12)
+    //+susy-grid-background
+    header
+      +span-columns(12,12)
+      position: relative
+      //margin-bottom: 18px
+      //todo non funziona con replace-text
+      //h2.wp-title
+      //  //+span-columns(10,10)
+      //  height: 342px
+      //  width: 100%
+      //  display: block
+      //  margin-bottom: 0
+      //  margin-left: -($grid-padding)
+      //  margin-right: -($grid-padding)
+      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
+
+      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
+      .subtitle
+        //margin: 0
+        margin-left: 0
+        //background: $black
+        //position: absolute
+        //top: 226px
+        //color: $wp-white
+        h3
+          margin: 0
+          padding: 10px 5px 10px $grid-padding
+          //@extend .blender
+          //font-weight: 400
+          font-size: px-to-em(28px, 16px)
+          span
+            display: block
+
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+        img
+          //height: 342px
+          //width: 100%
+          //z-index: -10
+          //display: block
+          //vertical-align: middle
+
+    section.container
+      +span-columns(12,12)
+      //margin: 9px 0
+
+      .banner_blue
+        //height: auto
+        //background: $wptk-blue
+        //color: $wp-white
+        //padding: 6px  0
+        margin-left: 0
+        margin-right: 0
+
+        p
+          padding: 0 0 0 $grid-padding
+          margin: 0
+          //@extend .blender
+          //font-weight: 400
+          font-size: px-to-em(20px, 16px)
+          .special
+            //@extend .bebas
+            //font-weight: 400
+            font-size: px-to-em($bebas-special-big, 16px)
+            line-height: 1em
+          .strong
+            //display: inline-block
+            //@extend .blender
+            //font-weight: 600
+            font-size: px-to-em(20px, 16px)
+
+      .paragraph
+        +pre(1)
+        p, ul li
+          //@extend .blender
+          //font-weight: 400
+          font-size: px-to-em(20px, 16px)
+
+        p
+          padding: 7px 7px 0 7px
+          margin: 0
+
+        p.interest
+          //@extend .bebas
+          //font-weight: 400
+          font-size: px-to-em($bebas-special-big, 16px)
+          line-height: 1em
+
+
+        ul
+          margin: 0
+          padding: 7px 7px 7px $grid-padding
+          li
+            //color: $wptk-blue
+            //text-decoration: underline
+
+
+    footer
+      +span-columns(12,12)
+      position: relative
+
+      .share
+        position: absolute
+        margin: 8% 0 0 0
+        padding: 0
+        width: 100%
+        text-align: center
+
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(24px,16px)
+          line-height: px-to-em(22px,16px)
+          //todo mettere a posto i colori
+          +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+
+        img
+          height: auto
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
+
+//
++at-breakpoint($screen3 $break3)
+  #wp1213_tk article
+    +span-columns(10,20)
+    +susy-grid-background
+
+
+    header
+      +span-columns(10,10)
+      position: relative
+      //margin-bottom: 18px
+      //todo non funziona con replace-text
+      //h2.wp-title
+      //  //+span-columns(10,10)
+      //  height: 342px
+      //  width: 100%
+      //  display: block
+      //  margin-bottom: 0
+      //  margin-left: -($grid-padding)
+      //  margin-right: -($grid-padding)
+      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
+
+      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
+      .subtitle
+        margin: 0
+        margin-left: -($grid-padding)
+        background: $black
+        position: absolute
+        top: 226px
+        color: $wp-white
+        h3
+          margin: 0
+          padding: 10px 5px 10px $grid-padding
+          @extend .blender
+          font-weight: 400
+          font-size: px-to-em(28px, 16px)
+          span
+            display: block
+
+
+      .image-container
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+        img
+          height: 342px
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
+
+    section.container
+      +span-columns(10,10)
+      margin: 9px 0
+
+      .banner_blue
+        height: auto
+        background: $wptk-blue
+        color: $wp-white
+        line-height: 1em
+        padding: 6px  0
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+
+        p
+          padding: 0 0 0 $grid-padding
+          margin: 0
+          @extend .blender
+          font-weight: 400
+          font-size: px-to-em(15px, 16px)
+          .special
+            @extend .bebas
+            font-weight: 400
+            font-size: px-to-em(20px, 16px)
+          .strong
+            display: inline-block
+            @extend .blender
+            font-weight: 600
+            font-size: px-to-em(15px, 16px)
+            line-height: 1em
+
+
+
+      .paragraph
+        +pre(0)
+        p, ul li
+          @extend .blender
+          font-weight: 400
+          font-size: px-to-em(15px, 16px)
+
+        p
+          padding: 7px 7px 0 7px
+          margin: 0
+
+        p.interest
+          @extend .bebas
+          font-weight: 400
+          font-size: px-to-em(20px, 16px)
+
+
+        ul
+          margin: 0
+          padding: 7px 7px 7px $grid-padding
+          li
+            color: $wptk-blue
+            text-decoration: underline
+
+
+    footer
+      +span-columns(10,10)
+      position: relative
+
+      .share
+        position: absolute
+        margin: 8% 0 0 0
+        padding: 0
+        width: 100%
+        text-align: center
+
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(24px,16px)
+          line-height: px-to-em(22px,16px)
+          //todo mettere a posto i colori
+          +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+
+      .image-container
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+
+        img
+          height: auto
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
+
++at-breakpoint($screen4 $break4)
+  #wp1213_tk article
+    +span-columns(12 ,24)
+    +susy-grid-background
+
+    header
+      +span-columns(12,12)
+      position: relative
+      //margin-bottom: 18px
+      //todo non funziona con replace-text
+      //h2.wp-title
+      //  //+span-columns(10,10)
+      //  height: 342px
+      //  width: 100%
+      //  display: block
+      //  margin-bottom: 0
+      //  margin-left: -($grid-padding)
+      //  margin-right: -($grid-padding)
+      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
+
+      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
+      .subtitle
+        //margin: 0
+        margin-left: 0
+        //background: $black
+        //position: absolute
+        //top: 226px
+        //color: $wp-white
+        h3
+          margin: 0
+          padding: 10px 5px 10px $grid-padding
+          //@extend .blender
+          //font-weight: 400
+          font-size: px-to-em(28px, 16px)
+          span
+            display: block
+
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+        img
+          //height: 342px
+          //width: 100%
+          //z-index: -10
+          //display: block
+          //vertical-align: middle
+
+    section.container
+      +span-columns(12,12)
+      //margin: 9px 0
+
+      .banner_blue
+        //height: auto
+        //background: $wptk-blue
+        //color: $wp-white
+        //padding: 6px  0
+        margin-left: 0
+        margin-right: 0
+
+        p
+          padding: 0 0 0 $grid-padding
+          margin: 0
+          //@extend .blender
+          //font-weight: 400
+          font-size: px-to-em(20px, 16px)
+          .special
+            //@extend .bebas
+            //font-weight: 400
+            font-size: px-to-em($bebas-special-big, 16px)
+            line-height: 1em
+          .strong
+            //display: inline-block
+            //@extend .blender
+            //font-weight: 600
+            font-size: px-to-em(20px, 16px)
+
+      .paragraph
+        +pre(1)
+        p, ul li
+          //@extend .blender
+          //font-weight: 400
+          font-size: px-to-em(20px, 16px)
+
+        p
+          padding: 7px 7px 0 7px
+          margin: 0
+
+        p.interest
+          //@extend .bebas
+          //font-weight: 400
+          font-size: px-to-em($bebas-special-big, 16px)
+          line-height: 1em
+
+
+        ul
+          margin: 0
+          padding: 7px 7px 7px $grid-padding
+          li
+            //color: $wptk-blue
+            //text-decoration: underline
+
+
+    footer
+      +span-columns(12,12)
+      position: relative
+
+      .share
+        position: absolute
+        margin: 8% 0 0 0
+        padding: 0
+        width: 100%
+        text-align: center
+
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(24px,16px)
+          line-height: px-to-em(22px,16px)
+          //todo mettere a posto i colori
+          +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+
+        img
+          height: auto
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
+
++at-breakpoint($screen5 $break5)
+  #wp1213_tk article
+    +span-columns(12,36)
+    +susy-grid-background
+
+    header
+      +span-columns(12,12)
+      position: relative
+      //margin-bottom: 18px
+      //todo non funziona con replace-text
+      //h2.wp-title
+      //  //+span-columns(10,10)
+      //  height: 342px
+      //  width: 100%
+      //  display: block
+      //  margin-bottom: 0
+      //  margin-left: -($grid-padding)
+      //  margin-right: -($grid-padding)
+      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
+
+      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
+      .subtitle
+        margin: 0
+        margin-left: 0
+        background: $black
+        position: absolute
+        top: 226px
+        color: $wp-white
+        h3
+          margin: 0
+          padding: 10px 5px 10px $grid-padding
+          @extend .blender
+          font-weight: 400
+          font-size: px-to-em(28px, 16px)
+          span
+            display: block
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+        img
+          height: 342px
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
+
+    section.container
+      +span-columns(12,12)
+      margin: 9px 0
+
+      .banner_blue
+        height: auto
+        background: $wptk-blue
+        color: $wp-white
+        line-height: 1em
+        padding: 6px  0
+        margin-left: 0
+        margin-right: 0
+
+        p
+          padding: 0 0 0 0
+          margin: 0
+          @extend .blender
+          font-weight: 400
+          font-size: px-to-em(15px, 16px)
+          .special
+            @extend .bebas
+            font-weight: 400
+            font-size: px-to-em(20px, 16px)
+          .strong
+            display: inline-block
+            @extend .blender
+            font-weight: 600
+            font-size: px-to-em(15px, 16px)
+            line-height: 1em
+
+      .paragraph
+        +pre(0)
+        p, ul li
+          @extend .blender
+          font-weight: 400
+          font-size: px-to-em(15px, 16px)
+
+        p
+          padding: 7px 7px 0 7px
+          margin: 0
+
+        p.interest
+          @extend .bebas
+          font-weight: 400
+          font-size: px-to-em(20px, 16px)
+
+
+        ul
+          margin: 0
+          padding: 7px 7px 7px $grid-padding
+          li
+            color: $wptk-blue
+            text-decoration: underline
+
+    footer
+      +span-columns(12,12)
+      position: relative
+
+      .share
+        position: absolute
+        margin: 8% 0 0 0
+        padding: 0
+        width: 100%
+        text-align: center
+
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(24px,16px)
+          line-height: px-to-em(22px,16px)
+          //todo mettere a posto i colori
+          +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+
+      .image-container
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+
+        img
+          height: auto
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle

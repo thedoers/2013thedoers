@@ -33,7 +33,9 @@
         font-weight: 600
         font-size:  px-to-em(23px,16px)
         margin: 0px
-        color: $acqua-green
+        a
+          text-decoration: none
+          color: $acqua-green
         .color
           color: $black
       p.powered
@@ -113,7 +115,7 @@
         +stretch(0,-($grid-padding),0,-($grid-padding))
         z-index: 2
         background-color: $wow-green
-        +opacity(0.5)
+        +opacity(0.2)
     figure
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
@@ -187,7 +189,7 @@
         color: $white
         box-shadow: $wow-green 2px 2px 1px 0px
         padding: 0
-      p#status
+      p.status
         @extend .droidsans
         margin-top: 20px
   footer

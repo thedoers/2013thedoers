@@ -7,7 +7,6 @@
 
 #wp1213 article
   +span-columns(10,10)
-  //+susy-grid-background
 
   header
     +span-columns(10,10)
@@ -17,18 +16,24 @@
       position: absolute
       top: 0
       right: 0
-      //+replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
+      +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
+      @extend .blender
     h3
-      margin: 0
+      margin: 0 0 0 0
       margin-left: -($grid-padding)
       background: $black
       position: absolute
+      display: block
       top: 226px
       color: $wp-white
       font-size: px-to-em(28px, 16px)
       font-weight: 400
-      margin: 0
+
       padding: 10px 5px 10px $grid-padding
+      @extend .blender
+      a
+        text-decoration: none
+        color: $wp-white
       span
         display: block
 
@@ -49,7 +54,6 @@
     +span-columns(10,10)
     margin: 0
 
-    //todo line-height testo va bene così?
     .paragraph
       font-size: px-to-em(15px, 16px)
       margin-bottom: 12px
@@ -92,20 +96,21 @@
 
         +stretch(0,-($grid-padding),0,-($grid-padding))
         z-index: 2
-        background-color: $wow-green
-        +opacity(0.5)
+        background-color: $wp-blue
+        +opacity(0.2)
 
       figure
         margin-left: -($grid-padding)
         margin-right: -($grid-padding)
         position: relative
-
+        overflow: hidden
         img
           position: relative
           display: block
           vertical-align: middle
           width: 100%
           height: auto
+          margin-bottom: -15%
 
     span
       //+span-columns(4,10)
@@ -142,8 +147,9 @@
       margin-bottom: 16px
       @extend .bebas
       font-size:  px-to-em(30px,16px)
-      color: $wp-blue
+
       line-height: 1em
+
 
     p.conditions
       +span-columns(10,10)
@@ -195,17 +201,22 @@
         box-shadow: $wp-gray 4px 4px 1px 0px
         padding: 0
 
-      p#status
+      p.status
         //@extend .droidsans
         margin-top: 20px
 
-  //todo cambiare icone
+
   footer
     +span-columns(10,10)
+    position: relative
+
     .share
-      text-align: center
-      margin: 0
+      position: absolute
+      margin: 8% 0 0 0
       padding: 0
+      width: 100%
+      text-align: center
+
       a
         cursor: pointer
         border: none
@@ -216,32 +227,27 @@
         text-align: center
         font-size: px-to-em(24px,16px)
         line-height: px-to-em(22px,16px)
-        +link-colors($acqua-green, $wow-green, $acqua-green, $blue, $acqua-green)
+        //todo mettere a posto i colori
+        +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+
+    .image-container
+      margin-left: -($grid-padding)
+      margin-right: -($grid-padding)
+
+      img
+        height: auto
+        width: 100%
+        z-index: -10
+        display: block
+        vertical-align: middle
 
 +at-breakpoint($screen2 $break2)
   #wp1213 article
     +span-columns(12 ,12)
-    //+susy-grid-background
 
     header
       +span-columns(12,12)
       position: relative
-      //margin-bottom: 18px
-      //todo non funziona con replace-text
-      //h2.wp-title
-      //  //+span-columns(10,10)
-      //  height: 342px
-      //  width: 100%
-      //  display: block
-      //  margin-bottom: 0
-      //  margin-left: -($grid-padding)
-      //  margin-right: -($grid-padding)
-      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
-
-      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-      .subtitle
-        h3
-          span
 
 
       .image-container
@@ -274,11 +280,7 @@
         position: relative
         +span-columns(12,12)
 
-        .overlay
-          +stretch(0,0,0,0)
-          z-index: 2
-          background-color: $wow-green
-          +opacity(0.5)
+
 
         figure
           margin-left: 0
@@ -322,6 +324,7 @@
         input
           +border-radius(0px)
           +box-sizing(content-box)
+
         fieldset
           border: none
           margin: 0
@@ -337,14 +340,14 @@
           overflow: hidden
           text-overflow: ellipsis
           padding: 0
-
+          @extend .blender
         .send
           text-align: left
           text-indent: 10px
           font-size: px-to-em(25px,16px)
           box-shadow: $wp-gray 6px 6px 1px 0px
 
-        p#status
+        p.status
           margin-top: 20px
 
     //todo cambiare icone
@@ -368,25 +371,12 @@
 +at-breakpoint($screen3 $break3)
   #wp1213 article
     +span-columns(10,20)
-    //+susy-grid-background
     @extend .blender
     font-weight: 400
 
     header
       +span-columns(10,10)
       position: relative
-      //todo non funziona con replace-text
-      //h2.wp-title
-      //  //+span-columns(10,10)
-      //  height: 342px
-      //  width: 100%
-      //  display: block
-      //  margin-bottom: 0
-      //  margin-left: -($grid-padding)
-      //  margin-right: -($grid-padding)
-      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
-
-      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
 
       .subtitle
         margin: 0
@@ -453,12 +443,7 @@
         position: relative
         +span-columns(10,10)
 
-        .overlay
 
-          +stretch(0,0,0,0)
-          z-index: 2
-          background-color: $wow-green
-          +opacity(0.5)
 
         figure
           margin-left: 0
@@ -560,7 +545,7 @@
           box-shadow: $wp-gray 4px 4px 1px 0px
           padding: 0
 
-        p#status
+        p.status
           //@extend .droidsans
           margin-top: 20px
 
@@ -580,23 +565,11 @@
 +at-breakpoint($screen4 $break4)
   #wp1213 article
     +span-columns(12 ,24)
-    //+susy-grid-background
 
     header
       +span-columns(12,12)
       position: relative
-      //todo non funziona con replace-text
-      //h2.wp-title
-      //  //+span-columns(10,10)
-      //  height: 342px
-      //  width: 100%
-      //  display: block
-      //  margin-bottom: 0
-      //  margin-left: -($grid-padding)
-      //  margin-right: -($grid-padding)
-      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
 
-      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
       .subtitle
         h3
           span
@@ -637,12 +610,7 @@
         position: relative
         +span-columns(12,12)
 
-        .overlay
 
-          +stretch(0,0,0,0)
-          z-index: 2
-          background-color: $wow-green
-          +opacity(0.5)
 
         figure
           margin-left: 0
@@ -708,7 +676,7 @@
           font-size: px-to-em(25px,16px)
           box-shadow: $wp-gray 6px 6px 1px 0px
 
-        p#status
+        p.status
           margin-top: 20px
 
     //todo cambiare icone
@@ -720,25 +688,13 @@
 +at-breakpoint($screen5 $break5)
   #wp1213 article
     +span-columns(12,36)
-    //+susy-grid-background
     @extend .blender
     font-weight: 400
 
     header
       +span-columns(12,12)
       position: relative
-      //todo non funziona con replace-text
-      //h2.wp-title
-      //  //+span-columns(10,10)
-      //  height: 342px
-      //  width: 100%
-      //  display: block
-      //  margin-bottom: 0
-      //  margin-left: -($grid-padding)
-      //  margin-right: -($grid-padding)
-      //  +replace-text-with-dimensions("workshop/workshop_bg-mobile.jpg")
 
-      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
       .subtitle
         margin: 0
         margin-left: 0
@@ -807,12 +763,6 @@
         position: relative
         +span-columns(10,10)
 
-        .overlay
-
-          +stretch(0,0,0,0)
-          z-index: 2
-          background-color: $wow-green
-          +opacity(0.5)
 
         figure
           margin-left: 0
@@ -852,7 +802,6 @@
 
     section.register
       +span-columns(12,12)
-      //margin-bottom: 16px
       line-height: 1em
 
       h3
@@ -916,11 +865,9 @@
           box-shadow: $wp-gray 4px 4px 1px 0px
           padding: 0
 
-        p#status
-          //@extend .droidsans
+        p.status
           margin-top: 20px
 
-    //todo cambiare icone
     footer
       +span-columns(12,12)
       .share

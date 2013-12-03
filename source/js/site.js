@@ -2,6 +2,7 @@
 //= require "subscribe"
 //= require "vendor/jquery.easing.min"
 //= require "vendor/jquery.fadeloader"
+//=require "passURL"
 /**
  * Created with JetBrains RubyMine.
  * User: piermariacosina
@@ -10,20 +11,11 @@
  * To change this template use File | Settings | File Templates.
  */
 $(document).ready(function(){
-    ajaxform_subscribe();
+    ajaxform_subscribe("#signup-form-wp1213","#status-wp1213");
+    ajaxform_subscribe("#signup-form-ixdt1113","#status-ixdt1113");
     overlay("a.map");
-    currentPath = getPathFromUrl(window.location.href);
-
-    if( currentPath == "http://thedoers.co/events/2013/thank-you-ixdt1113.html"){
-        name = decodeURIComponent($.urlParam('name'));
-
-        if (name == "null" || name == "" || name === "undefined" || name == 0){
-            $('#user_name').text("friend");
-        }else{
-            $('#user_name').text(name);
-        }
-
-    }
+    getQueryVars("http://thedoers.co/events/2013/thank-you-ixdt1113.html");
+    getQueryVars("http://0.0.0.0:4567/workshops/2013/thank-you-workshop1213.html");
     $('#container').fadeloader({mode: "children",preloadImg: '/loading.gif',
         preloadWidth: 36,
         preloadHeight: 36,
@@ -33,9 +25,9 @@ $(document).ready(function(){
 
 function overlay(element){
     $(element).hover(function(){
-        $(this).find(".overlay").fadeIn(400);
-    }, function() {
         $(this).find(".overlay").fadeOut(400);
+    }, function() {
+        $(this).find(".overlay").fadeIn(400);
     });
 
 }
@@ -43,15 +35,4 @@ function overlay(element){
 /*$('#header').click(function(){
     $('#header').toggleClass('flip');
 });*/
-function getPathFromUrl(url) {
-    return url.split("?")[0];
-}
-$.urlParam = function(name){
-    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
-    if (results==null){
-        return null;
-    }
-    else{
-        return results[1] || 0;
-    }
-}
+

@@ -5,8 +5,8 @@
  * Time: 09:49
  * To change this template use File | Settings | File Templates.
  */
-function ajaxform_subscribe(){
-    $("#signup-form").submit(function(e){
+function ajaxform_subscribe(formSubmit,status){
+    $(formSubmit).submit(function(e){
         e.preventDefault();
 
         var $form = $(this),
@@ -17,7 +17,7 @@ function ajaxform_subscribe(){
             language = $form.find('input[name="language"]').val(),
             success = $form.find('input[name="success"]').val(),
             url = $form.attr('action');
-
+        var $status = $(status);
         var success_path = success+"?"+check_name(name)+check_element(element);
         function check_name(name){
             if(name == ""){
@@ -37,8 +37,8 @@ function ajaxform_subscribe(){
 
         if (name == "null" || name == "" || name === "undefined" || name == 0)
         {
-            $("#status").text("Please fill in your name.");
-            $("#status").css("color", "red");
+            $status.text("Please fill in your name.");
+            $status.css("color", "red");
         }else{
             $.post(url, {name:name, email:email, list:list, boolean:true,language:language},
                 function(data) {
@@ -46,29 +46,29 @@ function ajaxform_subscribe(){
                     {
                         if(data=="Some fields are missing.")
                         {
-                            $("#status").text("Please fill in your name and email.");
-                            $("#status").css("color", "red");
+                            $status.text("Please fill in your name and email.");
+                            $status.css("color", "red");
                         }
                         else if(data=="Invalid email address.")
                         {
-                            $("#status").text("Your email address is invalid.");
-                            $("#status").css("color", "red");
+                            $status.text("Your email address is invalid.");
+                            $status.css("color", "red");
                         }
                         else if(data=="Invalid list ID.")
                         {
-                            $("#status").text("Your list ID is invalid.");
-                            $("#status").css("color", "red");
+                            $status.text("Your list ID is invalid.");
+                            $status.css("color", "red");
                         }
                         else if(data=="Already subscribed.")
                         {
-                            $("#status").text("You're already subscribed!");
-                            $("#status").css("color", "red");
+                            $status.text("You're already subscribed!");
+                            $status.css("color", "red");
                         }
                         else
                         {
                             //todo fixare colori feedback
-                            $("#status").text("You're subscribed!");
-                            $("#status").css("color", "green");
+                            $status.text("You're subscribed!");
+                            $status.css("color", "green");
                             window.location.href = success_path;
                         }
                     }
@@ -80,17 +80,17 @@ function ajaxform_subscribe(){
             );
         }
 
-
-
-    });
-    $("#signup-form").keypress(function(e) {
-        if(e.keyCode == 13) {
+        $form.keypress(function(e) {
+            if(e.keyCode == 13) {
+                e.preventDefault();
+                $(this).submit();
+            }
+        });
+        $(formSubmit).click(function(e){
             e.preventDefault();
-            $(this).submit();
-        }
+            $form.submit();
+        });
+
     });
-    $("#submit-btn").click(function(e){
-        e.preventDefault();
-        $("#signup-form").submit();
-    });
+
 }

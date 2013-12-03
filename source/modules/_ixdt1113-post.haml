@@ -7,7 +7,8 @@
     %section.container
       .subtitle-paragraph
         %h3.subtitle
-          HOW TO CRAFT A PERFECT <span class="color">USER EXPERIENCE</span> (EVEN WITH A ROUGH AND INCOMPLETE MVP)
+          %a{href:"/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html"}
+            HOW TO CRAFT A PERFECT <span class="color">USER EXPERIENCE</span> (EVEN WITH A ROUGH AND INCOMPLETE MVP)
         %p.powered
           powered by The Doers / event in English
       .paragraph
@@ -43,7 +44,7 @@
         ARE YOU CURIOUS TO SEE HOW UX DESIGN COULD BOOST YOUR BUSINESS?
       %p.paragraph
         Hey, this #IxDT is over: You are still on time to grasp the presentation and keep in contact for next events!
-      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form-ixdt1113", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
         - field_set_tag do
           %p
             -#= text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Leave your name and surname please", :type=>"text"
@@ -52,14 +53,14 @@
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"My email - To get the pres!", :type=>"text"
           = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
-          = hidden_field_tag  :success, :value => "/events/2013/thank-you-ixdt1113.html", :name => "success", :id => 'submit_success'
+          = hidden_field_tag  :success, :value => "/events/2013/thank-you-ixdt1113.html#ixdt1113_tk", :name => "success", :id => 'submit_success'
           = hidden_field_tag  :element, :value => "#ixdt1113_tk", :name => "element", :id => 'submit_element'
 
           = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
           %p
             -#= submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'GREAT, I\'M COMING!'
-            = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'GET THE PRES!'
-          %p#status
+            = submit_tag "Submit", :name => "submit", :id => 'submit-btn-ixdt1113',:class=> "send", :value=>'GET THE PRES!'
+          %p#status-ixdt1113.status
     %footer
       .text
         .paragraph-sponsor

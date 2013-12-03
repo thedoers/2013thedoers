@@ -1,13 +1,11 @@
-=begin
 activate :deploy do |deploy|
     deploy.method = :ftp
     deploy.host = "web332.webfaction.com"
     deploy.user = "piermaria"
     deploy.password = "Nonmelaricordo2"
-    deploy.path = "/home/piermaria/webapps/thedoers2013"
+    deploy.path = "/home/piermaria/webapps/devthedoers"
     deploy.build_before = true
 end
-=end
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = '2013.thedoers.co' # The name of the S3 bucket you are targetting. This is globally unique.
@@ -35,7 +33,10 @@ page "/404.html", :layout => :html5
 page "/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html", :layout => :html5
 page "/events/2013/thank-you-ixdt1113.html", :layout => :html5
 
-page "/newsletters/ixdt1113_post.html"
+page "/workshops/2013/Come-validare-la-mia-idea-di-business.html", :layout => :html5
+page "/workshops/2013/thank-you-workshop1213.html", :layout => :html5
+
+#page "/newsletters/ixdt1113_post.html"
 page "/sitemap.xml", :layout => false
 
 

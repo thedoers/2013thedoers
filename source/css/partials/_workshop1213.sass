@@ -5,7 +5,7 @@
 .droidsans
   font-family: Droidsans , "Helvetica neue", Helvetica, Arial, sans-serif
 
-#wp1213 article
+#wp1213
   +span-columns(10,10)
 
   header
@@ -15,7 +15,7 @@
     h2
       position: absolute
       top: 0
-      right: 0
+      left: columns(1)
       +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
       @extend .blender
     h3
@@ -59,7 +59,8 @@
       p, ul li
         @extend .blender
         font-weight: 400
-        font-size: px-to-em(15px, 16px)
+        font-size: px-to-em(16px, 16px)
+        color: $wp-grey
       p
         padding-top: 0
       ul
@@ -68,8 +69,9 @@
         li
           padding: 0
           color: $wp-blue
+          font-size: px-to-em(16px, 16px)
           span
-            color: $wp-black
+            color: $wp-grey
 
 
     .banner_blue
@@ -94,9 +96,7 @@
       @extend .nodecoration
       position: relative
       +span-columns(10,10)
-
       .overlay
-
         +stretch(0,-($grid-padding),0,-($grid-padding))
         z-index: 2
         background-color: $wp-blue
@@ -116,32 +116,30 @@
           margin-bottom: -15%
 
     span
-      //+span-columns(4,10)
       position: absolute
       display: block
       @extend .bebas
-      //font-size: 20px
       font-size: px-to-em(16px, 16px)
-
+      z-index: 3
     span.date
-      top: 0px
+      top: 10px
       left: 0px
 
+
     span.hour
-      top: 22px
+      top: 32px
       left: 0px
 
     span.address
-      top: 44px
+      top: 54px
       left: 0
 
     span.place
-      top: 66px
+      top: 76px
       left: 0
 
   section.register
     +span-columns(10,10)
-    //margin-bottom: 16px
     line-height: 1em
 
     h3
@@ -149,7 +147,7 @@
       margin: 0
       margin-bottom: 16px
       @extend .bebas
-      font-size:  px-to-em(30px,16px)
+      font-size:  px-to-em(32px,16px)
       color: $wp-blue
       line-height: 1em
 
@@ -162,6 +160,7 @@
       @extend .blender
       font-weight: 400
       font-size: px-to-em(14px,16px)
+      color: $wp-grey
 
     form
       +span-columns(10,10)
@@ -185,10 +184,9 @@
         margin-bottom: 16px
         border: 3px inset $wp-black
         @extend .blender
-        font-weight: 600
         font-size: px-to-em(20px,16px)
         font-weight: 600
-        text-indent: 10px
+        text-indent: 1em
         +nowrap
         overflow: hidden
         text-overflow: ellipsis
@@ -209,7 +207,6 @@
         padding: 0
 
       p.status
-        //@extend .droidsans
         margin-top: 20px
 
 
@@ -219,7 +216,7 @@
 
     .share
       position: absolute
-      margin: 8% 0 0 0
+      margin: 22px 0 0 0
       padding: 0
       width: 100%
       text-align: center
@@ -234,22 +231,23 @@
         text-align: center
         font-size: px-to-em(24px,16px)
         line-height: px-to-em(22px,16px)
-        //todo mettere a posto i colori
-        +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+        +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
 
     .image-container
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
-
+      overflow: hidden
+      height: 70px
       img
         height: auto
         width: 100%
         z-index: -10
         display: block
         vertical-align: middle
+        margin-top: -50%
 
 +at-breakpoint($screen2 $break2)
-  #wp1213 article
+  #wp1213
     +span-columns(12 ,12)
 
     header
@@ -269,21 +267,25 @@
 
     section.container
       +span-columns(12,12)
-      font-size: px-to-em(20px, 16px)
-
       .paragraph
-        p, ul li
-          font-size: px-to-em(20px, 16px)
-        ul li
-          padding-bottom: 7px
+        .left
+          +span-columns(6,12)
+        .right
+          +span-columns(6 omega,12)
+          padding-top: 1em
+        .paragraph
+          +span-columns(12,12)
+          p, ul li
+            font-size: px-to-em(18px, 16px)
+          ul li
+            padding-bottom: 7px
 
       .banner_blue
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
+        position: relative
+        +float-left
+        display: inline-block
         p
-          padding: 22px $grid-padding 22px $grid-padding
-          font-size: px-to-em(20px, 16px)
-
+          font-size: px-to-em(25px,16px)
     section.location
       +span-columns(12,12)
 
@@ -292,18 +294,6 @@
         position: relative
         +span-columns(12,12)
 
-        .overlay
-
-          +stretch(0,-($grid-padding),0,-($grid-padding))
-          z-index: 2
-          background-color: $wp-blue
-          +opacity(0.2)
-
-        figure
-          margin-left: -($grid-padding)
-          margin-right: -($grid-padding)
-          position: relative
-          img
 
       span
         font-size: px-to-em(24px, 16px)
@@ -328,15 +318,15 @@
       +span-columns(12,12)
 
       h3
-        +span-columns(9,12)
+        +span-columns(6,12)
         font-size:  px-to-em(35px,16px)
 
       p.conditions
-        +span-columns(9,12)
-        font-size: px-to-em(20px,16px)
+        +span-columns(6,12)
+        font-size: px-to-em(17px,16px)
 
       form
-        +span-columns(9,12)
+        +span-columns(6,12)
 
         input
           +border-radius(0px)
@@ -359,15 +349,14 @@
           padding: 0
           @extend .blender
         .send
-          text-align: left
+          text-align: center
           text-indent: 10px
-          font-size: px-to-em(25px,16px)
+          f
           box-shadow: $wp-gray 6px 6px 1px 0px
 
         p.status
           margin-top: 20px
 
-    //todo cambiare icone
     footer
       +span-columns(12,12)
       .share
@@ -382,13 +371,12 @@
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-          +link-colors($acqua-green, $wow-green, $acqua-green, $blue, $acqua-green)
+
 
 
 +at-breakpoint($screen3 $break3)
-  #wp1213 article
+  #wp1213
     +span-columns(10,20)
-
     header
       +span-columns(10,10)
       position: relative
@@ -396,12 +384,12 @@
       h2
         position: absolute
         top: 0
-        right: 0
+        left: columns(2,10)
         +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
         @extend .blender
       h3
         margin: 0 0 0 0
-        margin-left: -($grid-padding)
+        margin-left: 0
         background: $black
         position: absolute
         display: block
@@ -410,7 +398,10 @@
         font-size: px-to-em(28px, 16px)
         font-weight: 400
 
-        padding: 10px 5px 10px $grid-padding
+
+
+        padding: 10px 5px 10px 0
+        +prefix(1,10)
         @extend .blender
         a
           text-decoration: none
@@ -420,8 +411,8 @@
 
 
       .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
+        margin-left: 0
+        margin-right: 0
         max-height: 342px
         overflow: hidden
         img
@@ -437,22 +428,26 @@
 
       .paragraph
         margin-bottom: 12px
-        +pre(1)
-        +post(1)
+        .left
+          +span-columns(10,10)
+        .right
+          +span-columns(10,10)
         p, ul li
           @extend .blender
           font-weight: 400
-          font-size: px-to-em(15px, 16px)
+          font-size: px-to-em(16px, 16px)
+          color: $wp-grey
         p
           padding-top: 0
         ul
           margin: 0
-          padding: 0 pre(1)
+          padding: 0 0 0 16px
           li
             padding: 0
             color: $wp-blue
+            font-size: px-to-em(16px, 16px)
             span
-              color: $wp-black
+              color: $wp-grey
 
 
       .banner_blue
@@ -461,14 +456,15 @@
         margin-left: 0
         margin-right: 0
         p
-          //margin: 0
-          +pre(1)
-          +post(1)
-          padding: 22px 0 22px 0
+          margin: 0
+          padding: 22px 0
+          +prefix(1,10)
+          +suffix(1,10)
           @extend .blender
           font-weight: 400
           font-size: px-to-em(16px,16px)
           line-height: 1em
+
 
     section.location
       +span-columns(10,10)
@@ -479,9 +475,7 @@
         @extend .nodecoration
         position: relative
         +span-columns(10,10)
-
         .overlay
-
           +stretch(0,0,0,0)
           z-index: 2
           background-color: $wp-blue
@@ -501,53 +495,55 @@
             margin-bottom: -15%
 
       span
-        //+span-columns(4,10)
         position: absolute
         display: block
         @extend .bebas
-        //font-size: 20px
         font-size: px-to-em(16px, 16px)
-
+        z-index: 3
       span.date
-        top: 0px
-        left: pre(1)
+        top: 10px
+        left: 0
+        +prefix(1,10)
+
 
       span.hour
-        top: 22px
-        left: pre(1)
+        top: 32px
+        left: 0
+        +prefix(1,10)
 
       span.address
-        top: 44px
-        left: pre(1)
+        top: 54px
+        left: 0
+        +prefix(1,10)
 
       span.place
-        top: 66px
-        left: pre(1)
+        top: 76px
+        left: 0
+        +prefix(1,10)
 
     section.register
       +span-columns(10,10)
-      //margin-bottom: 16px
       line-height: 1em
 
       h3
-
-        +pre(1)
+        +span-columns(10,10)
+        margin: 0
         margin-bottom: 16px
         @extend .bebas
-        font-size:  px-to-em(30px,16px)
+        font-size:  px-to-em(32px,16px)
         color: $wp-blue
         line-height: 1em
 
 
       p.conditions
-
-        +pre(1)
-        +post(1)
+        +span-columns(10,10)
+        margin: 0
         margin-bottom: 12px
         padding: 0
         @extend .blender
         font-weight: 400
         font-size: px-to-em(14px,16px)
+        color: $wp-grey
 
       form
         +span-columns(10,10)
@@ -567,14 +563,13 @@
         .email, .name
           height: 46px
           width: 97%
-          margin: 0
+          margin: 0px
           margin-bottom: 16px
           border: 3px inset $wp-black
           @extend .blender
-          font-weight: 600
           font-size: px-to-em(20px,16px)
           font-weight: 600
-          text-indent: 10px
+          text-indent: 1em
           +nowrap
           overflow: hidden
           text-overflow: ellipsis
@@ -595,7 +590,6 @@
           padding: 0
 
         p.status
-          //@extend .droidsans
           margin-top: 20px
 
 
@@ -605,7 +599,7 @@
 
       .share
         position: absolute
-        margin: 8% 0 0 0
+        margin: 22px 0 0 0
         padding: 0
         width: 100%
         text-align: center
@@ -620,23 +614,25 @@
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-          //todo mettere a posto i colori
-          +link-colors($wptk-white, $wptk-blue, $acqua-green, $blue, $acqua-green)
+
+
 
       .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
-
+        margin-left: 0
+        margin-right: 0
+        overflow: hidden
+        height: 70px
         img
           height: auto
           width: 100%
           z-index: -10
           display: block
           vertical-align: middle
+          margin-top: -50%
 
 
 +at-breakpoint($screen4 $break4)
-  #wp1213 article
+  #wp1213
     +span-columns(12 ,24)
 
     header
@@ -645,8 +641,8 @@
 
 
       .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
+        margin-left: 0
+        margin-right: 0
         img
           height: 342px
           width: 100%
@@ -656,21 +652,25 @@
 
     section.container
       +span-columns(12,12)
-      font-size: px-to-em(20px, 16px)
-
       .paragraph
-        p, ul li
-          font-size: px-to-em(20px, 16px)
-        ul li
-          padding-bottom: 7px
+        .left
+          +span-columns(6,12)
+        .right
+          +span-columns(6 omega,12)
+          padding-top: 1em
+        .paragraph
+          +span-columns(12,12)
+          p, ul li
+            font-size: px-to-em(18px, 16px)
+          ul li
+            padding-bottom: 7px
 
       .banner_blue
-        margin-left: 0
-        margin-right: 0
+        position: relative
+        +float-left
+        display: inline-block
         p
-          padding: 22px 0 22px 0
-          font-size: px-to-em(20px, 16px)
-
+          font-size: px-to-em(25px,16px)
     section.location
       +span-columns(12,12)
 
@@ -679,18 +679,6 @@
         position: relative
         +span-columns(12,12)
 
-        .overlay
-
-          +stretch(0,0,0,0)
-          z-index: 2
-          background-color: $wp-blue
-          +opacity(0.2)
-
-        figure
-          margin-left: 0
-          margin-right: 0
-          position: relative
-          img
 
       span
         font-size: px-to-em(24px, 16px)
@@ -715,15 +703,15 @@
       +span-columns(12,12)
 
       h3
-        +span-columns(9,12)
+        +span-columns(6,12)
         font-size:  px-to-em(35px,16px)
 
       p.conditions
-        +span-columns(9,12)
-        font-size: px-to-em(20px,16px)
+        +span-columns(6,12)
+        font-size: px-to-em(17px,16px)
 
       form
-        +span-columns(9,12)
+        +span-columns(6,12)
 
         input
           +border-radius(0px)
@@ -746,15 +734,14 @@
           padding: 0
           @extend .blender
         .send
-          text-align: left
+          text-align: center
           text-indent: 10px
-          font-size: px-to-em(25px,16px)
+
           box-shadow: $wp-gray 6px 6px 1px 0px
 
         p.status
           margin-top: 20px
 
-    //todo cambiare icone
     footer
       +span-columns(12,12)
       .share
@@ -769,35 +756,15 @@
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-          +link-colors($acqua-green, $wow-green, $acqua-green, $blue, $acqua-green)
-
 
 
 +at-breakpoint($screen5 $break5)
-  #wp1213 article
-    +span-columns(12,36)
-    @extend .blender
-    font-weight: 400
+  #wp1213
+    +span-columns(12 ,36)
 
     header
       +span-columns(12,12)
       position: relative
-
-      .subtitle
-        margin: 0
-        margin-left: 0
-        background: $black
-        position: absolute
-        top: 226px
-
-        color: $wp-white
-        h3
-          font-size: px-to-em(28px, 16px)
-          font-weight: 400
-          margin: 0
-          padding: 10px 5px 10px $grid-padding
-          span
-            display: block
 
 
       .image-container
@@ -812,146 +779,92 @@
 
     section.container
       +span-columns(12,12)
-      font-size: px-to-em(15px, 16px)
-      //todo line-height testo va bene così?
-
       .paragraph
-        margin-bottom: 12px
-        +pre(1)
-        p
-          padding-top: 0
-        ul
-          margin: 0
-          padding: 0 0 0 16px
-          li
-            color: $wp-blue
-            span
-              color: $wp-black
-
+        .left
+          +span-columns(6,12)
+        .right
+          +span-columns(6 omega,12)
+          padding-top: 1em
+        .paragraph
+          +span-columns(12,12)
+          p, ul li
+            font-size: px-to-em(18px, 16px)
+          ul li
+            padding-bottom: 7px
 
       .banner_blue
-
-        background: $wp-blue
-        font-size: px-to-em(16px, 16px)
-        color: $wp-white
-        margin-left: 0
-        margin-right: 0
+        position: relative
+        +float-left
+        display: inline-block
         p
-          margin: 0
-          padding: 22px $grid-padding 22px $grid-padding
-          line-height: 1em
-
+          font-size: px-to-em(25px,16px)
     section.location
       +span-columns(12,12)
-      margin-bottom: 16px
-      position: relative
 
       a.map
         @extend .nodecoration
         position: relative
-        +span-columns(10,10)
+        +span-columns(12,12)
 
-
-        figure
-          margin-left: 0
-          margin-right: 0
-          position: relative
-
-          img
-            position: relative
-            display: block
-            vertical-align: middle
-            width: 100%
-            height: auto
 
       span
-        //+span-columns(4,10)
-        position: absolute
-        display: block
-        @extend .bebas
-        //font-size: 20px
-        font-size: px-to-em(16px, 16px)
+        font-size: px-to-em(24px, 16px)
 
       span.date
-        top: 0px
-        left: $grid-padding
+        top: 11px
+        left: 8px
 
       span.hour
-        top: 22px
-        left: $grid-padding
+        top: 40px
+        left: 8px
 
       span.address
-        top: 44px
-        left: $grid-padding
+        top: 70px
+        left: 8px
 
       span.place
-        top: 66px
-        left: $grid-padding
+        top: 100px
+        left: 8px
 
     section.register
       +span-columns(12,12)
-      line-height: 1em
 
       h3
-        +span-columns(12,12)
-        //+pre(1)
-        margin: 0
-        margin-bottom: 16px
-        @extend .bebas
-        font-size:  px-to-em(30px,16px)
-        color: $wp-blue
-        line-height: 1em
+        +span-columns(6,12)
+        font-size:  px-to-em(35px,16px)
 
       p.conditions
-        +span-columns(12,12)
-        //+pre(1)
-        margin: 0
-        margin-bottom: 12px
-        padding: 0
-        font-size: px-to-em(14px,16px)
+        +span-columns(6,12)
+        font-size: px-to-em(17px,16px)
 
       form
-        +span-columns(12,12)
+        +span-columns(6,12)
 
         input
           +border-radius(0px)
           +box-sizing(content-box)
+
         fieldset
           border: none
           margin: 0
           padding: 0
           p
-            +span-columns(12,12)
+            +span-columns(9,9)
             margin: 0
             padding: 0
 
         .email, .name
-          height: 46px
-          width: 97%
-          margin: 0px
-          margin-bottom: 16px
-          border: 3px inset $wp-black
-          font-size: px-to-em(16px,16px)
-          font-weight: 600
-          text-indent: 10px
+          font-size: px-to-em(20px,16px)
           +nowrap
           overflow: hidden
           text-overflow: ellipsis
           padding: 0
-
+          @extend .blender
         .send
-          height: 45px
-          width: 97%
-          margin: 0px
-          text-decoration: none
-          background: $wp-blue
-          border: none
           text-align: center
-          @extend .bebas
-          font-size: px-to-em(20px,16px)
-          color: $white
-          box-shadow: $wp-gray 4px 4px 1px 0px
-          padding: 0
+          text-indent: 10px
+
+          box-shadow: $wp-grey 6px 6px 0px 0px
 
         p.status
           margin-top: 20px
@@ -960,10 +873,14 @@
       +span-columns(12,12)
       .share
         text-align: center
-        +no-bullets
-        margin: 0
-        padding: 0
-
-
-
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(24px,16px)
+          line-height: px-to-em(22px,16px)
 

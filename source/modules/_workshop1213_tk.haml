@@ -1,8 +1,8 @@
 #wp1213_tk
   %article
     %header
-      -#%h2.wp-title
-      -#  WORKSHOP
+      %h2.wp-title
+        WORKSHOP
 
       .subtitle
         %h3
@@ -12,14 +12,14 @@
             idea di startup
 
       .image-container
-        = image_tag 'workshop/workshop_bg-mobile.jpg', id:'workshop_bg-mobile', alt:'Workshop'
+        = image_tag 'workshop/workshop_background-mobile.png', id:'workshop_bg-mobile', alt:'Workshop'
 
 
     %section.container
 
       .banner_blue
         %p
-          <span class= "special"><span class="special" id="user_name"></span><span>,</span><br> SEI UN GRANDE!</span>
+          <span class= "special"><span class="special" id="user_name"></span><span>,</span><br> CHE GRANDE!</span>
 
       .paragraph
         %p
@@ -42,6 +42,6 @@
           <span class="special">GRAZIE E A PRESTO!</span><br>Se vuoi contattarci o venirci a trovare prima: <br> <span class="strong"> we@thedoers.co</span> (.co è diverso da .com!) <span class="strong"> +39 339 3723401</span><br>I nostri riferimenti completi sono nel footer!
 
     %footer
-      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co", :twitter_title => "Non è l'idea che fa l'imprenditore, ma la capacità di validarla. Inizia con un Workshop LINK #startup #analytics #lean", :title => "Dallo sniff test alla validazione del problema e della soluzione: metodi di raccolta metriche, controllo dell'errore e tuning dell'MVP. Vuoi partecipare col tuo progetto di startup? Chiedi di essere selezionato, nessun costo."}
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/workshops/2013/Come-validare-la-mia-idea-di-business.html", :twitter_title => "Non è l'idea che fa l'imprenditore, ma la capacità di validarla. Inizia con un Workshop http://thedoers.co/workshops/2013/Come-validare-la-mia-idea-di-business.html #startup #analytics #lean", :title => "Workshop - Come Validare la Mia Idea di Business"}
       .image-container
         = image_tag 'workshop/workshop_bg-footer.jpg', id:'workshop_bg-footer', alt:'Workshop'

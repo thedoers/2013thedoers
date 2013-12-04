@@ -17,7 +17,7 @@
     h2
       position: absolute
       top: 0
-      right: 0
+      left: columns(1)
       +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
       @extend .blender
     h3
@@ -61,13 +61,13 @@
       background: $wptk-blue
       color: $wp-white
       line-height: 1em
-      padding: 6px  0
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
 
       p
-        padding: 20px 0 20px $grid-padding
         margin: 0
+        padding: 22px 0 22px $grid-padding
+        +suffix(1,10)
         @extend .blender
         font-weight: 400
         font-size: px-to-em(15px, 16px)
@@ -75,14 +75,8 @@
           @extend .bebas
           font-weight: 400
           font-size: px-to-em(20px, 16px)
-        .strong
-          display: inline-block
-          @extend .blender
-          font-weight: 600
-          font-size: px-to-em(15px, 16px)
-          line-height: 1em
-
-
+        a
+          color: $wptk_white
 
     .paragraph
       p, ul li
@@ -91,7 +85,8 @@
         font-size: px-to-em(15px, 16px)
 
       p
-        padding: 7px 7px 7px 0
+        padding: 7px 0
+        +suffix(1,10)
         margin: 0
 
       p.interest
@@ -102,9 +97,12 @@
 
       ul
         margin: 0
-        padding: 7px 7px 7px $grid-padding
-        a
-          +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
+        padding: 7px 0 7px $grid-padding
+        +suffix(1,10)
+        li
+          color: $wptk-blue
+          a
+            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-blue)
 
 
   footer
@@ -168,9 +166,6 @@ $bebas-special-big: 20px
       +span-columns(12,12)
       //margin: 9px 0
 
-      .banner_blue
-        p
-
       .paragraph
         p, ul li
           font-size: px-to-em(20px, 16px)
@@ -187,7 +182,6 @@ $bebas-special-big: 20px
         ul
           margin: 0
           padding: 7px 7px 7px $grid-padding
-          li
 
 
     footer
@@ -266,13 +260,14 @@ $bebas-special-big: 20px
         background: $wptk-blue
         color: $wp-white
         line-height: 1em
-        padding: 6px  0
         margin-left: 0
         margin-right: 0
 
         p
-          padding: 0 0 0 0
-          //margin: 0
+          margin: 0
+          padding: 22px 0
+          +prefix(1,10)
+          +suffix(1,10)
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
@@ -280,27 +275,21 @@ $bebas-special-big: 20px
             @extend .bebas
             font-weight: 400
             font-size: px-to-em(20px, 16px)
-          .strong
-            display: inline-block
-            @extend .blender
-            font-weight: 600
-            font-size: px-to-em(15px, 16px)
-            line-height: 1em
-
 
 
       .paragraph
-        +span-columns(9,10)
-        +pre(1)
-        //+post(1)
+        +span-columns(10,10)
+
         p, ul li
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
 
         p
-          padding: 7px 0 7px 0
+          padding: 7px 0
           margin: 0
+          +prefix(1,10)
+          +suffix(1,10)
 
         p.interest
           @extend .bebas
@@ -310,13 +299,14 @@ $bebas-special-big: 20px
 
         ul
           margin: 0
-          padding: 7px 0 7px $grid-padding
+          padding: 7px  0 7px 0
+          +prefix(1,10)
+          +suffix(1,10)
           li
             color: $wptk-blue
             text-decoration: underline
-          padding: 7px 7px 7px $grid-padding
-          a
-            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
+            a
+              +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-blue)
 
 
     footer
@@ -384,33 +374,21 @@ $bebas-special-big: 20px
         margin-right: 0
 
         p
-          padding: 0 $grid-padding 0 $grid-padding
+          //margin: 0
+          //padding: 22px 0 22px 0
           font-size: px-to-em(20px, 16px)
           .special
             font-size: px-to-em($bebas-special-big, 16px)
             line-height: 1em
-          .strong
-            font-size: px-to-em(20px, 16px)
 
       .paragraph
 
         p, ul li
           font-size: px-to-em(20px, 16px)
 
-        p
-          padding: 7px 7px 7px 0
-          margin: 0
-
         p.interest
           font-size: px-to-em($bebas-special-big, 16px)
           line-height: 1em
-
-
-        ul
-          margin: 0
-          padding: 7px 7px 7px $grid-padding
-          li
-
 
     footer
       +span-columns(12,12)
@@ -458,14 +436,11 @@ $bebas-special-big: 20px
         background: $wptk-blue
         color: $wp-white
         line-height: 1em
-        padding: 6px  0
         margin-left: 0
         margin-right: 0
 
         p
-
-          padding: 0 0 0 0
-          //margin: 0
+          //padding: 22px 0
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
@@ -473,12 +448,6 @@ $bebas-special-big: 20px
             @extend .bebas
             font-weight: 400
             font-size: px-to-em(20px, 16px)
-          .strong
-            display: inline-block
-            @extend .blender
-            font-weight: 600
-            font-size: px-to-em(15px, 16px)
-            line-height: 1em
 
       .paragraph
 
@@ -488,8 +457,8 @@ $bebas-special-big: 20px
           font-size: px-to-em(15px, 16px)
 
         p
-          padding: 7px 7px 7px 0
-          margin: 0
+          //padding: 7px 7px 7px 0
+          //margin: 0
 
         p.interest
           @extend .bebas
@@ -498,10 +467,10 @@ $bebas-special-big: 20px
 
 
         ul
-          margin: 0
-          padding: 7px 7px 7px $grid-padding
+          //margin: 0
+          //padding: 7px 7px 7px $grid-padding
           a
-            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
+            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-blue)
 
     footer
       +span-columns(12,12)

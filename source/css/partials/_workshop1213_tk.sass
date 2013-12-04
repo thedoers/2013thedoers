@@ -14,27 +14,29 @@
   header
     +span-columns(10,10)
     position: relative
+
     h2
       position: absolute
       top: 0
-      right: 0
+      left: columns(1)
       +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
       @extend .blender
-
-
-
-
     h3
-      margin: 0
+      margin: 0 0 0 0
       margin-left: -($grid-padding)
       background: $black
       position: absolute
+      display: block
       top: 226px
       color: $wp-white
+      font-size: px-to-em(28px, 16px)
+      font-weight: 400
+
       padding: 10px 5px 10px $grid-padding
       @extend .blender
-      font-weight: 400
-      font-size: px-to-em(28px, 16px)
+      a
+        text-decoration: none
+        color: $wp-white
       span
         display: block
 
@@ -113,7 +115,7 @@
 
     .share
       position: absolute
-      margin: 8% 0 0 0
+      margin: 22px 0 0 0
       padding: 0
       width: 100%
       text-align: center
@@ -133,61 +135,45 @@
     .image-container
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
-
+      overflow: hidden
+      height: 70px
       img
         height: auto
         width: 100%
         z-index: -10
         display: block
         vertical-align: middle
+        margin-top: -50%
 
-$bebas-special-big: 35px
+$bebas-special-big: 20px
 
 +at-breakpoint($screen2 $break2)
   #wp1213_tk article
     +span-columns(12 ,12)
+
     header
       +span-columns(12,12)
       position: relative
 
-      .subtitle
-        //margin: 0
-        margin-left: 0
-
-        h3
-          margin: 0
-          padding: 10px 5px 10px $grid-padding
-          font-size: px-to-em(28px, 16px)
-          span
-            display: block
-
 
       .image-container
-        margin-left: 0
-        margin-right: 0
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
         img
-
+          height: 342px
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
 
     section.container
       +span-columns(12,12)
       //margin: 9px 0
 
       .banner_blue
-        margin-left: 0
-        margin-right: 0
-
         p
-          +pre(1)
-          padding: 0 0 0 0
-          font-size: px-to-em(20px, 16px)
-          .special
-            font-size: px-to-em($bebas-special-big, 16px)
-            line-height: 1em
-          .strong
-            font-size: px-to-em(20px, 16px)
 
       .paragraph
-        +pre(1)
         p, ul li
           font-size: px-to-em(20px, 16px)
 
@@ -208,15 +194,8 @@ $bebas-special-big: 35px
 
     footer
       +span-columns(12,12)
-      position: relative
-
       .share
-        position: absolute
-        margin: 8% 0 0 0
-        padding: 0
-        width: 100%
         text-align: center
-
         a
           cursor: pointer
           border: none
@@ -227,18 +206,7 @@ $bebas-special-big: 35px
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-          +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
 
-      .image-container
-        margin-left: 0
-        margin-right: 0
-
-        img
-          height: auto
-          width: 100%
-          z-index: -10
-          display: block
-          vertical-align: middle
 
 //
 +at-breakpoint($screen3 $break3)
@@ -249,28 +217,42 @@ $bebas-special-big: 35px
       +span-columns(10,10)
       position: relative
 
-      .subtitle
-        margin: 0
-        margin-left: -($grid-padding)
+      h2
+        position: absolute
+        top: 0
+        left: columns(2,10)
+        +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
+        @extend .blender
+      h3
+        margin: 0 0 0 0
+        margin-left: 0
         background: $black
         position: absolute
+        display: block
         top: 226px
         color: $wp-white
-        h3
-          margin: 0
-          padding: 10px 5px 10px $grid-padding
-          @extend .blender
-          font-weight: 400
-          font-size: px-to-em(28px, 16px)
-          span
-            display: block
+        font-size: px-to-em(28px, 16px)
+        font-weight: 400
+
+
+
+        padding: 10px 5px 10px 0
+        +prefix(1,10)
+        @extend .blender
+        a
+          text-decoration: none
+          color: $wp-white
+        span
+          display: block
 
 
       .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
+        margin-left: 0
+        margin-right: 0
+        max-height: 342px
+        overflow: hidden
         img
-          height: 342px
+          height: auto
           width: 100%
           z-index: -10
           display: block
@@ -281,17 +263,18 @@ $bebas-special-big: 35px
       margin: 9px 0
 
       .banner_blue
+        +span-columns(10,10)
         height: auto
         background: $wptk-blue
         color: $wp-white
         line-height: 1em
         padding: 6px  0
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
+        margin-left: 0
+        margin-right: 0
 
         p
-          padding: 0 0 0 $grid-padding
-          margin: 0
+          padding: 0 0 0 0
+          //margin: 0
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
@@ -309,14 +292,16 @@ $bebas-special-big: 35px
 
 
       .paragraph
-        +pre(0)
+        +span-columns(9,10)
+        +pre(1)
+        //+post(1)
         p, ul li
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
 
         p
-          padding: 7px 7px 7px 0
+          padding: 7px 0 7px 0
           margin: 0
 
         p.interest
@@ -327,7 +312,7 @@ $bebas-special-big: 35px
 
         ul
           margin: 0
-          padding: 7px 7px 7px $grid-padding
+          padding: 7px 0 7px $grid-padding
           li
             color: $wptk-blue
             text-decoration: underline
@@ -339,7 +324,7 @@ $bebas-special-big: 35px
 
       .share
         position: absolute
-        margin: 8% 0 0 0
+        margin: 22px 0 0 0
         padding: 0
         width: 100%
         text-align: center
@@ -354,18 +339,21 @@ $bebas-special-big: 35px
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-          +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
+
+
 
       .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
-
+        margin-left: 0
+        margin-right: 0
+        overflow: hidden
+        height: 70px
         img
           height: auto
           width: 100%
           z-index: -10
           display: block
           vertical-align: middle
+          margin-top: -50%
 
 +at-breakpoint($screen4 $break4)
   #wp1213_tk article
@@ -375,25 +363,17 @@ $bebas-special-big: 35px
       +span-columns(12,12)
       position: relative
 
-      .subtitle
-        //margin: 0
-        margin-left: 0
-        //background: $black
-        //position: absolute
-        //top: 226px
-        //color: $wp-white
-        h3
-          margin: 0
-          padding: 10px 5px 10px $grid-padding
-          font-size: px-to-em(28px, 16px)
-          span
-            display: block
-
 
       .image-container
         margin-left: 0
         margin-right: 0
         img
+          height: 342px
+          width: 100%
+          z-index: -10
+          display: block
+          vertical-align: middle
+
 
     section.container
       +span-columns(12,12)
@@ -403,8 +383,7 @@ $bebas-special-big: 35px
         margin-right: 0
 
         p
-          +pre(1)
-          padding: 0 0 0 0
+          padding: 0 $grid-padding 0 $grid-padding
           font-size: px-to-em(20px, 16px)
           .special
             font-size: px-to-em($bebas-special-big, 16px)
@@ -413,7 +392,7 @@ $bebas-special-big: 35px
             font-size: px-to-em(20px, 16px)
 
       .paragraph
-        +pre(1)
+
         p, ul li
           font-size: px-to-em(20px, 16px)
 
@@ -431,18 +410,10 @@ $bebas-special-big: 35px
           padding: 7px 7px 7px $grid-padding
           li
 
-
     footer
       +span-columns(12,12)
-      position: relative
-
       .share
-        position: absolute
-        margin: 8% 0 0 0
-        padding: 0
-        width: 100%
         text-align: center
-
         a
           cursor: pointer
           border: none
@@ -453,18 +424,8 @@ $bebas-special-big: 35px
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-          +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
 
-      .image-container
-        margin-left: 0
-        margin-right: 0
 
-        img
-          height: auto
-          width: 100%
-          z-index: -10
-          display: block
-          vertical-align: middle
 
 +at-breakpoint($screen5 $break5)
   #wp1213_tk article
@@ -475,23 +436,6 @@ $bebas-special-big: 35px
       position: relative
 
 
-      //todo togliere questo sototitolo e lasciare soltanto h3 e mettere un numero di colomne giuste per l'h3
-      .subtitle
-        margin: 0
-        margin-left: 0
-        background: $black
-        position: absolute
-        top: 226px
-        color: $wp-white
-        h3
-          margin: 0
-          padding: 10px 5px 10px $grid-padding
-          @extend .blender
-          font-weight: 400
-          font-size: px-to-em(28px, 16px)
-          span
-            display: block
-
       .image-container
         margin-left: 0
         margin-right: 0
@@ -501,6 +445,7 @@ $bebas-special-big: 35px
           z-index: -10
           display: block
           vertical-align: middle
+
 
     section.container
       +span-columns(12,12)
@@ -516,7 +461,7 @@ $bebas-special-big: 35px
         margin-right: 0
 
         p
-          +pre(1)
+
           padding: 0 0 0 0
           //margin: 0
           @extend .blender
@@ -534,7 +479,7 @@ $bebas-special-big: 35px
             line-height: 1em
 
       .paragraph
-        +pre(1)
+
         p, ul li
           @extend .blender
           font-weight: 400
@@ -559,15 +504,8 @@ $bebas-special-big: 35px
 
     footer
       +span-columns(12,12)
-      position: relative
-
       .share
-        position: absolute
-        margin: 8% 0 0 0
-        padding: 0
-        width: 100%
         text-align: center
-
         a
           cursor: pointer
           border: none
@@ -578,14 +516,3 @@ $bebas-special-big: 35px
           text-align: center
           font-size: px-to-em(24px,16px)
           line-height: px-to-em(22px,16px)
-
-      .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
-
-        img
-          height: auto
-          width: 100%
-          z-index: -10
-          display: block
-          vertical-align: middle

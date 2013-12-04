@@ -1,10 +1,9 @@
 .fago
   font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
 
-#fabrica article
-  +susy-grid-background
+#fabrica
   +span-columns(10,10)
-  color: $white
+  color: $fa-white
   @extend .fago
   width: 100%
   //float: left
@@ -14,8 +13,8 @@
     position: relative
 
     h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
-      background: $black
-      +box-shadow($white 1px 1px 0px)
+      background: $fa-black
+      +box-shadow($fa-white 1px 1px 0px)
     .image-container
       margin-left: -($grid-padding)
       margin-right: -($grid-padding)
@@ -59,7 +58,7 @@
       top: 99px
 
       span.paragraph
-        background: black
+        background: $fa-black
         float: left
         clear: both
         font-size: px-to-em(15px,16px)
@@ -82,7 +81,7 @@
     margin-bottom: 26px
     font-size: px-to-em(14px, 16px)
     p.base
-      background: black
+      background: $fa-black
       margin: 0px auto
       padding-left: 9px
       padding-right: 6px
@@ -95,8 +94,8 @@
         border-bottom: 1px solid white
       span.white-bk
         padding: 3px
-        color: $black
-        background: $white
+        color: $fa-black
+        background: $fa-white
       span.white-bk, span.bold
         @extend .fago
         font-weight: 600
@@ -106,8 +105,8 @@
     p.underline
       padding-top: 0px
       padding-bottom: 0px
-      background: $white
-      color: $black
+      background: $fa-white
+      color: $fa-black
       @extend .fago
       font-weight: 600
     p.last
@@ -119,9 +118,9 @@
     +pre(1,10)
     margin-bottom: 27px
     form
-      width: span-columns(9,9)
+      width: span-columns(9,10)
       input
-        border: 3px inset black
+        border: 3px inset $fa-black
         padding: 0
         margin: 0
         text-align: left
@@ -149,14 +148,14 @@
       .send
         height: 32px
         width: 84%
-        background: $black
+        background: $fa-black
         border: none
         text-decoration: none
-        +box-shadow($grey 4px -4px 0px)
+        +box-shadow($fa-grey 4px -4px 0px)
         @extend .fago
         font-weight: 600
         font-size: px-to-em(12px, 16px)
-        color: $white
+        color: $fa-white
         +nowrap
         overflow: hidden
         text-overflow: ellipsis
@@ -167,9 +166,9 @@
     height: 68px
     //float: left
     text-align:  center
-    background: black
+    background: $fa-black
     p
-      background: black
+      background: $fa-black
       margin: 16px 0px 0px
       font-size: px-to-em(10.34px, 16px)
     .share
@@ -180,8 +179,7 @@
         padding: 0px 6px 3px
 
 +at-breakpoint($screen2 $break2)
-  #fabrica article
-    +susy-grid-background
+  #fabrica
     +span-columns(12,12)
     header
       .image-container
@@ -220,14 +218,14 @@
         span.bold
           font-weight: 600
           padding: 3px
-          color: $black
-          background: $white
+          color: $fa-black
+          background: $fa-white
         span.regular
 
       p.underline
         text-transform: uppercase
-        color: $white
-        background: $black
+        color: $fa-white
+        background: $fa-black
         font-size: px-to-em(15px, 16px)
       p.last
 
@@ -284,10 +282,9 @@
         float: right
 
 +at-breakpoint($screen3 $break3)
-  #fabrica article
-    //+susy-grid-background
+  #fabrica
     +span-columns(20,20)
-    color: $white
+    color: $fa-white
     @extend .fago
     width: 100%
     //float: left
@@ -299,8 +296,8 @@
 
 
       h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
-        background: $black
-        +box-shadow($white 1px 1px 0px)
+        background: $fa-black
+        +box-shadow($fa-white 1px 1px 0px)
       .image-container
         margin-left: -($grid-padding)
         margin-right: -($grid-padding)
@@ -380,8 +377,8 @@
           border-bottom: 1px solid white
         span.white-bk
           padding: 3px
-          color: $black
-          background: $white
+          color: $fa-black
+          background: $fa-white
         span.white-bk, span.bold
           @extend .fago
           font-weight: 600
@@ -391,8 +388,8 @@
       p.underline
         padding-top: 0px
         padding-bottom: 0px
-        background: $white
-        color: $black
+        background: $fa-white
+        color: $fa-black
         @extend .fago
         font-weight: 600
       p.last
@@ -404,9 +401,9 @@
       +pre(1,10)
       margin-bottom: 27px
       form
-        width: span-columns(9,9)
+        width: span-columns(9,10)
         input
-          border: 3px inset black
+          border: 3px inset
           padding: 0
           margin: 0
           text-align: left
@@ -434,14 +431,14 @@
         .send
           height: 32px
           width: 84%
-          background: $black
+          background: $fa-black
           border: none
           text-decoration: none
-          +box-shadow($grey 4px -4px 0px)
+          +box-shadow($fa-grey 4px -4px 0px)
           @extend .fago
           font-weight: 600
           font-size: px-to-em(12px, 16px)
-          color: $white
+          color: $fa-white
           +nowrap
           overflow: hidden
           text-overflow: ellipsis
@@ -466,10 +463,9 @@
 
 //todo refactoring
 +at-breakpoint($screen4 $break4)
-  #fabrica article
-    //+susy-grid-background
+  #fabrica
     +span-columns(8 ,24)
-    color: $white
+    color: $fa-white
     @extend .fago
     width: 100%
     //float: left
@@ -562,8 +558,8 @@
           border-bottom: 1px solid white
         span.white-bk
           padding: 3px
-          color: $black
-          background: $white
+          color: $fa-black
+          background: $fa-white
         span.white-bk, span.bold
           @extend .fago
           font-weight: 600
@@ -573,8 +569,8 @@
       p.underline
         padding-top: 0px
         padding-bottom: 0px
-        background: $white
-        color: $black
+        background: $fa-white
+        color: $fa-black
         @extend .fago
         font-weight: 600
       p.last
@@ -616,14 +612,14 @@
         .send
           height: 32px
           width: 84%
-          background: $black
+          background: $fa-black
           border: none
           text-decoration: none
-          +box-shadow($grey 4px -4px 0px)
+          +box-shadow($fa-grey 4px -4px 0px)
           @extend .fago
           font-weight: 600
           font-size: px-to-em(12px, 16px)
-          color: $white
+          color: $fa-white
           +nowrap
           overflow: hidden
           text-overflow: ellipsis
@@ -648,10 +644,9 @@
 
 
 +at-breakpoint($screen5 $break5)
-  #fabrica article
-    //+susy-grid-background
+  #fabrica
     +span-columns(12,36)
-    color: $white
+    color: $fa-white
     @extend .fago
     width: 100%
 
@@ -661,8 +656,8 @@
 
 
       h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
-        background: $black
-        +box-shadow($white 1px 1px 0px)
+        background: $fa-black
+        +box-shadow($fa-white 1px 1px 0px)
       .image-container
         margin-left: -($grid-padding)
         margin-right: -($grid-padding)
@@ -742,8 +737,8 @@
           border-bottom: 1px solid white
         span.white-bk
           padding: 3px
-          color: $black
-          background: $white
+          color: $fa-black
+          background: $fa-white
         span.white-bk, span.bold
           @extend .fago
           font-weight: 600
@@ -753,8 +748,8 @@
       p.underline
         padding-top: 0px
         padding-bottom: 0px
-        background: $white
-        color: $black
+        background: $fa-white
+        color: $fa-black
         @extend .fago
         font-weight: 600
       p.last
@@ -796,14 +791,14 @@
         .send
           height: 32px
           width: 84%
-          background: $black
+          background: $fa-black
           border: none
           text-decoration: none
-          +box-shadow($grey 4px -4px 0px)
+          +box-shadow($fa-grey 4px -4px 0px)
           @extend .fago
           font-weight: 600
           font-size: px-to-em(12px, 16px)
-          color: $white
+          color: $fa-white
           +nowrap
           overflow: hidden
           text-overflow: ellipsis
@@ -814,9 +809,9 @@
       height: 68px
       //float: left
       text-align:  center
-      background: black
+      background: $fa-black
       p
-        background: black
+        background: $fa-black
         margin: 16px 0px 0px
         font-size: px-to-em(10.34px, 16px)
       .share

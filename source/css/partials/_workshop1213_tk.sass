@@ -83,6 +83,7 @@
         @extend .blender
         font-weight: 400
         font-size: px-to-em(15px, 16px)
+        color: $wp-grey
 
       p
         padding: 7px 0
@@ -102,7 +103,7 @@
         li
           color: $wptk-blue
           a
-            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-blue)
+            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-grey)
 
 
   footer
@@ -282,7 +283,6 @@ $bebas-special-big: 20px
           @extend .blender
           font-weight: 400
           font-size: px-to-em(15px, 16px)
-
         p
           padding: 7px 0
           margin: 0
@@ -302,9 +302,8 @@ $bebas-special-big: 20px
           +suffix(1,10)
           li
             color: $wptk-blue
-            text-decoration: underline
             a
-              +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-blue)
+              +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
 
 
     footer
@@ -454,21 +453,13 @@ $bebas-special-big: 20px
           font-weight: 400
           font-size: px-to-em(15px, 16px)
 
-        p
-          //padding: 7px 7px 7px 0
-          //margin: 0
-
         p.interest
           @extend .bebas
           font-weight: 400
           font-size: px-to-em(20px, 16px)
 
-
-        ul
-          //margin: 0
-          //padding: 7px 7px 7px $grid-padding
           a
-            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wptk-blue)
+            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
 
     footer
       +span-columns(12,12)

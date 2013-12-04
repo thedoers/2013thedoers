@@ -14,11 +14,10 @@
   header
     +span-columns(10,10)
     position: relative
-
     h2
       position: absolute
       top: 0
-      left: columns(1)
+      right: 0
       +replace-text-with-dimensions("workshop/workshop_logo-mobile.png")
       @extend .blender
     h3
@@ -67,7 +66,7 @@
       margin-right: -($grid-padding)
 
       p
-        padding: 0 0 0 $grid-padding
+        padding: 20px 0 20px $grid-padding
         margin: 0
         @extend .blender
         font-weight: 400
@@ -104,9 +103,8 @@
       ul
         margin: 0
         padding: 7px 7px 7px $grid-padding
-        li
-          color: $wptk-blue
-          text-decoration: underline
+        a
+          +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
 
 
   footer
@@ -316,6 +314,9 @@ $bebas-special-big: 20px
           li
             color: $wptk-blue
             text-decoration: underline
+          padding: 7px 7px 7px $grid-padding
+          a
+            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
 
 
     footer
@@ -410,6 +411,7 @@ $bebas-special-big: 20px
           padding: 7px 7px 7px $grid-padding
           li
 
+
     footer
       +span-columns(12,12)
       .share
@@ -498,9 +500,8 @@ $bebas-special-big: 20px
         ul
           margin: 0
           padding: 7px 7px 7px $grid-padding
-          li
-            color: $wptk-blue
-            text-decoration: underline
+          a
+            +link-colors($wptk-blue,$wptk-blue,$wptk-blue,$wp-grey)
 
     footer
       +span-columns(12,12)

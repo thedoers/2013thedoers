@@ -8,7 +8,7 @@
 function ajaxform_subscribe(formSubmit,status){
     $(formSubmit).submit(function(e){
         e.preventDefault();
-
+        console.log(formSubmit,status);
         var $form = $(this),
             name = $form.find('input[name="name"]').val(),
             email = $form.find('input[name="email"]').val(),

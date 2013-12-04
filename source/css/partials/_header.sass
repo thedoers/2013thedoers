@@ -9,12 +9,10 @@
   .blender
     font-family: Blender, "Helvetica Neue", Helvetica, Arial, sans-serif
   +span-columns(10 ,10)
-  -webkit-perspective: 600px
-  -moz-perspective: 600px
-  perspective: 600px
+
   position: relative
   height: image-height("header/header_shades-background-mobile.png")
-  margin-top: 22px
+
 
 
   .front
@@ -27,17 +25,7 @@
     height: inherit
 
 
-    -webkit-transform: rotateX(0deg) rotateY(0deg)
-    -moz-transform: rotateX(0deg) rotateY(0deg)
-    transform: rotateX(0deg) rotateY(0deg)
-    -webkit-transform-style: preserve-3d
-    -moz-transform-style: preserve-3d
-    transform-style: preserve-3d
-    -webkit-backface-visibility: hidden
-    -moz-backface-visibility: hidden
-    backface-visibility: hidden
-    -webkit-transition: all .8s ease-in-out
-    transition: all .8s ease-in-out
+
 
   .back
 
@@ -48,30 +36,7 @@
     z-index: 800
     width: inherit
     height: inherit
-    -webkit-transform: rotateY(180deg)
-    -webkit-transform-style: preserve-3d
-    -webkit-backface-visibility: hidden
-    -moz-transform: rotateY(180deg)
-    -moz-transform-style: preserve-3d
-    -moz-backface-visibility: hidden
-    transform: rotateY(180deg)
-    transform-style: preserve-3d
-    backface-visibility: hidden
-    -webkit-transition: all .8s ease-in-out
-    transition: all .8s ease-in-out
-  &.flip
-    .front
-      z-index: 900
-      -webkit-transform: rotateY(-180deg)
-      -moz-transform: rotateY(-180deg)
-      transform: rotateY(-180deg)
 
-  &.flip
-    .back
-      z-index: 1000
-      -webkit-transform: rotateX(0deg) rotateY(0deg)
-      -moz-transform: rotateX(0deg) rotateY(0deg)
-      transform: rotateX(0deg) rotateY(0deg)
 
 
   .padder

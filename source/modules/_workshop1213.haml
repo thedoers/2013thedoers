@@ -16,22 +16,23 @@
 
     %section.container
       .paragraph
-        %p
+        %p.left
           Dallo sniff test ai metodi qualitativi di raccolta metriche per la validazione del problema. Dalla valorizzazione del problema, alla validazione della soluzione: come controllare il costo dell’errore
           e mettere a punto l’evoluzione dell’mvp.
-        %ul
-          %li
-            %span
-              Ha senso la mia idea di impresa?
-          %li
-            %span
-              Come posso misurare e dimostrare l’importanza del problema che voglio risolvere?
-          %li
-            %span
-              Come incontro i miei primi clienti se non ho ancora un prototipo?
-          %li
-            %span
-              Come emergo rispetto a chi offre soluzioni simili?
+        .right
+          %ul
+            %li
+              %span
+                Ha senso la mia idea di impresa?
+            %li
+              %span
+                Come posso misurare e dimostrare l’importanza del problema che voglio risolvere?
+            %li
+              %span
+                Come incontro i miei primi clienti se non ho ancora un prototipo?
+            %li
+              %span
+                Come emergo rispetto a chi offre soluzioni simili?
       .banner_blue
         %p
           PER IMPRENDITORI E LORO TEAM CHE VALUTANO DI AVVIARE UN PROGETTO DI STARTUP
@@ -39,20 +40,19 @@
       %a.map{target: "_blank",href: 'https://maps.google.it/maps?q=google+maps+via+mantova+36+torino&ie=UTF-8&ei=t5OTUraCEa2Q7Abk7ICoAQ&ved=0CAgQ_AUoAg'}
         .overlay
         %figure
-          = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Via+Mantova+36,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/d0GT44%7Clabel:S%7C45.075065,7.69844&sensor=false', id:'map_office', alt:'Office Location, Via Mantova 36 Torino'
+          = image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=Via+Mantova+36,Torino,To&zoom=16&size=600x300&maptype=roadmap&markers=icon:http://goo.gl/QNac7B%7Clabel:S%7C45.075065,7.69844&sensor=false', id:'map_office', alt:'Office Location, Via Mantova 36 Torino'
 
       %span.date
-        11 DICEMBRE 2013
+        11&nbsp;&nbsp;&nbsp;DICEMBRE&nbsp;&nbsp;2013
       %span.hour
         10-18
       %span.address
-        VIA MANTOVA,36
+        VIA&nbsp;&nbsp;MANTOVA,36
       %span.place
         TORINO
 
     %section.register
-      %h3
-        VUOI PARTECIPARE?
+      %h3 VUOI&nbsp;&nbsp;&nbsp;PARTECIPARE?
       %p.conditions
         La partecipazione &egrave; gratuita e riservata a 5 team selezionati (max 10 persone)
       - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form-wp1213", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
@@ -65,10 +65,10 @@
           = hidden_field_tag  :success, :value => "/workshops/2013/thank-you-workshop1213.html#wp1213_tk", :name => "success", :id => 'submit_success'
           = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
           %p
-            = submit_tag "Submit-wp1213", :name => "submit", :id => 'submit-btn-wp1213',:class=> "send", :value=>'VOGLIO PARTECIPARE!'
+            = submit_tag "Submit-wp1213", :name => "submit", :id => 'submit-btn-wp1213',:class=> "send", :value=>'VOGLIO&nbsp;&nbsp;&nbsp;&nbsp;PARTECIPARE!'
           %p#status-wp1213.status
 
     %footer
-      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co", :twitter_title => "They are Doers #ux #ixd #lean ", :title => "The Doers - User Experience, Interaction Design, Lean Product Development"}
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/workshops/2013/Come-validare-la-mia-idea-di-business.html", :twitter_title => "Non è l'idea che fa l'imprenditore, ma la capacità di validarla. Inizia con un Workshop http://thedoers.co/workshops/2013/Come-validare-la-mia-idea-di-business.html #startup #analytics #lean", :title => "Workshop - Come Validare la Mia Idea di Business"}
       .image-container
-        = image_tag 'workshop/workshop_bg-footer.jpg', id:'workshop_bg-footer', alt:'Workshop'
+        = image_tag 'workshop/workshop_background-mobile.png', id:'workshop_bg-footer', alt:'Workshop'

@@ -18,7 +18,10 @@ $(document).ready(function(){
     ajaxform_subscribe("#signup-form-wp1213","#status-wp1213");
     ajaxform_subscribe("#signup-form-ixdt1113","#status-ixdt1113");
 
-
+    $('#container').fadeloader({mode: "children",preloadImg: '/loading.gif',
+        preloadWidth: 36,
+        preloadHeight: 36,
+        displayType: "inline"});
 });
 
 

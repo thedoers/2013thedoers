@@ -8,7 +8,6 @@
 function ajaxform_subscribe(formSubmit,status){
     $(formSubmit).submit(function(e){
         e.preventDefault();
-        console.log(formSubmit,status);
         var $form = $(this),
             name = $form.find('input[name="name"]').val(),
             email = $form.find('input[name="email"]').val(),
@@ -18,22 +17,9 @@ function ajaxform_subscribe(formSubmit,status){
             success = $form.find('input[name="success"]').val(),
             url = $form.attr('action');
         var $status = $(status);
-        var success_path = success+"?"+check_name(name)+check_element(element);
-        function check_name(name){
-            if(name == ""){
-                return "name=friend";
-            }else{
-                query= encodeURI("name="+name);
-                return query;
-            }
-        }
-        function check_element(element){
-            if(element != ""){
-                return element;
-            }else{
-                return ""
-            }
-        }
+        var success_path = success+"?"+check_name(name,language)+check_element(element);
+
+
 
         if (name == "null" || name == "" || name === "undefined" || name == 0)
         {
@@ -93,4 +79,31 @@ function ajaxform_subscribe(formSubmit,status){
 
     });
 
+}
+
+function check_language(language){
+    switch(language){
+        case "en":
+            return "name=friend"
+            break;
+        case "it":
+            return "name=amico"
+            break;
+    }
+}
+
+function check_name(name,language){
+    if(name == ""){
+        return check_language(language);
+    }else{
+        query= encodeURI("name="+name);
+        return query;
+    }
+}
+function check_element(element){
+    if(element != ""){
+        return element;
+    }else{
+        return ""
+    }
 }

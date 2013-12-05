@@ -7,12 +7,17 @@
  */
 
 function getQueryVars(URL){
-    currentPath = getPathFromUrl(window.location.href);
+
+    currentPath = location.protocol+'//'+location.host+location.pathname;
+    var moduleLanguage = $("article").attr("lang");
+
     if( currentPath == URL){
         name = decodeURIComponent($.urlParam('name'));
 
         if (name == "null" || name == "" || name === "undefined" || name == 0){
-            $('#user_name').text("friend");
+            name = checkModuleLanguage(moduleLanguage);
+
+            $('#user_name').text(name);
         }else{
             $('#user_name').text(name);
         }
@@ -20,9 +25,17 @@ function getQueryVars(URL){
     }
 }
 
-function getPathFromUrl(url) {
-    return url.split("?")[0];
+function checkModuleLanguage(moduleLanguage){
+    switch(moduleLanguage){
+        case "en":
+            return "friend"
+            break;
+        case "it":
+            return "amico"
+            break;
+    }
 }
+
 $.urlParam = function(name){
     var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){

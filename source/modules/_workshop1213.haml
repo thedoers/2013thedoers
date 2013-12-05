@@ -64,13 +64,13 @@
           = hidden_field_tag  :list, :value => "KgDMXDrqaKxmv6NDzCziJQ", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
           = hidden_field_tag  :success, :value => "/workshops/2013/thank-you-workshop1213.html", :name => "success", :id => 'submit_success'
-          = hidden_field_tag  :element, :value => "#workshop1213_tk", :name => "element", :id => 'submit_element'
+          = hidden_field_tag  :element, :value => "#_wp1213_tk", :name => "element", :id => 'submit_element'
           = hidden_field_tag  :language, :value => "it", :name => "language", :id => 'language'
           %p
             = submit_tag "Submit-wp1213", :name => "submit", :id => 'submit-btn-wp1213',:class=> "send", :value=>'VOGLIO&nbsp;&nbsp;&nbsp;&nbsp;PARTECIPARE!'
           %p#status-wp1213.status
 
     %footer
-      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/workshops/2013/Come-validare-la-mia-startup.html", :twitter_title => "Non è l'idea che fa l'imprenditore, ma la capacità di validarla. Inizia con un Workshop http://thedoers.co/workshops/2013/Come-validare-la-mia-startup.html #startup #analytics #lean", :title => "Workshop - Come Validare la Mia Startup"}
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/workshops/2013/Come-validare-la-mia-startup.html#_wp1213", :twitter_title => "Non è l'idea che fa l'imprenditore, ma la capacità di validarla. Inizia con un Workshop http://thedoers.co/workshops/2013/Come-validare-la-mia-startup.html #startup #analytics #lean", :title => "Workshop - Come Validare la Mia Startup"}
       .image-container
         = image_tag 'workshop/workshop_background-mobile.png', id:'workshop_bg-footer', alt:'Workshop'

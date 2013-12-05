@@ -19,7 +19,7 @@ $(document).ready(function(){
     getQueryVars("http://0.0.0.0:4567/workshops/2013/thank-you-workshop1213.html");
     ajaxform_subscribe("#signup-form-wp1213","#status-wp1213");
     ajaxform_subscribe("#signup-form-ixdt1113","#status-ixdt1113");
-    $.scrollTo(elem);
+
 
     $('#container').fadeloader({
 
@@ -31,23 +31,24 @@ $(document).ready(function(){
         onComplete: "scroll()"
         });
 
+
+});
+function check_hash(){
     if (window.location.hash) {
         var params = (window.location.hash.substr(1)).split("&");
 
         for (i = 0; i < params.length; i++)
         {
             var a = params[i].split("=");
-
             var elem = $( window.location.hash.replace('#_', '#'));
-
-
+            $.scrollTo(elem,400);
         }
     }
-});
-
+}
 
 function scroll(){
-    $.scrollTo("#wp1213",400);
+   check_hash();
+
 }
 function overlay(element){
     $(element).hover(function(){

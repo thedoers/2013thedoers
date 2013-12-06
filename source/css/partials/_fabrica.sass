@@ -575,12 +575,9 @@
       +span-columns(12,12)
       position: relative
 
-      h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
-        background: $fa-black
-        +box-shadow($fa-white 1px 1px 0px)
       .image-container
-        margin-left: -($grid-padding)
-        margin-right: -($grid-padding)
+        margin-left: 0
+        margin-right: 0
         position: relative
         z-index: -10
 
@@ -595,21 +592,28 @@
         #fabrica_bg-desktop
           display: none
 
+      h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
+        background: $fa-black
+
+        +box-shadow($fa-white 1px 1px 0px)
+
       h2.fabrica-title
+        +pre(1,12)
         position: absolute
         height: 21px
         width: 182px
         top: 46px
-        margin: 0
+        //margin: 0
         z-index: 10
         +replace-text("fabrica/fabrica_logo.png")
 
       h3.subtitle
+        +pre(1,12)
         position: absolute
         height: 20px
         width: 66px
         top: 71px
-        margin: 0px
+        //margin: 0px
         text-align: center
         @extend .fago
         font-weight: 600
@@ -639,7 +643,7 @@
     section.container
       //todo chiedere a Pier gliela posizione dal container va bene così
       +span-columns(9,12)
-      +pre(1,12)
+      +pre(2,12)
       margin-top: -15px
       margin-bottom: 26px
       font-size: px-to-em(14px, 16px)
@@ -678,7 +682,7 @@
 
     section.register
       +span-columns(9,12)
-      +pre(1,10)
+      +pre(2,12)
       margin-bottom: 27px
       form
         width: span-columns(9,9)
@@ -727,7 +731,7 @@
 
     footer
       +span-columns(9,12)
-      +pre(1,10)
+      +pre(2,12)
       height: 68px
       //float: left
       text-align:  center

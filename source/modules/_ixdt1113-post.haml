@@ -52,7 +52,10 @@
             = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"My name (Nice to meet you)", :type=>"text"
             -#= text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Leave your email to join the event!", :type=>"text"
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"My email - To get the pres!", :type=>"text"
-          = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
+          - if development?
+            = hidden_field_tag  :list, :value => "C1fJOvxS4d3nIt7BNFTFGQ", :name => "list", :id => 'submit_list'
+          - if build?
+            = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
           = hidden_field_tag  :success, :value => "/events/2013/thank-you-ixdt1113.html#ixdt1113_tk", :name => "success", :id => 'submit_success'
           = hidden_field_tag  :element, :value => "#_ixdt1113_tk", :name => "element", :id => 'submit_element'

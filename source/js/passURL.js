@@ -7,8 +7,7 @@
  */
 
 function getQueryVars(URL){
-
-    currentPath = location.protocol+'//'+location.host+location.pathname;
+    currentPath = location.pathname;
     var moduleLanguage = $("article").attr("lang");
 
     if( currentPath == URL){

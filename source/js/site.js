@@ -5,7 +5,6 @@
 //= require "vendor/jquery.scrollTo"
 //= require "vendor/jquery.videoBG"
 //= require "passURL"
-//= require "addThis"
 /**
  * Created with JetBrains RubyMine.
  * User: piermariacosina

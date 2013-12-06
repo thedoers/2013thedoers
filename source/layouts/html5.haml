@@ -33,12 +33,6 @@
     = partial'partials/tag-manager'
     #container
       = yield
-    :javascript
-      var addthis_config = {
-         data_ga_property: 'UA-44338389-4',
-         data_ga_social: true,
-         data_track_clickback: true
-      };
     %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5063a47d5be474d1"}
     = javascript_include_tag "site.js"
 

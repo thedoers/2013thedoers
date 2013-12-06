@@ -21,15 +21,16 @@ $(document).ready(function(){
     ajaxform_subscribe("#signup-form-wp1213","#status-wp1213");
     ajaxform_subscribe("#signup-form-ixdt1113","#status-ixdt1113");
     $('#video').videoBG({
-        mp4: 'js/videos/tunnel_animation.mp4',
+        mp4: 'js/videos/s01.mp4',
 //        mp4:'js/videos/background_07052013.mp4',
-        webm: 'js/videos/tunnel_animation.webm',
-        ogv: 'js/videos/tunnel_animation.ogv',
+        webm: 'js/videos/s01.webm',
+        ogv: 'js/videos/s01.ogv',
         poster: 'js/videos/tunnel_animation.jpg',
 //        poster:'js/videos/background_07052013.png',
         width: "100%",
         position: "relative",
         scale:true,
+        loop: true,
         zIndex:-1
     });
 

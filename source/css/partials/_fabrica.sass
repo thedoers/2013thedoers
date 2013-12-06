@@ -79,22 +79,23 @@
   section.container
     //todo chiedere a Pier gliela posizione dal container va bene così
     +span-columns(9,10)
+
     +pre(1,10)
     margin-top: -15px
     margin-bottom: 26px
     font-size: px-to-em(14px, 16px)
     p.base
-      background: $fa-black
+
       margin: 0px auto
       padding-left: 9px
       padding-right: 6px
     p.first
       padding-top: 30px
       padding-bottom: 21px
-      a
-        text-decoration: none
-        color: white
-        border-bottom: 1px solid white
+      +background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
+      text-decoration: none
+      color: white
+      border-bottom: 1px solid white
       span.white-bk
         padding: 3px
         color: $fa-black

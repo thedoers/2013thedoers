@@ -1,10 +1,8 @@
 #fabrica
   %article
     %header
-      //todo image fabrica, swap nome
-      .image-container
-        = image_tag "fabrica/fabrica_bg-mobile.jpg", id:"fabrica_bg-mobile" ,alt:"Fabrica"
-        = image_tag "fabrica/fabrica_bg-desktop.jpg", id:"fabrica_bg-desktop" ,alt:"Fabrica"
+      #video.image-container
+
       %h2.fabrica-title
         Fabrica
       %h3.subtitle
@@ -37,5 +35,5 @@
     %footer
       %p
         Se vuoi, puoi condividere qui
-      //todo fixare shares fabrica
-      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/projects/fabrica.htm",:twitter_url => "http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html?utm_source=tweet&utm_medium=twitter&utm_content=26-11&utm_campaign=event#_ixdt1113, :twitter_title => "Come with me at next #ixdt! #ux #startups #event #torino", :title => "It\'s not the product that should be insanely great, but the experience of being your user. The product is just one component of that. (P.G.) - Are you curious to see how UX design could boost your Startup?"}
+
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/projects/fabrica.htm",:twitter_url => "http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html?utm_source=tweet&utm_medium=twitter&utm_content=26-11&utm_campaign=event#_ixdt1113", :twitter_title => "Come with me at next #ixdt! #ux #startups #event #torino", :title => "It\'s not the product that should be insanely great, but the experience of being your user. The product is just one component of that. (P.G.) - Are you curious to see how UX design could boost your Startup?"}

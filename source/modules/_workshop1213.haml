@@ -61,7 +61,10 @@
           %p
             = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Il tuo nome", :type=>"text"
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"La tua email", :type=>"text"
-          = hidden_field_tag  :list, :value => "KgDMXDrqaKxmv6NDzCziJQ", :name => "list", :id => 'submit_list'
+          - if development?
+            = hidden_field_tag  :list, :value => "C1fJOvxS4d3nIt7BNFTFGQ", :name => "list", :id => 'submit_list'
+          - if build?
+            = hidden_field_tag  :list, :value => "KgDMXDrqaKxmv6NDzCziJQ", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
           = hidden_field_tag  :success, :value => "/workshops/2013/thank-you-workshop1213.html", :name => "success", :id => 'submit_success'
           = hidden_field_tag  :element, :value => "#_wp1213_tk", :name => "element", :id => 'submit_element'

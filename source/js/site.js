@@ -25,7 +25,7 @@ $(document).ready(function(){
 //        mp4:'js/videos/background_07052013.mp4',
         webm: 'js/videos/s01.webm',
         ogv: 'js/videos/s01.ogv',
-        poster: 'js/videos/tunnel_animation.jpg',
+//        poster: 'js/videos/tunnel_animation.jpg',
 //        poster:'js/videos/background_07052013.png',
         width: "100%",
         position: "relative",

@@ -3,6 +3,7 @@
 
 #fabrica
   +span-columns(10,10)
+  margin-bottom: 22px
   color: $fa-white
   @extend .fago
 
@@ -23,17 +24,6 @@
       .videoBG
         width: span-columns(10,10)
         height: 220px!important
-
-      //img
-      //  display: block
-      //  vertical-align: middle
-      //  height: 220px
-      //  width: 100%
-
-      //#fabrica_bg-mobile
-      //  display: block
-      //#fabrica_bg-desktop
-      //  display: none
 
     h2.fabrica-title
       position: absolute
@@ -170,37 +160,40 @@
     +span-columns(9,10)
     +pre(1,10)
     height: 68px
-    //float: left
     text-align:  center
     background: $fa-black
-    p
-      background: $fa-black
-      margin: 16px 0px 0px
-      font-size: px-to-em(10.34px, 16px)
-    .share
-      list-style-type: none
-      margin: 0px
-      padding: 0
-      a
-        padding: 0px 6px 3px
 
+    p
+      //background: $fa-black
+      //margin: 16px 0px 0px
+      //font-size: px-to-em(10.34px, 16px)
+      display: none
+
+    .share
+      margin: 22px 0 0 0
+      text-align: center
+      a
+        cursor: pointer
+        border: none
+        text-decoration: none
+        width: 34px
+        height: 34px
+        display: inline-block
+        text-align: center
+        //font-size: px-to-em(22px,16px)
+        line-height: px-to-em(22px,16px)
+        +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
 
 +at-breakpoint($screen2 $break2)
   #fabrica
     +span-columns(12,12)
+    margin-bottom: 22px
     header
       .image-container
         position: relative
         .videoBG
           width: span-columns(12,12)
           height: 600px!important
-        //img
-        //  height: auto
-        //#fabrica_bg-mobile
-        //  display: none
-        //#fabrica_bg-desktop
-        //  display: block
-
 
       h3.subtitle
         text-transform: lowercase
@@ -281,18 +274,23 @@
     footer
       +span-columns(9,12)
       +pre(0)
-      height: 35px
+      height: 45px
       p
-        font-size: px-to-em(12.61px, 16px)
-        margin: 5px 0 0 10px
-        float: left
+        //font-size: px-to-em(12.61px, 16px)
+        //margin: 5px 0 0 10px
+        //float: left
+        //display: block
       .share
-        margin: 5px 10px 0 0
         float: right
+        margin: 7px 0 0 0
+        //padding: 0 0 0 5px
+        +suffix(1,9)
+
 
 +at-breakpoint($screen3 $break3)
   #fabrica
     +span-columns(10,20)
+    margin-bottom: 22px
     color: $fa-white
     @extend .fago
 
@@ -305,23 +303,6 @@
         .videoBG
           width: span-columns(12,12)
           height: 220px!important
-
-
-        //margin-left: 0
-        //margin-right: 0
-        //position: relative
-        //z-index: -10
-        //
-        //img
-        //  display: block
-        //  vertical-align: middle
-        //  height: 220px
-        //  width: 100%
-        //
-        //#fabrica_bg-mobile
-        //  display: block
-        //#fabrica_bg-desktop
-        //  display: none
 
       h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
         background: $fa-black
@@ -463,34 +444,24 @@
       text-align:  center
       background: $fa-black
       p
-        background: $fa-black
-        margin: 16px 0px 0px
-        font-size: px-to-em(10.34px, 16px)
+        //background: $fa-black
+        //margin: 16px 0px 0px
+        //font-size: px-to-em(10.34px, 16px)
       .share
-        list-style-type: none
-        margin: 0px
-        padding: 0
-        a
-          padding: 0px 6px 3px
+        margin: 22px 0 0 0
+
 
 //todo refactoring
 +at-breakpoint($screen4 $break4)
   #fabrica
     +span-columns(12 ,24)
+    margin-bottom: 22px
     header
       .image-container
         position: relative
         .videoBG
           width: span-columns(12,12)
-          height: 220px!important
-        //margin-left: 0
-        //margin-right: 0
-        //img
-        //  height: auto
-        //#fabrica_bg-mobile
-        //  display: none
-        //#fabrica_bg-desktop
-        //  display: block
+          height: 600px!important
 
       h2.fabrica-title
         +pre(1,12)
@@ -510,7 +481,7 @@
             font-size: px-to-em(38.75px, 16px)
 
     section.container
-      +span-columns(9, 12)
+      +span-columns(9,12)
       +pre(1,12)
       margin-top: -151px
       p.base
@@ -573,17 +544,18 @@
       +pre(1,12)
       height: 35px
       p
-        font-size: px-to-em(12.61px, 16px)
-        margin: 5px 0 0 10px
-        float: left
+        //font-size: px-to-em(12.61px, 16px)
+        //margin: 5px 0 0 10px
+        //float: left
       .share
-        margin: 5px 10px 0 0
-        float: right
+        margin: 22px 0 0 0
+
 
 
 +at-breakpoint($screen5 $break5)
   #fabrica
     +span-columns(12,36)
+    margin-bottom: 22px
     color: $fa-white
     @extend .fago
 
@@ -592,21 +564,13 @@
       position: relative
 
       .image-container
-        //margin-left: 0
-        //margin-right: 0
-        //position: relative
-        //z-index: -10
-        //
-        //img
-        //  display: block
-        //  vertical-align: middle
-        //  height: 220px
-        //  width: 100%
-        //
-        //#fabrica_bg-mobile
-        //  display: block
-        //#fabrica_bg-desktop
-        //  display: none
+        position: relative
+        margin-left: 0
+        margin-right: 0
+
+        .videoBG
+          width: span-columns(12,12)
+          height: 220px!important
 
       h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
         background: $fa-black

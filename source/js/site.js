@@ -28,7 +28,6 @@ $(document).ready(function(){
         poster: 'js/videos/tunnel_animation.jpg',
 //        poster:'js/videos/background_07052013.png',
         width: "100%",
-        height: "220px",
         position: "relative",
         scale:true,
         zIndex:-1

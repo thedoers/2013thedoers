@@ -25,36 +25,30 @@ $screen5a: 79.99em
 $screen6: 90em
 $screen6a: 89.99em
 
-
+//@import "partials/draw_grid"
 
 #container
   +container($total-columns, $break1, $break2, $break3, $break4, $break5)
-  +susy-grid-background
   -webkit-font-smoothing: antialiased
   -webkit-overflow-scrolling: touch
 
 +at-breakpoint($screen2 $break2 $screen3a)
   #container
-    +susy-grid-background
 +at-breakpoint($screen3 $break3 $screen4a)
   #container
-    +susy-grid-background
     >div
       +nth-omega(2n)
 +at-breakpoint($screen4 $break4 $screen5a)
   #container
-    +susy-grid-background
     >div
       +nth-omega(2n)
 +at-breakpoint($screen5 $break5 $screen6a)
   #container
-    +susy-grid-background
     >div
       +nth-omega(3n)
 
 +at-breakpoint($screen6 $break6)
   #container
-    +susy-grid-background
     >div
       +nth-omega(3n)
 

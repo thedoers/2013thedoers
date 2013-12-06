@@ -27,8 +27,8 @@ $(document).ready(function(){
         ogv: 'js/videos/tunnel_animation.ogv',
         poster: 'js/videos/tunnel_animation.jpg',
 //        poster:'js/videos/background_07052013.png',
-//        width: "100%",
-//        height: "auto",
+        width: "100%",
+        height: "220px",
         position: "relative",
         scale:true,
         zIndex:-1

@@ -160,7 +160,6 @@
     +span-columns(9,10)
     +pre(1,10)
     height: 68px
-    text-align:  center
     background: $fa-black
 
     p
@@ -180,7 +179,7 @@
         height: 34px
         display: inline-block
         text-align: center
-        //font-size: px-to-em(22px,16px)
+        font-size: px-to-em(20px,16px)
         line-height: px-to-em(22px,16px)
         +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
 
@@ -274,7 +273,7 @@
     footer
       +span-columns(9,12)
       +pre(0)
-      height: 45px
+      height: 50px
       p
         //font-size: px-to-em(12.61px, 16px)
         //margin: 5px 0 0 10px
@@ -282,8 +281,7 @@
         //display: block
       .share
         float: right
-        margin: 7px 0 0 0
-        //padding: 0 0 0 5px
+        margin: 14px 0 0 0
         +suffix(1,9)
 
 
@@ -440,15 +438,15 @@
       +span-columns(8,10)
       +pre(1,10)
       height: 68px
-      //float: left
-      text-align:  center
-      background: $fa-black
+
       p
         //background: $fa-black
         //margin: 16px 0px 0px
         //font-size: px-to-em(10.34px, 16px)
       .share
+        float: none
         margin: 22px 0 0 0
+        +suffix(0)
 
 
 //todo refactoring
@@ -542,14 +540,15 @@
     footer
       +span-columns(9,12)
       +pre(1,12)
-      height: 35px
+      height: 50px
       p
         //font-size: px-to-em(12.61px, 16px)
         //margin: 5px 0 0 10px
         //float: left
       .share
-        margin: 22px 0 0 0
-
+        float: right
+        margin: 14px 0 0 0
+        +suffix(1,9)
 
 
 +at-breakpoint($screen5 $break5)
@@ -709,19 +708,15 @@
       +span-columns(9,12)
       +pre(2,12)
       height: 68px
-      //float: left
-      text-align:  center
-      background: $fa-black
+
       p
-        background: $fa-black
-        margin: 16px 0px 0px
-        font-size: px-to-em(10.34px, 16px)
+        //background: $fa-black
+        //margin: 16px 0px 0px
+        //font-size: px-to-em(10.34px, 16px)
       .share
-        list-style-type: none
-        margin: 0px
-        padding: 0
-        a
-          padding: 0px 6px 3px
+        float: none
+        margin: 22px 0 0 0
+        +suffix(0)
 
 
 

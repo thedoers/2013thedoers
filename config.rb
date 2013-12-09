@@ -36,6 +36,10 @@ page "/events/2013/thank-you-ixdt1113.html", :layout => :html5
 page "/workshops/2013/Come-validare-la-mia-startup.html", :layout => :html5
 page "/workshops/2013/thank-you-workshop1213.html", :layout => :html5
 
+page "/projects/2013/Fabrica-story.html", :layout => :html5
+page "/projects/2013/Thenk-you-fabrica-story.html", :layout => :html5
+
+
 #page "/newsletters/ixdt1113_post.html"
 page "/sitemap.xml", :layout => false
 

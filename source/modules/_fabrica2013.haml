@@ -33,7 +33,8 @@
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Lascia qui la tua mail", :type=>"text"
           = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
-          = hidden_field_tag  :language, :value => "eng", :name => "language", :id => 'language'
+          = hidden_field_tag  :language, :value => "en", :name => "language", :id => 'language'
+          = hidden_field_tag  :tags, :value => "pranzo", :name => "tags", :id => 'tags'
           %p
             = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'OTTIMO, ALLORA SI MANGIA!'
           %p#status

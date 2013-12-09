@@ -1,0 +1,560 @@
+.fago
+  font-family: Fago , "Helvetica neue", Helvetica, Arial, sans-serif
+
+#fabrica_tk
+  +span-columns(10,10)
+  margin-bottom: 22px
+
+  header
+    +span-columns(10,10)
+    position: relative
+
+    .image-container
+      margin-left: -($grid-padding)
+      margin-right: -($grid-padding)
+      position: relative
+      z-index: -10
+
+      img
+        display: block
+        vertical-align: middle
+        height: 220px
+        width: 100%
+      #fabrica_bg-mobile
+        display: block
+      #fabrica_bg-desktop
+        display: none
+
+    h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
+      background: $fa-black
+      +box-shadow($fa-white 1px 1px 0px)
+      @extend .fago
+      color: $fa-white
+
+    h2.fabrica-title
+      position: absolute
+      height: 21px
+      width: 182px
+      top: 44px
+      margin: 0
+      padding: 2px 8px
+      z-index: 10
+      font-weight: 600
+      font-size: px-to-em(21px,16px)
+    //+replace-text("fabrica/fabrica_logo.png")
+
+    h3.subtitle
+      position: absolute
+      width: 66px
+      top: 71px
+      margin: 0
+      padding: 0 0 0 8px
+      font-weight: 600
+      font-size: px-to-em(16px,16px)
+
+    .subtitle-paragraph
+      position: absolute
+      top: 99px
+
+      span.paragraph
+        background: $fa-black
+        float: left
+        clear: both
+        padding: 2px 8px
+        margin-top: 2px
+        font-weight: 400
+        font-size: px-to-em(15px,16px)
+
+  section.container
+    //todo chiedere a Pier gliela posizione dal container va bene così
+    +span-columns(9,10)
+    +pre(1,10)
+    margin-top: -15px
+    margin-bottom: 0
+
+    p.base
+      margin: 0 auto
+      padding-left: 9px
+      padding-right: 6px
+    p.first
+      padding-top: 30px
+      padding-bottom: 21px
+      background: $fa-black
+      color: $fa-white
+      span.bold
+        margin-bottom: 12px
+        @extend .fago
+        font-weight: 600
+        font-size: px-to-em(23px,16px)
+        line-height: 1em
+      span.regular
+        @extend .fago
+        font-weight: 400
+        font-size: px-to-em(17px,16px)
+        line-height: 1em
+      span.regular, span.bold
+        display: block
+    //todo mancano le righe
+    p.underline
+      padding-top: 0px
+      padding-bottom: 0px
+      background: $fa-white
+      @extend .fago
+      font-weight: 600
+      font-size: px-to-em(23px,16px)
+      color: $fa-black
+
+  footer
+    +span-columns(9,10)
+    +pre(1,10)
+
+    .share
+      height: 89px
+      background: $fa-black
+      a
+        cursor: pointer
+        border: none
+        text-decoration: none
+        width: 34px
+        height: 34px
+        margin: 30px 0 0 0
+        display: inline-block
+        text-align: center
+        font-size: px-to-em(20px,16px)
+        line-height: px-to-em(22px,16px)
+        +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
+
+    .contact
+      p
+        padding: 21px 0
+        margin: 0
+        @extend .fago
+        font-weight: 400
+        font-size: px-to-em(15px,16px)
+        color: $fa-black
+        line-height: 1em
+        a
+          color: $fa-black
+
+    .black-bar
+      height: 44px
+      background: $fa-black
+
+
+
++at-breakpoint($screen2 $break2)
+  #fabrica_tk
+    +span-columns(12,12)
+    margin-bottom: 22px
+    header
+      .image-container
+        img
+          height: auto
+        #fabrica_bg-mobile
+          display: none
+        #fabrica_bg-desktop
+          display: block
+
+      h2.fabrica-title
+        font-size: px-to-em(30px,16px)
+      h3.subtitle
+        text-transform: lowercase
+        font-size: px-to-em(18.13px, 16px)
+
+      .subtitle-paragraph
+        span.paragraph
+          font-size: px-to-em(18.13px, 16px)
+
+    section.container
+      +span-columns(9, 12)
+      +pre(0)
+      margin-top: -232px
+
+      p.first
+        padding-botton: 15px
+        background: none
+        +background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
+        span.bold
+          padding: 3px
+          font-size: px-to-em(31px,16px)
+        span.regular
+          font-size: px-to-em(23px,16px)
+
+      p.underline
+        padding: 7px 8px
+
+    footer
+      +span-columns(9,12)
+      +pre(0)
+
+      .share
+        +span-columns(9,9)
+        a
+
+      .contact
+        +span-columns(8,9)
+        p
+          padding: 16px
+          font-size: px-to-em(20px,16px)
+
+
+      .black-bar
+        +span-columns(9,9)
+        height: 66px
+
+
+
+
++at-breakpoint($screen3 $break3)
+  #fabrica_tk
+    +span-columns(10,20)
+    margin-bottom: 22px
+
+    header
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+        position: relative
+        z-index: -10
+
+        img
+          display: block
+          vertical-align: middle
+          height: 220px
+          width: 100%
+
+        #fabrica_bg-mobile
+          display: block
+        #fabrica_bg-desktop
+          display: none
+
+      h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
+        background: $fa-black
+        +box-shadow($fa-white 1px 1px 0px)
+        @extend .fago
+        color: $fa-white
+
+      h2.fabrica-title
+        position: absolute
+        height: 21px
+        width: 182px
+        top: 44px
+        margin: 0
+        padding: 2px 8px
+        z-index: 10
+        font-weight: 600
+        font-size: px-to-em(21px,16px)
+      //+replace-text("fabrica/fabrica_logo.png")
+
+      h3.subtitle
+        position: absolute
+        width: 66px
+        top: 71px
+        margin: 0
+        padding: 0 0 0 8px
+        font-weight: 600
+        font-size: px-to-em(16px,16px)
+
+      .subtitle-paragraph
+        position: absolute
+        top: 99px
+
+        span.paragraph
+          background: $fa-black
+          float: left
+          clear: both
+          padding: 2px 8px
+          margin-top: 2px
+          font-weight: 400
+          font-size: px-to-em(15px,16px)
+
+    section.container
+      //todo chiedere a Pier gliela posizione dal container va bene così
+      +span-columns(8,10)
+      +pre(1,10)
+      margin-top: -15px
+      margin-bottom: 0
+
+      p.base
+        margin: 0 auto
+        padding-left: 9px
+        padding-right: 6px
+      p.first
+        padding-top: 30px
+        padding-bottom: 21px
+        background: $fa-black
+        color: $fa-white
+        span.bold
+          margin-bottom: 12px
+          @extend .fago
+          font-weight: 600
+          font-size: px-to-em(23px,16px)
+          line-height: 1em
+        span.regular
+          @extend .fago
+          font-weight: 400
+          font-size: px-to-em(17px,16px)
+          line-height: 1em
+        span.regular, span.bold
+          display: block
+      //todo mancano le righe
+      p.underline
+        padding-top: 0px
+        padding-bottom: 0px
+        background: $fa-white
+        @extend .fago
+        font-weight: 600
+        font-size: px-to-em(23px,16px)
+        color: $fa-black
+
+    footer
+      +span-columns(8,10)
+      +pre(1,10)
+
+      .share
+        height: 89px
+        background: $fa-black
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          margin: 30px 0 0 0
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(20px,16px)
+          line-height: px-to-em(22px,16px)
+          +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
+
+      .contact
+        p
+          padding: 21px 0
+          margin: 0
+          @extend .fago
+          font-weight: 400
+          font-size: px-to-em(15px,16px)
+          color: $fa-black
+          line-height: 1em
+          a
+            color: $fa-black
+
+      .black-bar
+        height: 44px
+        background: $fa-black
+
+
+
+//todo refactoring
++at-breakpoint($screen4 $break4)
+  #fabrica_tk
+    +span-columns(12 ,24)
+    margin-bottom: 22px
+
+    header
+
+      .image-container
+        margin-left: 0
+        margin-right: 0
+        img
+          height: auto
+        #fabrica_bg-mobile
+          display: none
+        #fabrica_bg-desktop
+          display: block
+
+      h2.fabrica-title
+        +pre(1,12)
+        font-size: px-to-em(30px,16px)
+      h3.subtitle
+        +pre(1,12)
+        text-transform: lowercase
+        font-size: px-to-em(18.13px, 16px)
+
+      .subtitle-paragraph
+        +pre(1,12)
+        span.paragraph
+          font-size: px-to-em(18.13px, 16px)
+
+    section.container
+      +span-columns(9, 12)
+      +pre(1,12)
+      margin-top: -232px
+
+      p.first
+        padding-botton: 15px
+        background: none
+        +background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
+        span.bold
+          padding: 3px
+          font-size: px-to-em(31px,16px)
+        span.regular
+          font-size: px-to-em(23px,16px)
+
+      p.underline
+        padding: 7px 8px
+
+    footer
+      +span-columns(9,12)
+      +pre(1,12)
+
+      .share
+        +span-columns(9,9)
+        a
+
+      .contact
+        +span-columns(8,9)
+        p
+          padding: 16px
+          font-size: px-to-em(20px,16px)
+
+
+      .black-bar
+        +span-columns(9,9)
+        height: 66px
+
+
++at-breakpoint($screen5 $break5)
+  #fabrica_tk
+    +span-columns(12,36)
+    margin-bottom: 22px
+
+    header
+      +span-columns(12,12)
+      position: relative
+
+      .image-container
+        margin-left: -($grid-padding)
+        margin-right: -($grid-padding)
+        position: relative
+        z-index: -10
+
+        img
+          display: block
+          vertical-align: middle
+          height: 220px
+          width: 100%
+
+        #fabrica_bg-mobile
+          display: block
+        #fabrica_bg-desktop
+          display: none
+
+      h2.fabrica-title, h3.subtitle, .subtitle-paragraph span.paragraph
+        background: $fa-black
+        +box-shadow($fa-white 1px 1px 0px)
+        @extend .fago
+        color: $fa-white
+
+      h2.fabrica-title
+        +pre(1,12)
+        position: absolute
+        height: 21px
+        width: 182px
+        top: 44px
+        margin: 0
+        padding: 2px 8px
+        z-index: 10
+        font-weight: 600
+        font-size: px-to-em(21px,16px)
+      //+replace-text("fabrica/fabrica_logo.png")
+
+      h3.subtitle
+        +pre(1,12)
+        position: absolute
+        width: 66px
+        top: 71px
+        margin: 0
+        padding: 0 0 0 8px
+        font-weight: 600
+        font-size: px-to-em(16px,16px)
+
+      .subtitle-paragraph
+        position: absolute
+        top: 99px
+
+        span.paragraph
+          background: $fa-black
+          float: left
+          clear: both
+          padding: 2px 8px
+          margin-top: 2px
+          font-weight: 400
+          font-size: px-to-em(15px,16px)
+
+    section.container
+      +span-columns(9,12)
+      +pre(2,12)
+      margin-top: -15px
+      margin-bottom: 0
+
+      p.base
+        margin: 0 auto
+        padding-left: 9px
+        padding-right: 6px
+      p.first
+        padding-top: 30px
+        padding-bottom: 21px
+        background: $fa-black
+        color: $fa-white
+        span.bold
+          margin-bottom: 12px
+          @extend .fago
+          font-weight: 600
+          font-size: px-to-em(23px,16px)
+          line-height: 1em
+        span.regular
+          @extend .fago
+          font-weight: 400
+          font-size: px-to-em(17px,16px)
+          line-height: 1em
+        span.regular, span.bold
+          display: block
+      //todo mancano le righe
+      p.underline
+        padding-top: 0px
+        padding-bottom: 0px
+        background: $fa-white
+        @extend .fago
+        font-weight: 600
+        font-size: px-to-em(23px,16px)
+        color: $fa-black
+
+    footer
+      +span-columns(9,12)
+      +pre(2,12)
+
+      .share
+        height: 89px
+        background: $fa-black
+        a
+          cursor: pointer
+          border: none
+          text-decoration: none
+          width: 34px
+          height: 34px
+          margin: 30px 0 0 0
+          display: inline-block
+          text-align: center
+          font-size: px-to-em(20px,16px)
+          line-height: px-to-em(22px,16px)
+          +link-colors($wp-white, $wp-blue, $wp-blue, $wp-white, $wp-white)
+
+      .contact
+        p
+          padding: 21px 0
+          margin: 0
+          @extend .fago
+          font-weight: 400
+          font-size: px-to-em(15px,16px)
+          color: $fa-black
+          line-height: 1em
+          a
+            color: $fa-black
+
+      .black-bar
+        height: 44px
+        background: $fa-black
+
+

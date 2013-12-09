@@ -1,0 +1,35 @@
+#fabrica_tk
+  %article
+    %header
+
+      .image-container
+        = image_tag "fabrica/fabrica_bg-mobile.jpg", id:"fabrica_bg-mobile" ,alt:"Fabrica"
+        = image_tag "fabrica/fabrica_bg-desktop.jpg", id:"fabrica_bg-desktop" ,alt:"Fabrica"
+
+      %h2.fabrica-title
+        YOUR
+      %h3.subtitle
+        story
+      .subtitle-paragraph
+        <span class="paragraph">In cosa consiste il valore della tua</span>
+        <span class="paragraph">presenza online?</span>
+
+    %section.container
+      %p.base.first
+        <span class="bold"> GRAZIE <span id="user_name"></span>!<br>
+        SARÁ UN PIACERE<br>
+        CONOSCERTI!</span>
+        <span class="regular">TI SCRIVIAMO A BREVE <br> PER ORGANIZZARCI</span>
+      %p.base.underline
+        SEI UN DOER ANCHE TU,
+        VUOI DIRLO AI
+        TUOI AMICI?
+    %footer
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/projects/fabrica.htm",:twitter_url => "http://thedoers.co/events/2013/How-to-craft-a-perfect-user-Experience-even-with-a-rough-MVP.html?utm_source=tweet&utm_medium=twitter&utm_content=26-11&utm_campaign=event#_ixdt1113", :twitter_title => "Come with me at next #ixdt! #ux #startups #event #torino", :title => "It\'s not the product that should be insanely great, but the experience of being your user. The product is just one component of that. (P.G.) - Are you curious to see how UX design could boost your Startup?"}
+      .contact
+        %p
+          Se vuoi contattarci prima scrivici a: <br>
+          <strong><a href="mailto:we@thedoersproject.com">we@thedoers.co</a></strong><br>
+          (.co non è .com)o chiamaci <br><strong><a href="tel:+393393723401">+39 3393723401</a></strong>
+      .black-bar
+

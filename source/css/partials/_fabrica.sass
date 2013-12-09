@@ -82,7 +82,8 @@
     p.first
       padding-top: 30px
       padding-bottom: 21px
-      +background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
+      //+background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
+      background: $fa-black
       a
         text-decoration: none
         color: white
@@ -107,6 +108,7 @@
     p.last
       padding-top: 22px
       padding-bottom: 15px
+      background: $fa-black
 
   section.register
     +span-columns(9,10)
@@ -215,6 +217,8 @@
 
       p.first
         padding-botton: 15px
+        background: none
+        +background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
         a
           text-decoration: none
           color: white
@@ -359,13 +363,14 @@
       margin-bottom: 26px
       font-size: px-to-em(14px, 16px)
       p.base
-        background: $fa-black
+        //background: $fa-black
         margin: 0px auto
         padding-left: 9px
         padding-right: 6px
       p.first
         padding-top: 30px
         padding-bottom: 21px
+        background: $fa-black
         a
           text-decoration: none
           color: white
@@ -390,6 +395,7 @@
       p.last
         padding-top: 22px
         padding-bottom: 15px
+        background: $fa-black
 
     section.register
       +span-columns(8,10)
@@ -489,7 +495,12 @@
 
       p.first
         padding-botton: 15px
+        background: none
+        +background-image(linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) 50%,#000))
         a
+          text-decoration: none
+          color: white
+          border-bottom: 1px solid white
 
         span.white-bk
           display: block
@@ -630,13 +641,13 @@
       margin-bottom: 26px
       font-size: px-to-em(14px, 16px)
       p.base
-        background: $fa-black
         margin: 0px auto
         padding-left: 9px
         padding-right: 6px
       p.first
         padding-top: 30px
         padding-bottom: 21px
+        background: $fa-black
         a
           text-decoration: none
           color: white
@@ -661,6 +672,7 @@
       p.last
         padding-top: 22px
         padding-bottom: 15px
+        background: $fa-black
 
     section.register
       +span-columns(9,12)

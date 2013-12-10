@@ -18,18 +18,16 @@ $(document).ready(function(){
     overlay("a.map");
     getQueryVars("/events/2013/thank-you-ixdt1113.html");
     getQueryVars("/workshops/2013/thank-you-workshop1213.html");
+    getQueryVars("/projects/2013/thank-you-fabrica1213.html");
+    ajaxform_subscribe("#signup-form-fb1213","#status-fb1213");
     ajaxform_subscribe("#signup-form-wp1213","#status-wp1213");
     ajaxform_subscribe("#signup-form-ixdt1113","#status-ixdt1113");
     $('#video').videoBG({
-        mp4:'js/videos/background_07052013.mp4',
-        webm:'js/videos/background_07052013.webm',
-        ogv:'js/videos/background_07052013.ogv',
-        poster:'js/videos/background_07052013.png',
-//        mp4: 'js/videos/s01.mp4',
-//        webm: 'js/videos/s01.webm',
-//        ogv: 'js/videos/s01.ogv',
-//        poster: 'js/videos/tunnel_animation.jpg',
-//
+        mp4:'/js/videos/background_07052013.mp4',
+        webm:'/js/videos/background_07052013.webm',
+        ogv:'/js/videos/background_07052013.ogv',
+        poster:'/js/videos/background_07052013.png',
+
         width: "100%",
         position: "relative",
         scale:true,

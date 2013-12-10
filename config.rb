@@ -37,7 +37,7 @@ page "/workshops/2013/Come-validare-la-mia-startup.html", :layout => :html5
 page "/workshops/2013/thank-you-workshop1213.html", :layout => :html5
 
 page "/projects/2013/Fabrica-story.html", :layout => :html5
-page "/projects/2013/Thank-you-fabrica1213.html", :layout => :html5
+page "/projects/2013/thank-you-fabrica1213.html", :layout => :html5
 
 
 #page "/newsletters/ixdt1113_post.html"

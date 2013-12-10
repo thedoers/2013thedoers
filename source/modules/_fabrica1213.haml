@@ -3,16 +3,17 @@
     %header
       #video.image-container
 
-      %h2.fabrica-title
-        Fabrica
+      %a{:href=>"/projects/2013/Fabrica-story.html"}
+        %h2.fabrica-title
+          Fabrica
 
-      %h3.subtitle
-        STORY
+        %h3.subtitle
+          STORY
 
-      .subtitle-paragraph
-        <span class="paragraph"> <span class="big-symbol">+ </span><span class="big-number"> 70% </span> di nuovi candidati</span>
-        <span class="paragraph">In cosa consiste il valore della tua</span>
-        <span class="paragraph">presenza online?</span>
+        .subtitle-paragraph
+          <span class="paragraph"> <span class="big-symbol">+ </span><span class="big-number"> 70% </span> di nuovi candidati</span>
+          <span class="paragraph">In cosa consiste il valore della tua</span>
+          <span class="paragraph">presenza online?</span>
 
     %section.container
 
@@ -27,22 +28,26 @@
         Abbiamo molte soluzioni da suggerirti ed esperienze pratiche che ti possono ispirare: vieni a parlarne nel nostro studio, a pranzo, per un caffè, un bicchiere di whisky? Lascia la tua email per ottenere il tuo invito!
 
     %section.register
-
-      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
+      - form_tag 'http://mailinglist.thedoersproject.com/subscribe', :id => "signup-form-fb1213", :name => "signup-form", :"accept-charset" => "utf-8", :class => 'submit-form', :method => 'POST' do
         - field_set_tag do
           %p
             = text_field_tag :name, :name => "name", :id => 'name', :class=>"name", :placeholder=>"Lascia qui il tuo nome", :type=>"text"
             = text_field_tag :email, :name => "email", :id => 'email', :class=>"email", :placeholder=>"Lascia qui la tua mail", :type=>"text"
-          = hidden_field_tag  :list, :value => "BIdg8zYVZmMImlmOFaDs0A", :name => "list", :id => 'submit_list'
+          - if development?
+            = hidden_field_tag  :list, :value => "C1fJOvxS4d3nIt7BNFTFGQ", :name => "list", :id => 'submit_list'
+          - if build?
+            = hidden_field_tag  :list, :value => "9jxH97E7Qq8dZKlsCVtNhA", :name => "list", :id => 'submit_list'
           = hidden_field_tag  :listall, :value => "f4B1RXA44QJWHwOkMzitlA", :name => "list all", :id => 'submit_listall'
+          = hidden_field_tag  :success, :value => "/projects/2013/thank-you-fabrica1213.html", :name => "success", :id => 'submit_success'
+          = hidden_field_tag  :element, :value => "#_fabrica_tk", :name => "element", :id => 'submit_element'
           = hidden_field_tag  :language, :value => "en", :name => "language", :id => 'language'
           = hidden_field_tag  :tags, :value => "pranzo", :name => "tags", :id => 'tags'
           %p
-            = submit_tag "Submit", :name => "submit", :id => 'submit-btn',:class=> "send", :value=>'OTTIMO, ALLORA SI MANGIA!'
-          %p#status
+            = submit_tag "Submit", :name => "submit", :id => 'submit-btn-fb1213',:class=> "send", :value=>'OTTIMO, ALLORA SI MANGIA!'
+          %p#status-fb1213.status
 
     %footer
       %p
         Se vuoi, puoi condividere qui
 
-      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/projects/2013/Fabrica-story.html",:twitter_url => "http://thedoers.co/projects/2013/Fabrica-story.html?                         ", :twitter_title => "@Fabrica ha +70% di nuovi leads. Qual è il Valore della Tua Esperienza Online? #TheDoersStories #UX", :title => "Fabrica-story"}
+      =partial "partials/share_tag", :locals => {:url => "http://thedoers.co/projects/2013/Fabrica-story.html",:twitter_url => "http://thedoers.co/projects/2013/Fabrica-story.html? ", :twitter_title => "@Fabrica ha +70% di nuovi leads. Qual è il Valore della Tua Esperienza Online? #TheDoersStories #UX", :title => "Fabrica-story"}

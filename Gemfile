@@ -18,5 +18,5 @@ gem 'oily_png'
 gem "middleman-cloudfront"
 gem 'middleman-s3_sync'
 
-
+gem "foreman"
 

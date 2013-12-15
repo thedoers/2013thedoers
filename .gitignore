@@ -15,7 +15,8 @@ doc/
 /.sass-cache
 /.DS_Store
 /build
-.idea/dictionaries/Administrator.xml
-.idea/
-.idea
 .icon
+
+/.idea/*.iws
+/.idea/workspace.xml
+/.idea/tasks.xml

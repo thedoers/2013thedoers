@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "middleman"
+#gem "middleman"
 gem "middleman-favicon-maker", :platforms => [:ruby]
 gem "middleman-deploy"
 #gem "middleman-smusher"

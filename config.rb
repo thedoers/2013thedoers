@@ -1,9 +1,17 @@
+activate :bower
+activate :automatic_image_sizes
+activate :livereload
+after_configuration do
+
+  puts sprockets.paths
+end
+
 activate :deploy do |deploy|
     deploy.method = :ftp
     deploy.host = "web332.webfaction.com"
     deploy.user = "piermaria"
     deploy.password = "Nonmelaricordo2"
-    deploy.path = "/home/piermaria/webapps/devthedoers"
+    deploy.path = ENV["FTP_FOLDER"]
     deploy.build_before = true
 end
 
@@ -40,6 +48,7 @@ page "/projects/2013/Fabrica-story.html", :layout => :html5
 page "/projects/2013/thank-you-fabrica1213.html", :layout => :html5
 
 
+
 #page "/newsletters/ixdt1113_post.html"
 page "/sitemap.xml", :layout => false
 
@@ -58,7 +67,7 @@ set :images_dir, 'images'
 
 set :fonts_dir, 'fonts'
 
-activate :automatic_image_sizes
+
 
 # Build-specific configuration
 configure :build do
@@ -69,7 +78,7 @@ configure :build do
   activate :minify_javascript
   activate :minify_html
   # # Create favicon/touch icon set from source/favicon_base.png
-  #activate :favicon_maker
+  activate :favicon_maker
   
   # # Enable cache buster
   activate :cache_buster

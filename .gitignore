@@ -17,6 +17,8 @@ doc/
 /build
 .icon
 
+/components
+
 /.idea/*.iws
 /.idea/workspace.xml
 /.idea/tasks.xml

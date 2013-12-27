@@ -82,10 +82,43 @@ $wptk-grey: #6d6e71
 @import "partials/_fabrica1213_tk"
 @import "partials/_workshop1213"
 @import "partials/_workshop1213_tk"
+@import "partials/photowall1213"
 @import "partials/header"
 @import "partials/footer"
 
+
+
 #container
   margin-top: 22px
-#container>div
-  display: none
+
+/*
+  #masonry>div
+    display: none*/
+
+#masonry
+  width: 100%
+.gutter-sizer
+  width: gutter(10)
+.grid-sizer
+  width: columns(1,10)
+
++at-breakpoint($screen2 $break2)
+  .gutter-sizer
+    width: gutter(12)
+  .grid-sizer
+    width: columns(1,12)
++at-breakpoint($screen3 $break3)
+  .gutter-sizer
+    width: gutter(20)
+  .grid-sizer
+    width: columns(1,20)
++at-breakpoint($screen4 $break4)
+  .gutter-sizer
+    width: gutter(24)
+  .grid-sizer
+    width: columns(1,24)
++at-breakpoint($screen5 $break5)
+  .gutter-sizer
+    width: gutter(36)
+  .grid-sizer
+    width: columns(1,36)

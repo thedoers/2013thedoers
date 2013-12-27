@@ -1,10 +1,21 @@
-//= require "vendor/jquery"
+//= require "jquery/jquery.min"
 //= require "subscribe"
-//= require "vendor/jquery.easing.min"
-//= require "vendor/jquery.fadeloader"
-//= require "vendor/jquery.scrollTo"
-//= require "vendor/jquery.videoBG"
+//= require "jquery.easing/js/jquery.easing.min"
+
+//= require "jquery.scrollTo/jquery.scrollTo.min"
+//= require "jquery.videoBG/jquery.videoBG"
 //= require "passURL"
+//= require "eventEmitter/EventEmitter"
+//= require "eventie/eventie"
+//= require "doc-ready/doc-ready"
+//= require "get-style-property/get-style-property"
+//= require "get-size/get-size"
+//= require "jquery-bridget/jquery.bridget"
+//= require "matches-selector/matches-selector"
+//= require "outlayer/item"
+//= require "outlayer/outlayer"
+//= require "masonry/masonry"
+//= require "imagesloaded/imagesloaded"
 /**
  * Created with JetBrains RubyMine.
  * User: piermariacosina
@@ -12,9 +23,20 @@
  * Time: 19:32
  * To change this template use File | Settings | File Templates.
  */
+$('#container').imagesLoaded( function() {
+    var $container = $('#masonry');
+    $container.masonry({
+        columnWidth: ".grid-sizer",
+        itemSelector: '.item',
+        gutter: ".gutter-sizer"
+    });
 
+});
 
 $(document).ready(function(){
+
+
+
     overlay("a.map");
     getQueryVars("/events/2013/thank-you-ixdt1113.html");
     getQueryVars("/workshops/2013/thank-you-workshop1213.html");
@@ -34,8 +56,7 @@ $(document).ready(function(){
         loop: true,
         zIndex:-1
     });
-
-    $('#container').fadeloader({
+/*    $('#masonry').fadeloader({
 
         mode: "children",
         preloadImg: '/loading.gif',
@@ -43,7 +64,8 @@ $(document).ready(function(){
         preloadHeight: 36,
         displayType: 'inline',
         onComplete: "scroll()"
-        });
+    });*/
+
 
 
 });

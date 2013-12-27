@@ -146,6 +146,7 @@
     <orderEntry type="library" scope="PROVIDED" name="favicon_maker (v0.2.4, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.3, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fog (v1.19.0, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="foreman (v0.61.0, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.4, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fssm (v0.2.10, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.4, RVM: ruby-2.0.0-p247 [thedoers]) [gem]" level="application" />

@@ -1,10 +1,8 @@
 activate :bower
 activate :automatic_image_sizes
 activate :livereload
-after_configuration do
 
-  puts sprockets.paths
-end
+
 
 activate :deploy do |deploy|
     deploy.method = :ftp

@@ -5,7 +5,13 @@
   "main": "masonry.js",
   "dependencies": {
     "get-size": "desandro/get-size#>=1.1.4 <2.0",
-    "outlayer": ">=1.1.2 <2.0"
+    "outlayer": ">=1.1.2 <2.0",
+    "masonry": "~3.1.4",
+    "jquery.easing": "~1.3.0",
+    "jquery.scrollTo": "~1.4.7",
+    "jquery.videoBG": "*",
+    "imagesloaded": "~3.1.0",
+    "jquery.fadeloader": "https://github.com/periplox/jquery.fadeloader.git#~1.0.1"
   },
   "devDependencies": {
     "doc-ready": "desandro/doc-ready",
